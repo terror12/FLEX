@@ -8,3 +8,4 @@ Import .csv from web page:
 	Open up a blank google sheet
 	Type in first cell: =importData("URL/file.csv")
   
+Open Git Bash: Type: 
