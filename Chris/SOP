@@ -6,5 +6,5 @@ Type in first cell: =importhtml(“URL”,”Table”,# of Table)  [View source 
 
 Import .csv from web page:
 	Open up a blank google sheet
-	Type in first cell: =importData("http://example.com/activities.csv")
+	Type in first cell: =importData("URL/file.csv")
   
