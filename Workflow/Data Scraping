@@ -1,0 +1,9 @@
+# R code to pull data from websites into a dataframe. Once this code is complete it will retrieve the projections and actually
+# points scored for each website that we specify. Once the data is called in we can build a large dataframe to combine it all
+# and organize it accordingly. Once we have this dataframe I believe each week when new projections come out we might have to
+# run this code again to call in the new info and add it to the dataframe.
+
+Steps:
+1) Call in all tables of data that we need.
+2) create a large dataframe combining all tables of data
+3) create a section of code that will combine new dataframes that we create with the current large dataframe.
