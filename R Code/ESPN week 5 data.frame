@@ -8,7 +8,7 @@ library(XML)
 y <- NULL
 
 # For loop to call in multiple different urls.
-for(i in seq(from=40, to=400, by=40)){
+for(i in seq(from=0, to=400, by=40)){
 num <- as.character(i)
 ESPNa <- paste("http://games.espn.com/ffl/tools/projections?&scoringPeriodId=5&seasonId=2017&startIndex=", num, sep='')
 ESPN.table = readHTMLTable(ESPNa, header=F, skip.rows = (2))
