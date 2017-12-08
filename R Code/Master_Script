@@ -1,0 +1,8 @@
+library("ffanalytics")
+setwd("C:/Users/Adam/terror12/FLEX/ffanalytics")
+
+## Edit the NULL values according to wha you want to scrape.
+adam <- runScrape(season = NULL, week = NULL,
+          analysts = NULL, positions = NULL,
+          fbgUser = NULL, fbgPwd, updatePlayers = TRUE)
+flex <- getProjections(scrapeData = adam, writeFile = TRUE)
