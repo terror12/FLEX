@@ -4,7 +4,7 @@
 library("ffanalytics")
 library("XML")
 setwd("C:/Users/Adam/terror12/FLEX/ffanalytics/Yahoo/2016")
-
+setwd("C:/Users/Chris/Documents/Spreadsheets/Flex")
 # Step 2:
 ## Edit the NULL values according to wha you want to scrape.
 adam <- runScrape(season = NULL, week = NULL,
