@@ -16,3 +16,5 @@ BACK TO GOOGLE SHEETS
 Add a new blank column next Last Name
 Type in cell =concatenate(click on first name," "click on last name)
 select box and double click on box in the lower righ corner. This will populate the entire column.
+Copy entire new column and paste special
+Clear previous three columns
