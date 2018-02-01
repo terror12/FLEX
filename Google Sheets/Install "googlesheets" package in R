@@ -199,3 +199,4 @@ Error in loadNamespace(name) : there is no package called ‘lazyeval’
 > install.packages("lazyeval")
 > install.packages("dplyr")
 > install.packages("hms")
+> install.packages("tidyverse")
