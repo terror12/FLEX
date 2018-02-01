@@ -1,4 +1,5 @@
-# Script to upgrade and ownload all packages I needed for google sheets package
+# Upgrade RStudio to 3.2.3 then execute this
+# Script to upgrade and download all packages I needed for google sheets package
 
 > version
 _                           
@@ -188,4 +189,13 @@ Installing googlesheets
 ** installing vignettes
 ** testing if installed package can be loaded
 * DONE (googlesheets)
+
 > library("googlesheets")
+
+> gs_ls()
+httpuv not installed, defaulting to out-of-band authentication
+Enter authorization code: 4/z4oDmjVyYQz1d0W4dQrNTnLFl3MOB2l5jWOiSDVbXa0
+Error in loadNamespace(name) : there is no package called ‘lazyeval’
+> install.packages("lazyeval")
+> install.packages("dplyr")
+
