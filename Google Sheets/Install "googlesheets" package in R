@@ -198,4 +198,4 @@ Enter authorization code: 4/z4oDmjVyYQz1d0W4dQrNTnLFl3MOB2l5jWOiSDVbXa0
 Error in loadNamespace(name) : there is no package called ‘lazyeval’
 > install.packages("lazyeval")
 > install.packages("dplyr")
-
+> install.packages("hms")
