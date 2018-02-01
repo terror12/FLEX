@@ -1,0 +1,191 @@
+# Script to upgrade and ownload all packages I needed for google sheets package
+
+> version
+_                           
+platform       i386-w64-mingw32            
+arch           i386                        
+os             mingw32                     
+system         i386, mingw32               
+status                                     
+major          3                           
+minor          2.3                         
+year           2015                        
+month          12                          
+day            10                          
+svn rev        69752                       
+language       R                           
+version.string R version 3.2.3 (2015-12-10)
+nickname       Wooden Christmas-Tree       
+> install.packages("googlesheets")
+Installing package into ‘C:/Users/Adam/Documents/R/win-library/3.2’
+(as ‘lib’ is unspecified)
+
+There is a binary version available but the source version is later:
+  binary source needs_compilation
+googlesheets  0.2.1  0.2.2             FALSE
+
+installing the source package ‘googlesheets’
+
+trying URL 'https://cran.rstudio.com/src/contrib/googlesheets_0.2.2.tar.gz'
+Content type 'application/x-gzip' length 2178662 bytes (2.1 MB)
+downloaded 2.1 MB
+
+* installing *source* package 'googlesheets' ...
+** package 'googlesheets' successfully unpacked and MD5 sums checked
+** R
+** inst
+** preparing package for lazy loading
+Error in loadNamespace(i, c(lib.loc, .libPaths()), versionCheck = vI[[i]]) : 
+  there is no package called 'DBI'
+ERROR: lazy loading failed for package 'googlesheets'
+* removing 'C:/Users/Adam/Documents/R/win-library/3.2/googlesheets'
+Warning in install.packages :
+  running command '"C:/PROGRA~1/R/R-32~1.3/bin/i386/R" CMD INSTALL -l "C:\Users\Adam\Documents\R\win-library\3.2" C:\Users\Adam\AppData\Local\Temp\RtmpSw6MU3/downloaded_packages/googlesheets_0.2.2.tar.gz' had status 1
+Warning in install.packages :
+  installation of package ‘googlesheets’ had non-zero exit status
+
+The downloaded source packages are in
+‘C:\Users\Adam\AppData\Local\Temp\RtmpSw6MU3\downloaded_packages’
+> library("googlesheets")
+Error in library("googlesheets") : 
+  there is no package called ‘googlesheets’
+> devtools::install_github("jennybc/googlesheets")
+Downloading GitHub repo jennybc/googlesheets@master
+from URL https://api.github.com/repos/jennybc/googlesheets/zipball/master
+Installing googlesheets
+"C:/PROGRA~1/R/R-32~1.3/bin/i386/R" --no-site-file --no-environ --no-save --no-restore --quiet CMD INSTALL  \
+"C:/Users/Adam/AppData/Local/Temp/RtmpSw6MU3/devtools4785cbb15a1/jennybc-googlesheets-62a46d2" --library="C:/Users/Adam/Documents/R/win-library/3.2" --install-tests 
+
+* installing *source* package 'googlesheets' ...
+** R
+** inst
+** tests
+** preparing package for lazy loading
+Error in loadNamespace(i, c(lib.loc, .libPaths()), versionCheck = vI[[i]]) : 
+  there is no package called 'DBI'
+ERROR: lazy loading failed for package 'googlesheets'
+* removing 'C:/Users/Adam/Documents/R/win-library/3.2/googlesheets'
+Error: Command failed (1)
+> remove.packages("googlesheets")
+Removing package from ‘C:/Users/Adam/Documents/R/win-library/3.2’
+(as ‘lib’ is unspecified)
+Error in remove.packages : there is no package called ‘googlesheets’
+> install.packages("devtools")
+Error in install.packages : Updating loaded packages
+
+Restarting R session...
+
+> install.packages("devtools")
+Installing package into ‘C:/Users/Adam/Documents/R/win-library/3.2’
+(as ‘lib’ is unspecified)
+also installing the dependencies ‘digest’, ‘git2r’
+
+
+There are binary versions available but the source versions are later:
+  binary source needs_compilation
+digest   0.6.12 0.6.15              TRUE
+git2r    0.18.0 0.21.0              TRUE
+devtools 1.12.0 1.13.4              TRUE
+
+Binaries will be installed
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/digest_0.6.12.zip'
+Content type 'application/zip' length 172453 bytes (168 KB)
+downloaded 168 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/git2r_0.18.0.zip'
+Content type 'application/zip' length 2985635 bytes (2.8 MB)
+downloaded 2.8 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/devtools_1.12.0.zip'
+Content type 'application/zip' length 432097 bytes (421 KB)
+downloaded 421 KB
+
+package ‘digest’ successfully unpacked and MD5 sums checked
+package ‘git2r’ successfully unpacked and MD5 sums checked
+package ‘devtools’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+C:\Users\Adam\AppData\Local\Temp\RtmpYhXhMP\downloaded_packages
+> devtools::install_github("jennybc/googlesheets")
+Error in loadNamespace(name) : there is no package called ‘curl’
+> install.packages("curl")
+Installing package into ‘C:/Users/Adam/Documents/R/win-library/3.2’
+(as ‘lib’ is unspecified)
+
+There is a binary version available but the source version is later:
+  binary source needs_compilation
+curl    2.5    3.1              TRUE
+
+Binaries will be installed
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.2/curl_2.5.zip'
+Content type 'application/zip' length 3090095 bytes (2.9 MB)
+downloaded 2.9 MB
+
+package ‘curl’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+C:\Users\Adam\AppData\Local\Temp\RtmpYhXhMP\downloaded_packages
+> devtools::install_github("jennybc/googlesheets")
+Downloading GitHub repo jennybc/googlesheets@master
+from URL https://api.github.com/repos/jennybc/googlesheets/zipball/master
+Installing googlesheets
+"C:/PROGRA~1/R/R-32~1.3/bin/i386/R" --no-site-file --no-environ --no-save --no-restore --quiet CMD INSTALL  \
+"C:/Users/Adam/AppData/Local/Temp/RtmpYhXhMP/devtools2bf03abe3a/jennybc-googlesheets-62a46d2" --library="C:/Users/Adam/Documents/R/win-library/3.2" --install-tests 
+
+* installing *source* package 'googlesheets' ...
+** R
+** inst
+** tests
+** preparing package for lazy loading
+Error in loadNamespace(i, c(lib.loc, .libPaths()), versionCheck = vI[[i]]) : 
+  there is no package called 'DBI'
+ERROR: lazy loading failed for package 'googlesheets'
+* removing 'C:/Users/Adam/Documents/R/win-library/3.2/googlesheets'
+Error: Command failed (1)
+> install.packages("DBI")
+Installing package into ‘C:/Users/Adam/Documents/R/win-library/3.2’
+(as ‘lib’ is unspecified)
+
+There is a binary version available but the source version is later:
+  binary source needs_compilation
+DBI  0.6-1    0.7             FALSE
+
+installing the source package ‘DBI’
+
+trying URL 'https://cran.rstudio.com/src/contrib/DBI_0.7.tar.gz'
+Content type 'application/x-gzip' length 613174 bytes (598 KB)
+downloaded 598 KB
+
+* installing *source* package 'DBI' ...
+** package 'DBI' successfully unpacked and MD5 sums checked
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (DBI)
+
+The downloaded source packages are in
+‘C:\Users\Adam\AppData\Local\Temp\RtmpYhXhMP\downloaded_packages’
+> devtools::install_github("jennybc/googlesheets")
+Downloading GitHub repo jennybc/googlesheets@master
+from URL https://api.github.com/repos/jennybc/googlesheets/zipball/master
+Installing googlesheets
+"C:/PROGRA~1/R/R-32~1.3/bin/i386/R" --no-site-file --no-environ --no-save --no-restore --quiet CMD INSTALL  \
+"C:/Users/Adam/AppData/Local/Temp/RtmpYhXhMP/devtools2bf079505669/jennybc-googlesheets-62a46d2" --library="C:/Users/Adam/Documents/R/win-library/3.2" --install-tests 
+
+* installing *source* package 'googlesheets' ...
+** R
+** inst
+** tests
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (googlesheets)
+> library("googlesheets")
