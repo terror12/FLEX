@@ -1,0 +1,58 @@
+#
+1. Import .csv's to google sheet (seperate by tabs)
+
+2. Create new tab for official sheet import2R
+
+### On import2R tab
+3. Paste CBS data into new tab (only columns B,C,D, and H)
+
+### On Fanduel Tab
+4. Correct Player name collumn for FanDuel use code on github concatanate steps
+=CONCATENATE(B4," ",C4)
+- find a way to correct names like C.J. Anderson
+- Only do up until Kickers and stop (will have something else to manipulate defense names)
+
+5. Label the new column Player, copy it, and paste special so that you can delete the previous 
+three columns that gave you that output.
+
+6. Delete those three columns
+
+7. Need to create somthing that makes Miami Defense = Dolphins, Green Defense = Packers
+
+### on import2R tab
+8. Change label of column "points" to "CBS Projected Points"
+
+9. Create new column name it "Actual Points" put it inbetween position and CBS Projected points and 
+add the actual points from the FanDuel tab that coincide with the player names of this tab.
+# way to call in data from FanDuel tab into the main tab lineup the points with the name column
+=VLOOKUP(A4,{CBS!$B$4:$B$539,CBS!$H$4:$H$539},2,FALSE))
+
+10. Create column named ESPN
+Use =VLOOKUP(A4,{ESPN!$B$4:$B$360,ESPN!$H$4:$H$360},2,FALSE)
+to carry over the projected point values from the ESPN tab to the import2R tab under ESPN column.
+
+11. Create column named NFL
+Use =VLOOKUP(A4,{NFL!$B$4:$B$735,NFL!$H$4:$H$735},2,FALSE)
+to carry over the projected point values from the NFL tab to the import2R tab under NFL column.
+
+12. Create column named FFToday
+Use =VLOOKUP(A4,{FFToday!$B$4:$B$280,FFToday!$H$4:$H$280},2,FALSE)
+to carry over the projected point values from the FFToday tab to the import2R tab under FFToday column.
+
+13. Create column named FanDuel
+Use =VLOOKUP(A4,{FFToday!$B$4:$B$280,FFToday!$H$4:$H$280},2,FALSE)
+to carry over the projected point values from the FanDuel tab to the import2R tab under FanDuel column.
+
+14. Create Platform AVG column
+=IFERROR(AVERAGEIF(E4:H4,"<>#N/A"),"")
+Average opf ESPN NFL FFToday and Fanduel
+
+15. Create STD Column
+=STDEV(I4,J4)
+of Fanduel and Platform AVG column
+
+Then order whole sheet from a-z based on STD column
+
+
+# way to call in data from one tab into the main tab lineup the points with the name column
+=VLOOKUP(A4,{CBS!$B$4:$B$539,CBS!$H$4:$H$539},2,FALSE)
