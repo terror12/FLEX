@@ -1,0 +1,20 @@
+Hihlight Column
+Click Addon
+Get Addon
+Search Split Names
+Click +Free
+Click Accept/Allow
+BACK TO GOOGLE SHEETS
+Highlight Column with names
+Click Add o 
+Split Names -- Start
+Make sure My Column has Headerbis checked, Only if the is a header.
+Check first name
+Check Last name
+Click Slipt
+BACK TO GOOGLE SHEETS
+Add a new blank column next Last Name
+Type in cell =concatenate(click on first name," "click on last name)
+select box and double click on box in the lower righ corner. This will populate the entire column.
+Copy entire new column and paste special
+Clear previous three columns
