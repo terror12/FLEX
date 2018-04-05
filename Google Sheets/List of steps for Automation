@@ -39,16 +39,20 @@ to carry over the projected point values from the NFL tab to the import2R tab un
 Use =VLOOKUP(A4,{FFToday!$B$4:$B$280,FFToday!$H$4:$H$280},2,FALSE)
 to carry over the projected point values from the FFToday tab to the import2R tab under FFToday column.
 
-13. Create column named FanDuel
-Use =VLOOKUP(A4,{FFToday!$B$4:$B$280,FFToday!$H$4:$H$280},2,FALSE)
+13. Create column named FanDuel_Salary
+Use =VLOOKUP(A2,{FanDuel!$A$4:$A$456,FanDuel!$C$4:$C$456},2,FALSE)
 to carry over the projected point values from the FanDuel tab to the import2R tab under FanDuel column.
 
-14. Create Platform AVG column
+14. Create FanDuel Column 
+Use =I2*2.5/1000
+to turn the FanDuel Salary into a projected points value
+
+15. Create Platform AVG column
 =IFERROR(AVERAGEIF(E4:H4,"<>#N/A"),"")
 Average opf ESPN NFL FFToday and Fanduel
 
-15. Create STD Column
-=STDEV(I4,J4)
+16. Create STD Column
+=STDEV(J2,K2)
 of Fanduel and Platform AVG column
 
 Then order whole sheet from a-z based on STD column
