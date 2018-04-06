@@ -29,6 +29,7 @@ three columns that gave you that output.
 9. Create new column name it "Actual_Points" put it inbetween position and CBS Projected points and 
 add the position from the FanDuel tab that coincide with the player names of this tab.
 =VLOOKUP(A2,FanDuel!$A$4:$B$418,2,False)
+# Will need a way to do a count of the ros the number 418 will change!
 
 ##. way to call in data from CBS tab into the main tab lineup the points with the name column
 =VLOOKUP(A2,{CBS!$B$2:$B$539,CBS!$H$2:$H$539},2,FALSE))
@@ -39,15 +40,15 @@ Use =VLOOKUP(A2,{ESPN!$A$2:$A$354,ESPN!$G$2:$G$354},2,FALSE)
 to carry over the projected point values from the ESPN tab to the import2R tab under ESPN column.
 
 11. Create column named NFL
-Use =VLOOKUP(A4,{NFL!$B$4:$B$735,NFL!$H$4:$H$735},2,FALSE)
+Use =VLOOKUP(A2,{NFL!$A$2:$A$731,NFL!$G$2:$G$731},2,FALSE)
 to carry over the projected point values from the NFL tab to the import2R tab under NFL column.
 
 12. Create column named FFToday
-Use =VLOOKUP(A4,{FFToday!$B$4:$B$280,FFToday!$H$4:$H$280},2,FALSE)
+Use =VLOOKUP(A2,{FFToday!$A$2:$A$269,FFToday!$G$2:$G$269},2,FALSE)
 to carry over the projected point values from the FFToday tab to the import2R tab under FFToday column.
 
 13. Create column named FanDuel_Salary
-Use =VLOOKUP(A2,{FanDuel!$A$4:$A$456,FanDuel!$C$4:$C$456},2,FALSE)
+Use =VLOOKUP(A2,{FanDuel!$A$2:$A$414,FanDuel!$C$2:$C$414},2,FALSE)
 to carry over the projected point values from the FanDuel tab to the import2R tab under FanDuel column.
 
 14. Create FanDuel Column 
@@ -55,7 +56,7 @@ Use =I2*2.5/1000
 to turn the FanDuel Salary into a projected points value
 
 15. Create Platform AVG column
-=IFERROR(AVERAGEIF(E4:H4,"<>#N/A"),"")
+=IFERROR(AVERAGEIF(E2:H2,"<>#N/A"),"")
 Average opf ESPN NFL FFToday and Fanduel
 
 16. Create STD Column
