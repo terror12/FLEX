@@ -1,16 +1,20 @@
 #
 1. Import .csv's to google sheet (seperate by tabs)
 
-2. Create new tab for official sheet import2R
+2. Create new tabs for official sheet import2R, FanDuel, CBS, ESPN, NFL, FFToday
+  # for CBS, ESPN,NFL,FFToday copy in columns B,C,D,H
+  # do not leave any white lines on top
 
 ### On import2R tab
-3. Paste CBS data into new tab (only columns B,C,D, and H)
+3. Paste CBS data into import2R (only columns A,B,C, and G)
 
 ### On Fanduel Tab
 4. Correct Player name collumn for FanDuel use code on github concatanate steps
-=CONCATENATE(B4," ",C4)
+=CONCATENATE(B2," ",C2)
 - find a way to correct names like C.J. Anderson
 - Only do up until Kickers and stop (will have something else to manipulate defense names)
+
+
 
 5. Label the new column Player, copy it, and paste special so that you can delete the previous 
 three columns that gave you that output.
@@ -22,8 +26,10 @@ three columns that gave you that output.
 ### on import2R tab
 8. Change label of column "points" to "CBS Projected Points"
 
-9. Create new column name it "Actual Points" put it inbetween position and CBS Projected points and 
-add the actual points from the FanDuel tab that coincide with the player names of this tab.
+9. Create new column name it "Actual_Points" put it inbetween position and CBS Projected points and 
+add the position from the FanDuel tab that coincide with the player names of this tab.
+=VLOOKUP(A2,FanDuel!$A$4:$B$418,2,False)
+
 # way to call in data from FanDuel tab into the main tab lineup the points with the name column
 =VLOOKUP(A4,{CBS!$B$4:$B$539,CBS!$H$4:$H$539},2,FALSE))
 
