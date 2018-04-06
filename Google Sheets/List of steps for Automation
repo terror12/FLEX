@@ -30,11 +30,12 @@ three columns that gave you that output.
 add the position from the FanDuel tab that coincide with the player names of this tab.
 =VLOOKUP(A2,FanDuel!$A$4:$B$418,2,False)
 
-# way to call in data from FanDuel tab into the main tab lineup the points with the name column
-=VLOOKUP(A4,{CBS!$B$4:$B$539,CBS!$H$4:$H$539},2,FALSE))
+##. way to call in data from CBS tab into the main tab lineup the points with the name column
+=VLOOKUP(A2,{CBS!$B$2:$B$539,CBS!$H$2:$H$539},2,FALSE))
+###
 
 10. Create column named ESPN
-Use =VLOOKUP(A4,{ESPN!$B$4:$B$360,ESPN!$H$4:$H$360},2,FALSE)
+Use =VLOOKUP(A2,{ESPN!$A$2:$A$354,ESPN!$G$2:$G$354},2,FALSE)
 to carry over the projected point values from the ESPN tab to the import2R tab under ESPN column.
 
 11. Create column named NFL
