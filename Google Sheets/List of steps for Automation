@@ -15,7 +15,6 @@
 - Only do up until Kickers and stop (will have something else to manipulate defense names)
 
 
-
 5. Label the new column Player, copy it, and paste special so that you can delete the previous 
 three columns that gave you that output.
 
@@ -30,10 +29,6 @@ three columns that gave you that output.
 add the position from the FanDuel tab that coincide with the player names of this tab.
 =VLOOKUP(A2,FanDuel!$A$4:$B$418,2,False)
 # Will need a way to do a count of the ros the number 418 will change!
-
-##. way to call in data from CBS tab into the main tab lineup the points with the name column
-=VLOOKUP(A2,{CBS!$B$2:$B$539,CBS!$H$2:$H$539},2,FALSE))
-###
 
 10. Create column named ESPN
 Use =VLOOKUP(A2,{ESPN!$A$2:$A$354,ESPN!$G$2:$G$354},2,FALSE)
