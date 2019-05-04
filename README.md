@@ -1,4 +1,3 @@
-# FLEX
 FLEX Project Guidelines:
 ========================
 
