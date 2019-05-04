@@ -1,9 +1,37 @@
 # FLEX
+========================
+FLEX Project Guidelines:
+========================
+==================
+Mission Statement:
+==================
 
-FLEX Project Guidelines
-Git hub repository has been created and named FLEX, can be found by searching
-	terror12 / FLEX
-	Mission Statement: Build a predictive engine that will output projected best lineups for weekly entries into FanDuel.
+To build a web based daily fantasy football lineup generator using python3 for backend and Django fo UI.
+
+=====================
+Methodology:
+=====================
+Using Fanduels salary system compared with the average of the other top Fantasy prediction engines(NFL.com, Yahoo, ESPN) 
+we can construct a standard deviation (STD) value for every player for the upcoming week. With this list and the code in place to generate lineups based on the players standard deviation value, we will use a community driven approach to collect data and find out which standard deviation value for each position yeilds the highest average return.
+
+======================
+Action Plan:
+======================
+ 1. Collect database of historical data as far back as possible (3 years currently)
+ 2. Write python code to scrape webpages to pull down current projections week to week while in season. Save files as xmls or csvs
+ 3. Depending how files are stored import into Google sheets and automate how to create the STD list
+ 4. Build webpage that allows you to generate lineups for that weeks players.
+    a. Include sliders to change the STD number that you assign for the code to pull players from
+    b. Store all generated lineups and evaluate based on post week results save only lineup configuration that yeild a high result.
+ 5. Send link to community and advertise that using this can help them win $$$
+ 6. Create Facebook, Instagram, and twitter for Flexproject
+ 
+
+
+====================
+Leagacy information:
+====================
+Mission Statement: Build a predictive engine that will output projected best lineups for weekly entries into FanDuel.
 	Methodology:  Using top projection platforms, create a standard deviation value for each player based on the average projected points for that week, and the 'FanDuel FLEX value'. With that standard deviation value we will be able to oder the list of players from min to max STD. We will do this for 4 years of past data 2015-2019. Using a python script we will create lineups picking from the top of the list. These lineups will be based off of historical data, therefore we will be able to create lineups under the maximum salary and record the actual points scored by the lineup. A python script will be needed to generate lineups using different variables to generate the ordered STD list and record the results. We will then be able to compare which STD order leads to the highest scoring lineups on an average basis. This will be the lineup that we roll out on gameday.
 	
 	FanDuel creates a price value for each player. We will be judging a players value by 2-1/2 times their price. This value will be compared with numerous different player ranking platforms (yahoo, espn, nfl.com etc.) The standard deviation will be found between every possibility of each platform, I will most likely be looking at the lowest positive standard deviation. 
