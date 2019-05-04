@@ -1,20 +1,16 @@
 # FLEX
-========================
 FLEX Project Guidelines:
 ========================
-==================
+
 Mission Statement:
 ==================
-
 To build a web based daily fantasy football lineup generator using python3 for backend and Django fo UI.
 
-=====================
 Methodology:
 =====================
 Using Fanduels salary system compared with the average of the other top Fantasy prediction engines(NFL.com, Yahoo, ESPN) 
 we can construct a standard deviation (STD) value for every player for the upcoming week. With this list and the code in place to generate lineups based on the players standard deviation value, we will use a community driven approach to collect data and find out which standard deviation value for each position yeilds the highest average return.
 
-======================
 Action Plan:
 ======================
  1. Collect database of historical data as far back as possible (3 years currently)
@@ -29,7 +25,7 @@ Action Plan:
 
 
 ====================
-Leagacy information:
+Legacy information:
 ====================
 Mission Statement: Build a predictive engine that will output projected best lineups for weekly entries into FanDuel.
 	Methodology:  Using top projection platforms, create a standard deviation value for each player based on the average projected points for that week, and the 'FanDuel FLEX value'. With that standard deviation value we will be able to oder the list of players from min to max STD. We will do this for 4 years of past data 2015-2019. Using a python script we will create lineups picking from the top of the list. These lineups will be based off of historical data, therefore we will be able to create lineups under the maximum salary and record the actual points scored by the lineup. A python script will be needed to generate lineups using different variables to generate the ordered STD list and record the results. We will then be able to compare which STD order leads to the highest scoring lineups on an average basis. This will be the lineup that we roll out on gameday.
