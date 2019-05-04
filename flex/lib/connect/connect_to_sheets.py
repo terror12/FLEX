@@ -1,11 +1,19 @@
 
+from apiclient import discovery
+import httplib2
+from oauth2client import client
+from oauth2client import tools
+from oauth2client.file import Storage
+import os
+import pandas as pd
 
 class GoogleSheetsConnector():
     """
     Class object to hold credentials for connecting to google sheets
     """
 
-    #def __init__(self):
+    def __init__(self):
+        self.credentials = self.get_credentials()
 
 
     def get_credentials(self):
@@ -25,6 +33,7 @@ class GoogleSheetsConnector():
                                        'sheets.googleapis.com-python-quickstart.json')
         store = Storage(credential_path)
         credentials = store.get()
+        print(credentials)
         if not credentials or credentials.invalid:
             flow = client.flow_from_clientsecrets(CLIENT_SECRET_FILE, SCOPES)
             flow.user_agent = APPLICATION_NAME
@@ -38,8 +47,8 @@ class GoogleSheetsConnector():
     # Function that will take credentials from googlesheets and break up the sheet into dataframes RB,RB,WR,TE,FLX,DST.
     def posDframe(self, spreadsheetId, rangeName):
 
-        credentials = solution.get_credentials()
-        http = credentials.authorize(httplib2.Http())
+#        credentials = solution.get_credentials()
+        http = self.credentials.authorize(httplib2.Http())
         discoveryUrl = ('https://sheets.googleapis.com/$discovery/rest?'
                         'version=v4')
         service = discovery.build('sheets', 'v4', http=http,
@@ -51,3 +60,7 @@ class GoogleSheetsConnector():
         # Turns Googlesheet data into DataFrame and separates just the values
         full_df = pd.DataFrame(result['values'])
         return full_df
+
+FLEX = GoogleSheetsConnector()
+
+FLEX.get_credentials()

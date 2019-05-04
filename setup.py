@@ -38,7 +38,17 @@ setup(
     url="https://github.com/terror12/FLEX.git",
     packages=find_packages(),
     data_files=extra_files,
-    install_requires=[],
+    install_requires=[
+        "glusto@git+git://github.com/loadtheaccumulator/glusto.git"
+        "@python3_port4#egg-glusto"
+        'httplib2',
+        'numba',
+        'tqdm',
+        'apiclient',
+        'google-api-python-client',
+        'oauth2client',
+        'pandas'
+    ],
     classifiers=[
         "Programming Language :: Python :: 3"
     ]

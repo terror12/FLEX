@@ -1,0 +1,11 @@
+# Python packaging
+__pycache__
+
+#Python virtualenv
+executioner
+
+# IDE
+.idea
+
+# log
+Googleconnectorlog
