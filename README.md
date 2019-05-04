@@ -23,7 +23,6 @@ Action Plan:
  
 
 
-====================
 Legacy information:
 ====================
 Mission Statement: Build a predictive engine that will output projected best lineups for weekly entries into FanDuel.
