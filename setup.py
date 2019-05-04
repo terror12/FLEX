@@ -15,10 +15,10 @@
 # along with this program.If not, see < https://www.gnu.org/licenses/>.
 
 import os
-from import walk
-from import join
-from import setup, find_packages
-from import __version__
+from os import walk
+from os.path import join
+from setuptools import setup, find_packages
+from flex import __version__
 
 def package_files(directory):
     paths = []
