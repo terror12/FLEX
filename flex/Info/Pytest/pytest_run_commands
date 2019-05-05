@@ -1,0 +1,2 @@
+# run test for google sheet connection
+pytest tests/tier-0/testconnection/test_google_sheets.py -v -s --setup-show --testdata="{'spreadsheetId': '1VZLj2gegd6RwDmE3UYprClaGsMe91TDrNw8fsC5ZbD4', 'rangeName': 'A1:L537'}"

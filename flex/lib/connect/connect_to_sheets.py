@@ -12,8 +12,10 @@ class GoogleSheetsConnector():
     Class object to hold credentials for connecting to google sheets
     """
 
-    def __init__(self):
+    def __init__(self, spreadsheetId, rangeName):
         self.credentials = self.get_credentials()
+        self.spreadsheetId = spreadsheetId
+        self.rangeName = rangeName
 
 
     def get_credentials(self):
@@ -33,7 +35,6 @@ class GoogleSheetsConnector():
                                        'sheets.googleapis.com-python-quickstart.json')
         store = Storage(credential_path)
         credentials = store.get()
-        print(credentials)
         if not credentials or credentials.invalid:
             flow = client.flow_from_clientsecrets(CLIENT_SECRET_FILE, SCOPES)
             flow.user_agent = APPLICATION_NAME
@@ -45,7 +46,7 @@ class GoogleSheetsConnector():
         return credentials
 
     # Function that will take credentials from googlesheets and break up the sheet into dataframes RB,RB,WR,TE,FLX,DST.
-    def posDframe(self, spreadsheetId, rangeName):
+    def rd_sheet(self):
 
 #        credentials = solution.get_credentials()
         http = self.credentials.authorize(httplib2.Http())
@@ -54,13 +55,26 @@ class GoogleSheetsConnector():
         service = discovery.build('sheets', 'v4', http=http,
                                   discoveryServiceUrl=discoveryUrl)
         result = service.spreadsheets().values().get(
-            spreadsheetId=spreadsheetId, range=rangeName).execute()
+            spreadsheetId=self.spreadsheetId, range=self.rangeName).execute()
+#        print(result)
+        return result
         #values = result.get('values', [])
 
+
+    def result_to_df(self):
         # Turns Googlesheet data into DataFrame and separates just the values
-        full_df = pd.DataFrame(result['values'])
+        #result = self.rd_sheet(spreadsheetId, rangeName)
+        #print('+++++++++++++++++++')
+        #print(self.result)
+        full_df = pd.DataFrame(self.rd_sheet()['values'])
         return full_df
 
-FLEX = GoogleSheetsConnector()
 
+# Instantiate Class object
+FLEX = GoogleSheetsConnector('1VZLj2gegd6RwDmE3UYprClaGsMe91TDrNw8fsC5ZbD4', 'A1:L537')
+
+# Start using methods
 FLEX.get_credentials()
+FLEX.rd_sheet()
+#help(FLEX)
+FLEX.result_to_df()
