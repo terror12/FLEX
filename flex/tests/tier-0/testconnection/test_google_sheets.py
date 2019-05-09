@@ -8,7 +8,7 @@ import pytest
 
 class TestConnection:
 
-    g.add_log(g.log, filename='./Googleconnectorlog')
+    g.add_log(g.log, filename='./logs/Googleconnectorlog')
 
 
     @pytest.mark.json

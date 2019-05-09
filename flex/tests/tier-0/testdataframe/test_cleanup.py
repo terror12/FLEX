@@ -10,7 +10,7 @@ import pytest
 class TestCleanup:
 
     #g.add_log(g.log, filename='STDOUT')
-    g.add_log(g.log, filename='./Dataframecleanuplog')
+    g.add_log(g.log, filename='./logs/Dataframecleanuplog')
 
 
     @pytest.mark.header
