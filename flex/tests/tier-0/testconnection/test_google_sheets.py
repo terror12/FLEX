@@ -8,12 +8,11 @@ import pytest
 
 class TestConnection:
 
-    g.add_log(g.log, filename='STDOUT')
     g.add_log(g.log, filename='./Googleconnectorlog')
 
 
     @pytest.mark.json
-    def test_creds_file(self):
+    def test_creds_file(self, print_logging):
         """
         Test the existence of the creds json file
         :return:
@@ -23,7 +22,7 @@ class TestConnection:
 
 
     @pytest.mark.rd_sheet
-    def test_read_sheet(self, deftestdata):
+    def test_read_sheet(self, deftestdata, print_logging):
         """
         Test that we can read a sheet using the credential object
         :return:
@@ -63,7 +62,7 @@ class TestConnection:
         # g.log.info(validated)
 
     @pytest.mark.conn
-    def test_connectivity(self, deftestdata):
+    def test_connectivity(self, deftestdata, print_logging):
         """
         Assert that we can connect with our creds file and return a Dataframe
         :return:

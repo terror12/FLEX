@@ -45,10 +45,13 @@ class GoogleSheetsConnector():
             print('Storing credentials to ' + credential_path)
         return credentials
 
-    # Function that will take credentials from googlesheets and break up the sheet into dataframes RB,RB,WR,TE,FLX,DST.
-    def rd_sheet(self):
 
-#        credentials = solution.get_credentials()
+    def rd_sheet(self):
+        """
+        Method to read from GoogleSheets using credentials object from 'get_credentials()'
+        :return result: Object holding values from the Googlesheet, among other things I assume be we are only using 'values'
+        """
+
         http = self.credentials.authorize(httplib2.Http())
         discoveryUrl = ('https://sheets.googleapis.com/$discovery/rest?'
                         'version=v4')
@@ -56,17 +59,18 @@ class GoogleSheetsConnector():
                                   discoveryServiceUrl=discoveryUrl)
         result = service.spreadsheets().values().get(
             spreadsheetId=self.spreadsheetId, range=self.rangeName).execute()
-#        print(result)
+
         return result
-        #values = result.get('values', [])
 
 
     def result_to_df(self):
-        # Turns Googlesheet data into DataFrame and separates just the values
-        #result = self.rd_sheet(spreadsheetId, rangeName)
-        #print('+++++++++++++++++++')
-        #print(self.result)
+        """
+        Turns Googlesheet result data into DataFrame and separates just the values
+        :return full_df: Dataframe holding everything in Goooglsheet
+        """
+
         full_df = pd.DataFrame(self.rd_sheet()['values'])
+
         return full_df
 
 
@@ -76,5 +80,4 @@ FLEX = GoogleSheetsConnector('1VZLj2gegd6RwDmE3UYprClaGsMe91TDrNw8fsC5ZbD4', 'A1
 # Start using methods
 FLEX.get_credentials()
 FLEX.rd_sheet()
-#help(FLEX)
 FLEX.result_to_df()
