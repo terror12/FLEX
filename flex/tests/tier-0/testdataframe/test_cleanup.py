@@ -118,10 +118,10 @@ class TestCleanup:
         g.log.info('All Non-Available have Been Removed!!')
         assert True
 
-    @pytest.mark.cut
-    def test_roster_cut(self, rawDataframe, print_logging):
+    @pytest.mark.rm_low
+    def test_rm_Low_Projections(self, rawDataframe, print_logging):
         """
-        Method to remove all 0's from Platform_AVG in Dataframe.
+        Method to remove all players with < 1 in Platform_AVG in Dataframe.
         :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
         :param print_logging: Fixture to initialize logging.
         :return: True or False
@@ -131,15 +131,44 @@ class TestCleanup:
 
         g.log.info('Instantiate Remove() object')
         rm = Remove()
-        g.log.info('Removing All players with 0 in Platform_AVG')
-        df = rm.Roster_cut(df)
+        g.log.info('Removing All players with < 1 in Platform_AVG')
+        df = rm.rm_Low_Projections(df)
 
         df.values.tolist()
 
         for i in df.Platform_AVG:
-            if i == 0:
-                g.log.info('Players With 0 in Platform_AVG Exist When They Shouldnt!!')
+            if i <= 1.0:
+                g.log.info('Players With Platform_AVG under 1 Exist When They Shouldnt!!')
                 assert False
 
-        g.log.info('All 0s from Platform_AVG have Been Removed!!')
+        g.log.info('All Player With Platform_AVG Under 1 have Been Removed!!')
+        assert True
+
+
+    @pytest.mark.rm_high
+    def test_rm_High_Std(self, rawDataframe, print_logging):
+        """
+        Method to remove all Players with STD greater then 10.
+        :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
+        :param print_logging: Fixture to initialize logging.
+        :return: True or False
+        """
+        FixUp_df = FixUpDf()
+        df = FixUp_df.fix_header(rawDataframe)
+
+        g.log.info('Instantiate Remove() object')
+        rm = Remove()
+        g.log.info('Removing All Not Available values from STD column using rm_NA()')
+        df = rm.rm_NA(df)
+        g.log.info('Removing All players with STD >= 10')
+        df = rm.rm_High_Std(df)
+
+        df.values.tolist()
+
+        for i in df.STD:
+            if i >= 10.0:
+                g.log.info('Players With STD >= 10.0 Exist When They Shouldnt!!')
+                assert False
+
+        g.log.info('All players with STD >= 10.0 have Been Removed!!')
         assert True

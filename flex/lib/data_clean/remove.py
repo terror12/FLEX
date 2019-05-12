@@ -1,4 +1,4 @@
-
+import pandas as pd
 from flex.lib.connect.connect_to_sheets import  GoogleSheetsConnector
 
 class Remove:
@@ -51,14 +51,31 @@ class Remove:
 
         return df
 
-    def Roster_cut(self, df):
+    def rm_Low_Projections(self, df):
         """
-        Remove all players with a Platform_AVG of 0
+        Remove all players with a Platform_AVG Less than 1.0
         :param df: The Dataframe
-        :return df: The Dataframe without 0's in Platform_AVG
+        :return df: The Dataframe without Players < 1 in Platform_AVG
         """
 
-        df = df[df.Platform_AVG != '0']
+        df['Platform_AVG'] = pd.to_numeric(df['Platform_AVG'])
+
+        df = df[~(df['Platform_AVG'] <= 1.0)]
+        print('\n %s' % df.tail(10))
+
+        return df
+
+    def rm_High_Std(self, df):
+        """
+        Remove all players with STD > 10.0
+        :param df: The Dataframe
+        :return df: The Dataframe without players with STD > 10.0
+        """
+
+        # Convert STD Column to integers
+        df['STD'] = pd.to_numeric(df['STD'])
+
+        df = df[~(df['STD'] >= 10.0)]
         print('\n %s' % df.tail(10))
 
         return df
