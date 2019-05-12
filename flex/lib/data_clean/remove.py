@@ -11,7 +11,7 @@ class Remove:
         """
         # remove columns that I do not need
         df = full_df_head[['player', 'team', 'position', 'Actual_Points', 'FanDuel_Salary', 'Platform_AVG', 'STD']]
-        print('\n %s' % df)
+        print('\n %s' % df.head(10))
         return df
 
 
@@ -23,7 +23,7 @@ class Remove:
         """
 
         df = df[['player', 'team', 'position', 'Actual_Points', 'FanDuel_Salary', 'Platform_AVG', 'STD']]
-        print('\n %s' % df)
+        print('\n %s' % df.head(10))
         return df
 
     def rm_FA(self, df):
@@ -35,15 +35,18 @@ class Remove:
 
         # Removes all free agents
         df = df[df.team != "FA"]
+        print('\n %s' % df.head(10))
 
         return df
 
-# FLEX = GoogleSheetsConnector('1VZLj2gegd6RwDmE3UYprClaGsMe91TDrNw8fsC5ZbD4', 'A1:L537')
-#
-# # Start using methods
-# FLEX.get_credentials()
-# FLEX.rd_sheet()
-# full_df_head = FLEX.result_to_df()
-#
-# Remove = Remove()
-# Remove.columns(full_df_head)
+    def rm_NA(self, df):
+        """
+        Remove all Non-Aveailable from Dataframe
+        :param df: The Dataframe
+        :return df: The Dataframe without NA's
+        """
+
+        df = df[df.STD.str.contains("#N/A") == False]
+        print('\n %s' % df.head(10))
+
+        return df

@@ -6,6 +6,9 @@ from flex.lib.data_clean.remove import Remove
 import os.path
 from os import path
 import pytest
+from pandas import Series, DataFrame
+from pandas import Series
+import pandas
 
 
 class TestCleanup:
@@ -17,8 +20,10 @@ class TestCleanup:
     @pytest.mark.header
     def test_header(self, rawDataframe, print_logging):
         """
-
-        :return:
+        Method to replace numbered header with proper headers from Google Sheets
+        :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
+        :param print_logging: Fixture to initialize logging.
+        :return: True or False
         """
 
         head = FixUpDf()
@@ -35,10 +40,10 @@ class TestCleanup:
     @pytest.mark.cols
     def test_rm_cols(self, rawDataframe, print_logging):
         """
-
-        :param rawDataframe:
-        :param print_logging:
-        :return:
+        Method to remove all unneeded columns from Dataframe.
+        :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
+        :param print_logging: Fixture to initialize logging.
+        :return: True or False
         """
         FixUp_df = FixUpDf()
         df = FixUp_df.fix_header(rawDataframe)
@@ -59,10 +64,58 @@ class TestCleanup:
     @pytest.mark.FA
     def test_rm_FA(self, rawDataframe, print_logging):
         """
-
-        :param rawDataframe:
-        :param print_logging:
-        :return:
+        Method to remove all Free Agents from Dataframe.
+        :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
+        :param print_logging: Fixture to initialize logging.
+        :return: True or False
         """
+
+        g.log.info('Connect to Googlesheet and prep the data')
+
         df = FixUpDf()
         df = df.fix_header(rawDataframe)
+
+        g.log.info('Instantiate Remove() object')
+        rm = Remove()
+        g.log.info('Removing All Free Agents using rm_FA()')
+
+
+        df = rm.rm_FA(df)
+        df.values.tolist()
+
+        for i in df.team:
+            if i == 'FA':
+                g.log.info('Free Agents Exist When They Shouldnt!!')
+                assert False
+
+        g.log.info('All FAs have Been Removed!!')
+        assert True
+
+    @pytest.mark.NA
+    def test_rm_NA(self, rawDataframe, print_logging):
+        """
+        Method to remove all Non-Available from Dataframe.
+        :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
+        :param print_logging: Fixture to initialize logging.
+        :return: True or False
+        """
+
+        g.log.info('Connect to Googlesheet and prep the data')
+
+        df = FixUpDf()
+        df = df.fix_header(rawDataframe)
+
+        g.log.info('Instantiate Remove() object')
+        rm = Remove()
+        g.log.info('Removing All Not Available values from STD column using rm_NA()')
+        df = rm.rm_NA(df)
+        df.values.tolist()
+
+
+        for i in df.STD:
+            if i == '#N/A':
+                g.log.info('Non Available Players Exist When They Shouldnt!!')
+                assert False
+
+        g.log.info('All Non-Available have Been Removed!!')
+        assert True
