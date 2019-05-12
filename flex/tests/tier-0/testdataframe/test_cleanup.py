@@ -172,3 +172,93 @@ class TestCleanup:
 
         g.log.info('All players with STD >= 10.0 have Been Removed!!')
         assert True
+
+    @pytest.mark.seperate
+    def test_seperate_Positions(self, rawDataframe, print_logging):
+        """
+        Test that the full Dataframe is broken up by position
+        :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
+        :param print_logging: Fixture to initialize logging.
+        :return: True or False
+        """
+
+        g.log.info('Instantiate FixUpDF() object')
+        FixUp_df = FixUpDf()
+        df = FixUp_df.fix_header(rawDataframe)
+
+        g.log.info('Seperating Full Dataframe Into Positional Dataframes')
+        QB, RB, WR, TE, DST = FixUp_df.seperate_positions(df)
+
+
+        g.log.info('Ensure that no other position is in QB Datframe')
+        CHECK_QB = False
+        for i in QB.position:
+            if i in ('RB', 'WR', 'TE', 'DST'):
+                assert False
+            else:
+                CHECK_QB = True
+
+        g.log.info('Ensure that no other position is in RB Datframe')
+        CHECK_RB = False
+        for i in RB.position:
+            if i in ('QB', 'WR', 'TE', 'DST'):
+                assert False
+            else:
+                CHECK_RB = True
+
+        g.log.info('Ensure that no other position is in WR Datframe')
+        CHECK_WR = False
+        for i in WR.position:
+            if i in ('QB', 'RB', 'TE', 'DST'):
+                assert False
+            else:
+                CHECK_WR = True
+
+        g.log.info('Ensure that no other position is in TE Datframe')
+        CHECK_TE = False
+        for i in TE.position:
+            if i in ('QB', 'RB', 'WR', 'DST'):
+                assert False
+            else:
+                CHECK_TE = True
+
+        g.log.info('Ensure that no other position is in DST Datframe')
+        CHECK_DST = False
+        for i in DST.position:
+            if i in ('QB', 'RB', 'WR', 'TE'):
+                assert False
+            else:
+                CHECK_DST = True
+
+        if CHECK_QB == True:
+            g.log.info('QB Positional Dataframe Created Succesfully!!')
+            g.log.info('\n %s' % QB.head(3))
+
+        if CHECK_RB == True:
+            g.log.info('RB Positional Dataframe Created Succesfully!!')
+            g.log.info('\n %s' % RB.head(3))
+
+        if CHECK_WR == True:
+            g.log.info('WR Positional Dataframe Created Succesfully!!')
+            g.log.info('\n %s' % WR.head(3))
+
+        if CHECK_TE == True:
+            g.log.info('TE Positional Dataframe Created Succesfully!!')
+            g.log.info('\n %s' % TE.head(3))
+
+        if CHECK_DST == True:
+            g.log.info('DST Positional Dataframe Created Succesfully!!')
+            g.log.info('\n %s' % DST.head(3))
+
+
+        if CHECK_QB == CHECK_RB == CHECK_WR == CHECK_TE == CHECK_DST == True:
+            g.log.info('========================================================')
+            g.log.info('All Positional Dataframes Created Succesfully!!')
+            g.log.info('========================================================')
+            assert True
+
+        else:
+            g.log.info('========================================================')
+            g.log.info('All Positional Dataframes Were NOT Created Succesfully!!')
+            g.log.info('========================================================')
+            assert False
