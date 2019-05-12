@@ -41,12 +41,24 @@ class Remove:
 
     def rm_NA(self, df):
         """
-        Remove all Non-Aveailable from Dataframe
+        Remove all Non-Available from Dataframe
         :param df: The Dataframe
         :return df: The Dataframe without NA's
         """
 
         df = df[df.STD.str.contains("#N/A") == False]
         print('\n %s' % df.head(10))
+
+        return df
+
+    def Roster_cut(self, df):
+        """
+        Remove all players with a Platform_AVG of 0
+        :param df: The Dataframe
+        :return df: The Dataframe without 0's in Platform_AVG
+        """
+
+        df = df[df.Platform_AVG != '0']
+        print('\n %s' % df.tail(10))
 
         return df

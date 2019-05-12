@@ -79,7 +79,6 @@ class TestCleanup:
         rm = Remove()
         g.log.info('Removing All Free Agents using rm_FA()')
 
-
         df = rm.rm_FA(df)
         df.values.tolist()
 
@@ -111,11 +110,36 @@ class TestCleanup:
         df = rm.rm_NA(df)
         df.values.tolist()
 
-
         for i in df.STD:
             if i == '#N/A':
                 g.log.info('Non Available Players Exist When They Shouldnt!!')
                 assert False
 
         g.log.info('All Non-Available have Been Removed!!')
+        assert True
+
+    @pytest.mark.cut
+    def test_roster_cut(self, rawDataframe, print_logging):
+        """
+        Method to remove all 0's from Platform_AVG in Dataframe.
+        :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
+        :param print_logging: Fixture to initialize logging.
+        :return: True or False
+        """
+        FixUp_df = FixUpDf()
+        df = FixUp_df.fix_header(rawDataframe)
+
+        g.log.info('Instantiate Remove() object')
+        rm = Remove()
+        g.log.info('Removing All players with 0 in Platform_AVG')
+        df = rm.Roster_cut(df)
+
+        df.values.tolist()
+
+        for i in df.Platform_AVG:
+            if i == 0:
+                g.log.info('Players With 0 in Platform_AVG Exist When They Shouldnt!!')
+                assert False
+
+        g.log.info('All 0s from Platform_AVG have Been Removed!!')
         assert True
