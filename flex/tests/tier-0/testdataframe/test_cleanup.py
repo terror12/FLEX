@@ -197,7 +197,6 @@ class TestCleanup:
                 assert False
             else:
                 CHECK_QB = True
-
         g.log.info('Ensure that no other position is in RB Datframe')
         CHECK_RB = False
         for i in RB.position:
@@ -205,7 +204,6 @@ class TestCleanup:
                 assert False
             else:
                 CHECK_RB = True
-
         g.log.info('Ensure that no other position is in WR Datframe')
         CHECK_WR = False
         for i in WR.position:
@@ -213,7 +211,6 @@ class TestCleanup:
                 assert False
             else:
                 CHECK_WR = True
-
         g.log.info('Ensure that no other position is in TE Datframe')
         CHECK_TE = False
         for i in TE.position:
@@ -221,7 +218,6 @@ class TestCleanup:
                 assert False
             else:
                 CHECK_TE = True
-
         g.log.info('Ensure that no other position is in DST Datframe')
         CHECK_DST = False
         for i in DST.position:
@@ -233,32 +229,37 @@ class TestCleanup:
         if CHECK_QB == True:
             g.log.info('QB Positional Dataframe Created Succesfully!!')
             g.log.info('\n %s' % QB.head(3))
-
         if CHECK_RB == True:
             g.log.info('RB Positional Dataframe Created Succesfully!!')
             g.log.info('\n %s' % RB.head(3))
-
         if CHECK_WR == True:
             g.log.info('WR Positional Dataframe Created Succesfully!!')
             g.log.info('\n %s' % WR.head(3))
-
         if CHECK_TE == True:
             g.log.info('TE Positional Dataframe Created Succesfully!!')
             g.log.info('\n %s' % TE.head(3))
-
         if CHECK_DST == True:
             g.log.info('DST Positional Dataframe Created Succesfully!!')
             g.log.info('\n %s' % DST.head(3))
 
 
         if CHECK_QB == CHECK_RB == CHECK_WR == CHECK_TE == CHECK_DST == True:
-            g.log.info('========================================================')
+            g.log.info('=================================================')
             g.log.info('All Positional Dataframes Created Succesfully!!')
-            g.log.info('========================================================')
+            g.log.info('=================================================')
             assert True
-
         else:
             g.log.info('========================================================')
             g.log.info('All Positional Dataframes Were NOT Created Succesfully!!')
             g.log.info('========================================================')
             assert False
+
+    @pytest.mark.dupe
+    def test_seperate_Positions(self, rawDataframe, print_logging):
+        """
+        Test to remove all players except the one with the highest Platform_AVG.
+        :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
+        :param print_logging: Fixture to initialize logging.
+        :return: True or False
+        """
+        pass

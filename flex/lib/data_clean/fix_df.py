@@ -21,6 +21,12 @@ class FixUpDf:
         return df
 
     def seperate_positions(self, df):
+        """
+        Function to brak up full dataframe into postional dataframes
+        :param df:
+        :return:
+        """
+
         # Create dataframe of just QBS
         QB = df.loc[df['position'] == 'QB']
 
@@ -37,6 +43,44 @@ class FixUpDf:
         DST = df.loc[df['position'] == 'DST']
 
         return QB, RB, WR, TE, DST
+
+    def convert_to_num(self, df, col):
+        """
+        Convert Column into a numeric value.
+        :param df:
+        :return:
+        """
+
+        df[col] = pd.to_numeric(df[col])
+
+        return df
+
+    def hitpositionLimits(self, df, limit):
+        """
+
+        :param df:
+        :param limit:
+        :return:
+        """
+
+        if len(df) > limit:
+            df = df.sort_values(by=[col], ascending=False)
+            diff = (len(df) - limit)
+            df = df[:-diff]
+
+        return df
+
+    def order_STD(self, df, col):
+        """
+
+        :param df:
+        :param col:
+        :return:
+        """
+
+        df = df.sort_values(by=[col], ascending=True)
+        
+        return df
 
 
 # FLEX = GoogleSheetsConnector('1VZLj2gegd6RwDmE3UYprClaGsMe91TDrNw8fsC5ZbD4', 'A1:L537')

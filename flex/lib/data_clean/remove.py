@@ -79,3 +79,10 @@ class Remove:
         print('\n %s' % df.tail(10))
 
         return df
+
+    def rm_dupe(self, df):
+        """
+        Remove
+        :param df:
+        :return:
+        """
