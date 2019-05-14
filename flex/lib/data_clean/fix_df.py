@@ -1,3 +1,5 @@
+import pandas as pd
+
 
 class FixUpDf:
 
@@ -79,8 +81,23 @@ class FixUpDf:
         """
 
         df = df.sort_values(by=[col], ascending=True)
-        
+
         return df
+
+    def flx_Create(self, RB, WR, TE):
+        """
+        Create the FLX positional Dataframe
+        :param RB: RB Dataframe
+        :param WR: WR Dataframe
+        :param TE: TE Dataframe
+        :return: The FLX Dataframe
+        """
+
+        # Create the FLX dataframe
+        FLX = pd.DataFrame()
+        FLX = pd.concat([RB,WR,TE], ignore_index=True)
+
+        return FLX
 
 
 # FLEX = GoogleSheetsConnector('1VZLj2gegd6RwDmE3UYprClaGsMe91TDrNw8fsC5ZbD4', 'A1:L537')
