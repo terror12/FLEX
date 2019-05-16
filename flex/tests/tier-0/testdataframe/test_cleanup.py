@@ -13,7 +13,6 @@ import pandas
 
 class TestCleanup:
 
-    #g.add_log(g.log, filename='STDOUT')
     g.add_log(g.log, filename='./logs/Dataframecleanuplog')
 
 
@@ -262,4 +261,27 @@ class TestCleanup:
         :param print_logging: Fixture to initialize logging.
         :return: True or False
         """
-        pass
+
+        FixUp_df = FixUpDf()
+        df = FixUp_df.fix_header(rawDataframe)
+
+        QB, RB, WR, TE, DST = FixUp_df.seperate_positions(df)
+
+        g.log.info('Instantiate Remove() object')
+        rm = Remove()
+        g.log.info('Removing All duplicate players from the same team except one w/ highest AVG')
+
+        QB = rm.rm_dupe(QB)
+
+        print(QB)
+
+        df_list = []
+        # TODO: Fix this thang up
+        for i in QB.team:
+            if i in df_list:
+                assert False
+            else:
+                df_list = df_list.append(i)
+
+        g.log.info('There is not any duplicate team values')
+        assert True

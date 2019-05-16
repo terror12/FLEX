@@ -86,3 +86,7 @@ class Remove:
         :param df:
         :return:
         """
+
+        df = df.sort_values('Platform_AVG', ascending=False).drop_duplicates('team').sort_index()
+
+        return df
