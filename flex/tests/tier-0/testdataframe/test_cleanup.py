@@ -162,6 +162,7 @@ class TestCleanup:
         g.log.info('Removing All players with STD >= 10')
         df = rm.rm_High_Std(df)
 
+
         df.values.tolist()
 
         for i in df.STD:
@@ -270,18 +271,19 @@ class TestCleanup:
         g.log.info('Instantiate Remove() object')
         rm = Remove()
         g.log.info('Removing All duplicate players from the same team except one w/ highest AVG')
-
         QB = rm.rm_dupe(QB)
+        g.log.info("Change Dataframe to a list")
+        QB.values.tolist()
 
-        print(QB)
 
         df_list = []
-        # TODO: Fix this thang up
+        g.log.info("Loop Through QB Dataframe and check for duplicates")
         for i in QB.team:
             if i in df_list:
+                print("There was a team that was found more then once!!")
                 assert False
             else:
-                df_list = df_list.append(i)
+                df_list.append(i)
 
-        g.log.info('There is not any duplicate team values')
+        g.log.info('There is not any duplicate team values!!')
         assert True
