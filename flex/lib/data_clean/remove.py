@@ -82,11 +82,26 @@ class Remove:
 
     def rm_dupe(self, df):
         """
-        Remove
-        :param df:
-        :return:
+        Remove Players from a postional datfaframe that are on the same team so that there are no
+        duplicates. Removing the lowest projected scorers first.
+        :param df: The positional Dataframe
+        :return: The Dataframe without any same team duplicates
         """
 
         df = df.sort_values('Platform_AVG', ascending=False).drop_duplicates('team').sort_index()
+
+        return df
+
+    def hitpositionLimits(self, df, num):
+        """
+        Remove all but n players from dataframe. Remove from bottom of list to top.
+        :param df: The Dataframe
+        :return:
+        """
+
+        if len(df) > num:
+            df = df.sort_values(by=['Platform_AVG'], ascending=False)
+            diff = (len(df) - num)
+            df = df[:-diff]
 
         return df

@@ -42,7 +42,7 @@ class TestCleanup:
         Method to remove all unneeded columns from Dataframe.
         :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
         :param print_logging: Fixture to initialize logging.
-        :return: True or False
+        :assert: True or False
         """
         FixUp_df = FixUpDf()
         df = FixUp_df.fix_header(rawDataframe)
@@ -66,7 +66,7 @@ class TestCleanup:
         Method to remove all Free Agents from Dataframe.
         :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
         :param print_logging: Fixture to initialize logging.
-        :return: True or False
+        :assert: True or False
         """
 
         g.log.info('Connect to Googlesheet and prep the data')
@@ -95,7 +95,7 @@ class TestCleanup:
         Method to remove all Non-Available from Dataframe.
         :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
         :param print_logging: Fixture to initialize logging.
-        :return: True or False
+        :assert: True or False
         """
 
         g.log.info('Connect to Googlesheet and prep the data')
@@ -123,7 +123,7 @@ class TestCleanup:
         Method to remove all players with < 1 in Platform_AVG in Dataframe.
         :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
         :param print_logging: Fixture to initialize logging.
-        :return: True or False
+        :assert: True or False
         """
         FixUp_df = FixUpDf()
         df = FixUp_df.fix_header(rawDataframe)
@@ -150,7 +150,7 @@ class TestCleanup:
         Method to remove all Players with STD greater then 10.
         :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
         :param print_logging: Fixture to initialize logging.
-        :return: True or False
+        :assert: True or False
         """
         FixUp_df = FixUpDf()
         df = FixUp_df.fix_header(rawDataframe)
@@ -179,7 +179,7 @@ class TestCleanup:
         Test that the full Dataframe is broken up by position
         :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
         :param print_logging: Fixture to initialize logging.
-        :return: True or False
+        :assert: True or False
         """
 
         g.log.info('Instantiate FixUpDF() object')
@@ -260,7 +260,7 @@ class TestCleanup:
         Test to remove all players except the one with the highest Platform_AVG.
         :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
         :param print_logging: Fixture to initialize logging.
-        :return: True or False
+        :assert: True or False
         """
 
         FixUp_df = FixUpDf()
@@ -287,3 +287,41 @@ class TestCleanup:
 
         g.log.info('There is not any duplicate team values!!')
         assert True
+
+    @pytest.mark.limit
+    def test_hit_Position_Limit(self, rawDataframe, print_logging):
+        """
+        Test to make sure we can limit the length of the positional dataframes.
+        :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
+        :param print_logging: Fixture to initialize logging.
+        :assert: True or False
+        """
+
+        FixUp_df = FixUpDf()
+        df = FixUp_df.fix_header(rawDataframe)
+
+        QB, RB, WR, TE, DST = FixUp_df.seperate_positions(df)
+
+        g.log.info('Instantiate Remove() object')
+        rm = Remove()
+
+        g.log.info('Set position limits')
+        QB = rm.hitpositionLimits(QB, 32)
+        RB = rm.hitpositionLimits(RB, 150)
+        WR = rm.hitpositionLimits(WR, 150)
+        TE = rm.hitpositionLimits(TE, 90)
+        DST = rm.hitpositionLimits(DST, 32)
+
+        if len(QB) > 32 or len(DST) > 32:
+            g.log.info('Either QB or DST dataframe has too many entities')
+            assert False
+        if len(RB) > 150 or len(WR) > 150:
+            g.log.info('Ethier RB or WR dataframe has too many entities')
+            assert False
+        if len(TE) > 90:
+            g.log.info('TE dataframe has too many entities')
+            assert False
+
+        g.log.info('All dataframes hit position limits!!')
+        assert True
+
