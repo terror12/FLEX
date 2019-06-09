@@ -80,28 +80,41 @@ class Remove:
 
         return df
 
-    def rm_dupe(self, df):
+    def rm_dupe(self, dfp):
         """
         Remove Players from a postional datfaframe that are on the same team so that there are no
         duplicates. Removing the lowest projected scorers first.
-        :param df: The positional Dataframe
+        :param dfp: The positional Dataframe
         :return: The Dataframe without any same team duplicates
         """
 
-        df = df.sort_values('Platform_AVG', ascending=False).drop_duplicates('team').sort_index()
+        dfp = dfp.sort_values('Platform_AVG', ascending=False).drop_duplicates('team').sort_index()
 
-        return df
+        return dfp
 
-    def hitpositionLimits(self, df, num):
+    def hit_Position_Limits(self, dfp, num):
         """
         Remove all but n players from dataframe. Remove from bottom of list to top.
-        :param df: The Dataframe
-        :return:
+        :param dfp: The positional Dataframe
+        :return: The positional dataframe with length limits
         """
 
-        if len(df) > num:
-            df = df.sort_values(by=['Platform_AVG'], ascending=False)
-            diff = (len(df) - num)
-            df = df[:-diff]
+        if len(dfp) > num:
+            dfp = dfp.sort_values(by=['Platform_AVG'], ascending=False)
+            diff = (len(dfp) - num)
+            dfp = dfp[:-diff]
 
-        return df
+        return dfp
+
+    def use_Needed_Cols(self, dfp):
+        """
+        Use only the needed columns 'player', 'team', 'Actual_Points', 'FanDuel_Salary', 'STD'
+        This is meant to be run after dataframe is broken up into positional dataframe and cleanup tasks
+        using 'Platform Avg have been done.
+        :param dfp: The positional Dataframe
+        :return: The positional dataframe with only needed columns
+        """
+
+        dfp = dfp[['player', 'team', 'Actual_Points', 'FanDuel_Salary', 'STD']]
+
+        return dfp

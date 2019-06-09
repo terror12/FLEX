@@ -306,11 +306,11 @@ class TestCleanup:
         rm = Remove()
 
         g.log.info('Set position limits')
-        QB = rm.hitpositionLimits(QB, 32)
-        RB = rm.hitpositionLimits(RB, 150)
-        WR = rm.hitpositionLimits(WR, 150)
-        TE = rm.hitpositionLimits(TE, 90)
-        DST = rm.hitpositionLimits(DST, 32)
+        QB = rm.hit_Position_Limits(QB, 32)
+        RB = rm.hit_Position_Limits(RB, 150)
+        WR = rm.hit_Position_Limits(WR, 150)
+        TE = rm.hit_Position_Limits(TE, 90)
+        DST = rm.hit_Position_Limits(DST, 32)
 
         if len(QB) > 32 or len(DST) > 32:
             g.log.info('Either QB or DST dataframe has too many entities')
@@ -324,4 +324,30 @@ class TestCleanup:
 
         g.log.info('All dataframes hit position limits!!')
         assert True
+    @pytest.mark.needed
+    def test_use_Needed_Cols(self, rawDataframe, print_logging):
+        """
+        Only the following 5 coumns are needed to begin creating lineups from the datframe.
+        We need to check to make sure the dataframes that should have been removed were removed.
+        :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
+        :param print_logging: Fixture to initialize logging.
+        :assert: True or False
+        """
 
+        FixUp_df = FixUpDf()
+        df = FixUp_df.fix_header(rawDataframe)
+
+        QB, RB, WR, TE, DST = FixUp_df.seperate_positions(df)
+
+        g.log.info('Instantiate Remove() object')
+        rm = Remove()
+
+        g.log.info('Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD')
+        QB = rm.use_Needed_Cols(QB)
+
+        if ('Platform_AVG', 'position') in QB:
+            g.log.info('Dataframe is holding columns that should have been removed')
+            assert False
+
+        g.log.info('Only needed columns Remain!!')
+        assert True
