@@ -1,18 +1,18 @@
 import pandas as pd
-from flex.lib.connect.connect_to_sheets import  GoogleSheetsConnector
+from flex.lib.connect.connect_to_sheets import  SheetsConnector
 
 class Remove:
 
-    def columns(self, full_df_head):
-        """
-
-        :param full_df_head:
-        :return:
-        """
-        # remove columns that I do not need
-        df = full_df_head[['player', 'team', 'position', 'Actual_Points', 'FanDuel_Salary', 'Platform_AVG', 'STD']]
-        print('\n %s' % df.head(10))
-        return df
+    # def columns(self, full_df_head):
+    #     """
+    #
+    #     :param full_df_head:
+    #     :return:
+    #     """
+    #     # remove columns that I do not need
+    #     df = full_df_head[['player', 'team', 'position', 'Actual_Points', 'FanDuel_Salary', 'Platform_AVG', 'STD']]
+    #     print('\n %s' % df.head(10))
+    #     return df
 
 
     def rm_cols(self, df):

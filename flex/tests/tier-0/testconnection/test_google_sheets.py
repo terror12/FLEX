@@ -1,5 +1,5 @@
 from glusto.core import Glusto as g
-from flex.lib.connect.connect_to_sheets import GoogleSheetsConnector
+from flex.lib.connect.connect_to_sheets import SheetsConnector
 #from schema import Schema, And, Use, Optional
 import os.path
 from os import path
@@ -8,7 +8,7 @@ import pytest
 
 class TestConnection:
 
-    g.add_log(g.log, filename='./logs/Googleconnectorlog')
+    g.add_log(g.log, filename='./logs/connectorlog')
 
 
     @pytest.mark.json
@@ -29,7 +29,7 @@ class TestConnection:
         """
         self.spreadsheetId = deftestdata['spreadsheetId']
         self.rangeName = deftestdata['rangeName']
-        gsc = GoogleSheetsConnector(self.spreadsheetId, self.rangeName)
+        gsc = SheetsConnector(self.spreadsheetId, self.rangeName)
 
         g.log.info('Read from Google sheet')
         result = gsc.rd_sheet()
@@ -70,8 +70,8 @@ class TestConnection:
 
         self.spreadsheetId = deftestdata['spreadsheetId']
         self.rangeName = deftestdata['rangeName']
-        g.log.info('Instantiate GoogleSheetConnector object')
-        gsc = GoogleSheetsConnector(self.spreadsheetId, self.rangeName)
+        g.log.info('Instantiate SheetConnector object')
+        gsc = SheetsConnector(self.spreadsheetId, self.rangeName)
 
         g.log.info('Get credentials...')
         gsc.get_credentials()

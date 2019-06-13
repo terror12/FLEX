@@ -7,7 +7,7 @@ from oauth2client.file import Storage
 import os
 import pandas as pd
 
-class GoogleSheetsConnector():
+class SheetsConnector():
     """
     Class object to hold credentials for connecting to google sheets
     """
@@ -75,7 +75,7 @@ class GoogleSheetsConnector():
 
 
 # Instantiate Class object
-FLEX = GoogleSheetsConnector('1VZLj2gegd6RwDmE3UYprClaGsMe91TDrNw8fsC5ZbD4', 'A1:L537')
+FLEX = SheetsConnector('1VZLj2gegd6RwDmE3UYprClaGsMe91TDrNw8fsC5ZbD4', 'A1:L537')
 
 # Start using methods
 FLEX.get_credentials()
