@@ -13,7 +13,7 @@ class TestClosestToNum:
     @pytest.mark.close
     def test_closest_to_num(self, rawDataframe, print_logging, full_dataframe_prep):
         """
-
+        This test will make sure that the closest value to the STD of 1 is being returned.
         :param rawDataframe:
         :param print_logging:
         :param full_dataframe_prep:
@@ -27,9 +27,44 @@ class TestClosestToNum:
 
         #g.log.info(QB, RB, WR, TE, FLX, DST)
 
-        closest_QB = Closest_to_num.find_closest(QB, 1)
+        STD = 10
 
+        closest_QB = Closest_to_num.find_closest(QB, STD)
 
+        QBSTD = QB['STD']
 
+        # Convert values to a list
+        QBSTD = QBSTD.values.tolist()
+        # Test that the difference from the STD for the chosen index is always <= other index values
+        test_position1 = (QBSTD[3])
+        test_position2 = (QBSTD[5])
+        test_position3 = (QBSTD[7])
+        closest_position = (QBSTD[closest_QB])
+
+        g.log.info('closest_QB')
         g.log.info(closest_QB)
-        g.log.info(RB)
+        g.log.info(QB)
+
+
+        g.log.info(closest_position)
+        #g.log.info(closest_position['STD'])
+        g.log.info(test_position1)
+
+        diff = abs(closest_position - STD)
+        g.log.info('diff')
+        g.log.info(diff)
+        diff_test1 = abs(test_position1 - STD)
+        diff_test2 = abs(test_position2 - STD)
+        diff_test3 = abs(test_position3 - STD)
+        g.log.info('diff_test')
+        g.log.info(diff_test1)
+        g.log.info(diff_test2)
+        g.log.info(diff_test3)
+
+        if diff > diff_test1 or diff > diff_test2 or diff > diff_test3:
+            g.log.info('Index Chosen does not hold the closest to STD!!')
+            assert False
+
+        else:
+            g.log.info('The test values were not closer to STD value.. SUCCESS!')
+            assert True
