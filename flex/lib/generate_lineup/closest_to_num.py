@@ -25,10 +25,22 @@ class ClosestToNum():
 
         # Find the next value with the smallest difference from the passed in Standard Deviation value
         dfpclosest = min(dfpSTD, key=lambda x: abs(x - STD))
-        print(dfpclosest)
 
-        # Return the
+        # Return the position in the list of the closest value
         dfpposition = (dfpSTD.index(dfpclosest))
-        print(dfpposition)
 
         return dfpposition
+
+    def remove_closest(self, dfp, closest):
+        """
+
+        :param dfp:
+        :param closest:
+        :return:
+        """
+
+        dfp = dfp[dfp.STD != closest]
+
+        g.log.info(dfp)
+
+        return dfp
