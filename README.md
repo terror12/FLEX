@@ -3,17 +3,19 @@ FLEX Project Guidelines:
 
 Mission Statement:
 ==================
-To build a web based daily fantasy football lineup generator using python3 for backend and Django fo UI.
+To openly share daily fantasy football generated lineups that lead to victory atleast 51% of the time.
 
 Methodology:
 =====================
 Using Fanduels salary system compared with the average of the other top Fantasy prediction engines(NFL.com, Yahoo, ESPN) 
-we can construct a standard deviation (STD) value for every player for the upcoming week. With this list and the code in place to generate lineups based on the players standard deviation value, we will use a community driven approach to collect data and find out which standard deviation value for each position yeilds the highest average return.
+we can construct a standard deviation (STD) value for every player for the upcoming week. With this list and the code in place to generate valid lineups based on the players standard deviation value, we will use a database of previous years actual results to evaluate the success of a lineup. Overtime the optimal STD value for each postion in a lineup will reveal itself. 
+
+We will use a program to generate lineups along with a community driven approach to increase the number of different STD combinations that we can record. This will be accomplished by providing a website for users to control sliders and generate their own lineups, which will be recorded and combined with all other previous runs in the database.
 
 Action Plan:
 ======================
  1. Collect database of historical data as far back as possible (3 years currently)
- 2. Write python code to scrape webpages to pull down current projections week to week while in season. Save files as xmls or csvs
+ 2. Write python script/library to scrape webpages to pull down current projections week to week while in season. Save files as XMLs or CSVs
  3. Depending how files are stored import into Google sheets and automate how to create the STD list
  4. Build webpage that allows you to generate lineups for that weeks players.
     a. Include sliders to change the STD number that you assign for the code to pull players from
