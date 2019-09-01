@@ -3,7 +3,7 @@ FLEX Project Guidelines:
 
 Mission Statement:
 ==================
-To openly share daily fantasy football generated lineups that lead to victory atleast 51% of the time.
+To openly share daily fantasy football generated lineups that result in victory atleast 51% of the time.
 
 Methodology:
 =====================
