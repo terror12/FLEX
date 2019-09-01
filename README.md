@@ -15,6 +15,9 @@ We will use a program to generate lineups along with a community driven approach
 Tickets will be tracked and assigned on the following Trello board
 https://trello.com/b/k1UY8kRD/flex-project
 ======================
+
+High Level Tasks:
+======================
  1. Collect database of historical data as far back as possible (3 years currently)
  2. Write python script/library to scrape webpages to pull down current projections week to week while in season. Save files as XMLs or CSVs
  3. Depending how files are stored import into Google sheets and automate how to create the STD list
