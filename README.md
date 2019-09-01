@@ -12,7 +12,7 @@ we can construct a standard deviation (STD) value for every player for the upcom
 
 We will use a program to generate lineups along with a community driven approach to increase the number of different STD combinations that we can record. This will be accomplished by providing a website for users to control sliders and generate their own lineups, which will be recorded and combined with all other previous runs in the database.
 
-Action Plan: Tickets will be tracked and assigned on the following Trello board
+Tickets will be tracked and assigned on the following Trello board
 https://trello.com/b/k1UY8kRD/flex-project
 ======================
  1. Collect database of historical data as far back as possible (3 years currently)
