@@ -111,5 +111,21 @@ class Remove:
         """
 
         dfp = dfp[['player', 'team', 'Actual_Points', 'FanDuel_Salary', 'STD']]
+        dfp['Actual_Points'] = dfp['Actual_Points'].astype('float')
+
+        return dfp
+
+    def clean_FanDuel_Salary(self, dfp):
+        """
+        The FanDuel Salary value format needs to change in order to be viewed as proper number
+        :param dfp: Positional Dataframe
+        :return dfp: With cleaned FanDuel salary value
+        """
+
+        dfp['FanDuel_Salary'] = [s.replace(']],', '') for s in dfp['FanDuel_Salary']]
+        dfp['FanDuel_Salary'] = [s.replace('\'', '') for s in dfp['FanDuel_Salary']]
+        dfp['FanDuel_Salary'] = [s.replace(']', '') for s in dfp['FanDuel_Salary']]
+        dfp['FanDuel_Salary'] = [s.replace(',', '') for s in dfp['FanDuel_Salary']]
+        dfp['FanDuel_Salary'] = [float(i) for i in dfp['FanDuel_Salary']]
 
         return dfp

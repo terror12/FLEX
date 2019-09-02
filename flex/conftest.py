@@ -72,6 +72,9 @@ def full_dataframe_prep(request, rawDataframe):
     g.log.info('Converting STD Column to Integer Values')
     df = FixUp_df.convert_to_num(df, 'STD')
 
+    g.log.info('Clean FanDuel_Salary column')
+    rm.clean_FanDuel_Salary(df)
+
     g.log.info('Seperating Full Dataframe Into Positional Dataframes')
     QB, RB, WR, TE, DST = FixUp_df.seperate_positions(df)
 
