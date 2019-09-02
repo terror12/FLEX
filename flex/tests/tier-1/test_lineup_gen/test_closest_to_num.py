@@ -26,13 +26,11 @@ class TestClosestToNum:
         g.log.info('Instantiate the positional dataframes')
         QB, RB, WR, TE, FLX, DST = full_dataframe_prep
 
-        #g.log.info(QB, RB, WR, TE, FLX, DST)
-
         STD = random.randint(1, 10)
 
         g.log.info('set the STD value for run at %s' % STD)
 
-        closest_QB = Closest_to_num.find_closest(QB, STD)
+        closest_QB = Closest_to_num.find_closest_STD(QB, STD)
 
         QBSTD = QB['STD']
 
@@ -45,8 +43,6 @@ class TestClosestToNum:
         closest_position_value = (QBSTD[closest_QB])
 
         g.log.info('Position in list of closest QB is %s' % closest_QB)
-        #g.log.info(QB)
-
 
         g.log.info('closest position value is %s' % closest_position_value)
         g.log.info('test_position1 value is %s' % test_position1)
@@ -85,14 +81,15 @@ class TestClosestToNum:
         g.log.info('Instantiate the positional dataframes')
         QB, RB, WR, TE, FLX, DST = full_dataframe_prep
 
-        #g.log.info(QB, RB, WR, TE, FLX, DST)
-
-        STD = random.randint(1, 10)
-
+        # Generate Random int
+        STD = random.randint(1, 5)
         g.log.info('set the STD value for run at %s' % STD)
 
-        closest_QB = Closest_to_num.find_closest(QB, STD)
+        closest_QB_STD = Closest_to_num.find_closest_STD(QB, STD)
+        g.log.info('The QB with the closest STD value is #%s in the list' % closest_QB_STD)
 
-        QB = Closest_to_num.remove_closest(QB, closest_QB)
+        closest_QB_pos = Closest_to_num.find_closest_pos(QB, STD)
 
-        g.log.info(QB)
+        g.log.info('The QB to be removed is %s' % closest_QB_pos)
+
+        QB = Closest_to_num.remove_closest(QB, closest_QB_STD)

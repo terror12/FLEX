@@ -23,7 +23,6 @@ class Remove:
         """
 
         df = df[['player', 'team', 'position', 'Actual_Points', 'FanDuel_Salary', 'Platform_AVG', 'STD']]
-        print('\n %s' % df.head(10))
         return df
 
     def rm_FA(self, df):
@@ -35,7 +34,6 @@ class Remove:
 
         # Removes all free agents
         df = df[df.team != "FA"]
-        print('\n %s' % df.head(10))
 
         return df
 
@@ -47,7 +45,6 @@ class Remove:
         """
 
         df = df[df.STD.str.contains("#N/A") == False]
-        print('\n %s' % df.head(10))
 
         return df
 
@@ -61,7 +58,6 @@ class Remove:
         df['Platform_AVG'] = pd.to_numeric(df['Platform_AVG'])
 
         df = df[~(df['Platform_AVG'] <= 1.0)]
-        print('\n %s' % df.tail(10))
 
         return df
 
@@ -76,7 +72,6 @@ class Remove:
         df['STD'] = pd.to_numeric(df['STD'])
 
         df = df[~(df['STD'] >= 10.0)]
-        print('\n %s' % df.tail(10))
 
         return df
 
