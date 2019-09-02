@@ -31,10 +31,22 @@ class TestBuildLineup:
         QB_STD = random.randint(1, 10)
         RB_STD = random.randint(1, 10)
         RB2_STD = random.randint(1, 10)
+        WR_STD = random.randint(1, 10)
+        WR2_STD = random.randint(1, 10)
+        WR3_STD = random.randint(1, 10)
+        TE_STD = random.randint(1, 10)
+        FLX_STD = random.randint(1, 10)
+        DST_STD = random.randint(1, 10)
 
         g.log.info(QB_STD)
         g.log.info(RB_STD)
         g.log.info(RB2_STD)
+        g.log.info(WR_STD)
+        g.log.info(WR2_STD)
+        g.log.info(WR3_STD)
+        g.log.info(TE_STD)
+        g.log.info(FLX_STD)
+        g.log.info(DST_STD)
 
         # WR_STD = random.randint(1, 10)
         # TE_STD = random.randint(1, 10)
@@ -43,12 +55,18 @@ class TestBuildLineup:
 
         # Create the RB2 dfp, this consists of the RB dfp minus the chosen player
         RB2 = Closest_to_num.remove_closest(RB, RB_STD)
-        # WR2 = Closest_to_num.remove_closest(WR, WR_STD)
-        # WR3 = Closest_to_num.remove_closest(WR2, WR2_STD)
+        WR2 = Closest_to_num.remove_closest(WR, WR_STD)
+        WR3 = Closest_to_num.remove_closest(WR2, WR2_STD)
 
         closest_QB_pos = Closest_to_num.find_closest_STD(QB, QB_STD)
         closest_RB_pos = Closest_to_num.find_closest_STD(RB, RB_STD)
         closest_RB2_pos = Closest_to_num.find_closest_STD(RB2, RB2_STD)
+        closest_WR_pos = Closest_to_num.find_closest_STD(WR, WR_STD)
+        closest_WR2_pos = Closest_to_num.find_closest_STD(WR2, WR2_STD)
+        closest_WR3_pos = Closest_to_num.find_closest_STD(WR3, WR3_STD)
+        closest_TE_pos = Closest_to_num.find_closest_STD(TE, TE_STD)
+        closest_FLX_pos = Closest_to_num.find_closest_STD(FLX, FLX_STD)
+        closest_DST_pos = Closest_to_num.find_closest_STD(DST, DST_STD)
         # closest_WR = Closest_to_num.find_closest_STD(WR, WR_STD)
         # closest_TE = Closest_to_num.find_closest_STD(TE, TE_STD)
         # closest_FLX = Closest_to_num.find_closest_STD(FLX, FLX_STD)
@@ -61,6 +79,12 @@ class TestBuildLineup:
         QB = QB.values.tolist()
         RB = RB.values.tolist()
         RB2 = RB2.values.tolist()
+        WR = WR.values.tolist()
+        WR2 = WR2.values.tolist()
+        WR3 = WR3.values.tolist()
+        TE = TE.values.tolist()
+        FLX = FLX.values.tolist()
+        DST = DST.values.tolist()
 
         # Create lineup object, this will be where the chosen players will be appended
         lineup = []
@@ -68,6 +92,12 @@ class TestBuildLineup:
         lineup.append(QB[closest_QB_pos])
         lineup.append(RB[closest_RB_pos])
         lineup.append(RB2[closest_RB2_pos])
+        lineup.append(WR[closest_WR_pos])
+        lineup.append(WR2[closest_WR2_pos])
+        lineup.append(WR3[closest_WR3_pos])
+        lineup.append(TE[closest_TE_pos])
+        lineup.append(FLX[closest_FLX_pos])
+        lineup.append(DST[closest_DST_pos])
 
         g.log.info(lineup)
 
