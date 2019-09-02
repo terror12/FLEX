@@ -97,9 +97,6 @@ class TestClosestToNum:
         QB = QB.values.tolist()
         result = result.values.tolist()
 
-        g.log.info(len(QB))
-        g.log.info(len(result))
-
         if len(result) >= len(QB):
             g.log.info('The chosen player was not removed from the list')
             assert False
