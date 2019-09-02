@@ -60,13 +60,24 @@ class ClosestToNum():
 
         return dfpposition
 
-    def remove_closest(self, dfp, closest_STD):
+    def remove_closest(self, dfp, STD):
         """
         Remove the row in a Dataframe that has a STD value of int closest_STD
         :param dfp: (Dataframe) Positional Dataframe
-        :param closest_STD: (int) STD value used to locate which column to remove from Dataframe
+        :param STD: (int) number that represents the STD value we want to compare with
         :return dfp: (Dataframe) Positional Dataframe with the closest_STD removed
         """
-        dfp = dfp[dfp.STD != closest_STD]
+
+        # Use just to STD column
+        dfpSTD = dfp['STD']
+
+        # Convert values to a list
+        dfpSTD = dfpSTD.values.tolist()
+
+        # Find the next STD value with the smallest difference from the STD value passed in.
+        dfpclosest = min(dfpSTD, key=lambda x: abs(x - STD))
+
+        # Return the Dataframe with everything except the value = to dfpclosest
+        dfp = dfp[dfp.STD != dfpclosest]
 
         return dfp

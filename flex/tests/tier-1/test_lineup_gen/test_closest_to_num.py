@@ -92,4 +92,18 @@ class TestClosestToNum:
 
         g.log.info('The QB to be removed is %s' % closest_QB_pos)
 
-        QB = Closest_to_num.remove_closest(QB, closest_QB_STD)
+        result = Closest_to_num.remove_closest(QB, STD)
+
+        QB = QB.values.tolist()
+        result = result.values.tolist()
+
+        g.log.info(len(QB))
+        g.log.info(len(result))
+
+        if len(result) >= len(QB):
+            g.log.info('The chosen player was not removed from the list')
+            assert False
+
+        else:
+            g.log.info('The chosen player was removed!!')
+            assert True
