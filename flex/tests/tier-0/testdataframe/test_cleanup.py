@@ -341,7 +341,7 @@ class TestCleanup:
 
         g.log.info('Instantiate Remove() object')
         rm = Remove()
-
+        QB = rm.rm_NA(QB)
         g.log.info('Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD')
         QB = rm.use_Needed_Cols(QB)
 
