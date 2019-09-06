@@ -111,7 +111,11 @@ class Remove:
         """
 
         dfp = dfp[['player', 'team', 'Actual_Points', 'FanDuel_Salary', 'STD']]
-        dfp['Actual_Points'] = dfp['Actual_Points'].astype('float')
+        for i in dfp['Actual_Points']:
+            if i == 'NA':
+                pass
+            else:
+                dfp['Actual_Points'] = dfp['Actual_Points'].astype('float')
 
         return dfp
 
