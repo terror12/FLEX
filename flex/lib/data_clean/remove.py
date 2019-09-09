@@ -45,6 +45,7 @@ class Remove:
         """
 
         df = df[df.STD.str.contains("#N/A") == False]
+        df = df[df.Actual_Points.str.contains("#N/A") == False]
 
         return df
 
@@ -112,7 +113,7 @@ class Remove:
 
         dfp = dfp[['player', 'team', 'Actual_Points', 'FanDuel_Salary', 'STD']]
         for i in dfp['Actual_Points']:
-            if i == 'NA':
+            if i == 'NA' or i == '#N/A':
                 pass
             else:
                 dfp['Actual_Points'] = dfp['Actual_Points'].astype('float')

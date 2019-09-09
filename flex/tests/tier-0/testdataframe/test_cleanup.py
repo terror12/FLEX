@@ -113,7 +113,6 @@ class TestCleanup:
             if i == '#N/A':
                 g.log.info('Non Available Players Exist When They Shouldnt!!')
                 assert False
-
         g.log.info('All Non-Available have Been Removed!!')
         assert True
 
@@ -343,6 +342,7 @@ class TestCleanup:
         rm = Remove()
         QB = rm.rm_NA(QB)
         g.log.info('Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD')
+        g.log.info(QB)
         QB = rm.use_Needed_Cols(QB)
 
         if ('Platform_AVG', 'position') in QB:

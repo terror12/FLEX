@@ -12,7 +12,7 @@ class SheetsConnector():
     Class object to hold credentials for connecting to google sheets
     """
 
-    def __init__(self, spreadsheetId, rangeName):
+    def __init__(self, spreadsheetId=None, rangeName=None):
         self.credentials = self.get_credentials()
         self.spreadsheetId = spreadsheetId
         self.rangeName = rangeName
