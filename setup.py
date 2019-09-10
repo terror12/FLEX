@@ -48,7 +48,8 @@ setup(
         'google-api-python-client',
         'oauth2client',
         'pandas',
-        'schema'
+        'schema',
+        'google_auth_oauthlib'
     ],
     classifiers=[
         "Programming Language :: Python :: 3"

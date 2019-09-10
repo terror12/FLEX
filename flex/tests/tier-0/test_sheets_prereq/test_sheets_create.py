@@ -14,7 +14,7 @@ class TestSheetsCreate:
 
 
     @pytest.mark.create_sheet
-    def test_read_sheet(self, print_logging):
+    def test_create_sheet(self, print_logging):
         """
         #Test that we can read a sheet using the credential object
         #:return:
@@ -30,7 +30,7 @@ class TestSheetsCreate:
         g.log.info('Instantiate Prereqs')
         prereq = PreReqs()
         g.log.info('create New sheet')
-        prereq.createNewSheet(credentials)
+        prereq.createNewSheet(credentials, '2019 Week1 STD')
 
         #gsc = SheetsConnector(self.spreadsheetId, self.rangeName)
 
@@ -41,3 +41,23 @@ class TestSheetsCreate:
         #g.log.info(type(result))
 
         #assert isinstance(result, dict)
+
+    @pytest.mark.import_data
+    def test_import_data(self, deftestdata, print_logging):
+        """
+        #Test that we can read a sheet using the credential object
+        #:return:
+        """
+        #self.spreadsheetId = deftestdata['spreadsheetId']
+        #self.rangeName = deftestdata['rangeName']
+
+        g.log.info('Instantiate SheetsConnector object')
+        FLEX = SheetsConnector()
+        g.log.info('Get Credentials')
+        credentials = FLEX.get_credentials()
+
+        g.log.info('Instantiate Prereqs')
+        prereq = PreReqs()
+        g.log.info('create New sheet')
+        spreadsheetId = deftestdata['spreadsheetId']
+        prereq.editSheet(credentials, spreadsheetId)

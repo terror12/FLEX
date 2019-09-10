@@ -4,31 +4,41 @@ from apiclient import discovery
 from oauth2client import client
 from oauth2client import tools
 from oauth2client.file import Storage
+import gspread
 
 class PreReqs():
 
-    def createNewSheet(self, credentials):
+    def createNewSheet(self, credentials, title):
 
         # FLEX = SheetsConnector()
         # FLEX.get_credentials()
 
         spreadsheet = {
             'properties': {
-                'title': 'AUTO_WEEK'
+                'title': title
             }
         }
 
-        #http = credentials.authorize(httplib2.Http())
-        #print(http)
         service = discovery.build('sheets', 'v4', credentials=credentials)
-        print(service)
 
         spreadsheet = service.spreadsheets().create(body=spreadsheet,
                                             fields='spreadsheetId').execute()
-        print('Spreadsheet ID: {0}'.format(spreadsheet.get('spreadsheetId')))
 
-    def editSheet(self):
-        pass
+        return spreadsheet
+
+    def editSheet(self, credentials, spreadsheetId):
+
+        
+
+        # Read CSV file contents
+        content = open('ffa_customrankings2019-1.csv', 'r').read()
+
+        gc = gspread.authorize(credentials)
+
+
+
+        gc.import_csv(spreadsheetId, content)
+
 # TODO: Use these as examples for effort
 # result = sheet.row_values(5) #See individual row
 # # result = sheet.col.values(5) #See individual column
