@@ -22,7 +22,7 @@ class Remove:
         :return df: The Dataframe without uneeded columns
         """
 
-        df = df[['player', 'team', 'position', 'Actual_Points', 'FanDuel_Salary', 'Platform_AVG', 'STD']]
+        df = df[['player', 'team', 'position', 'Actual_Points', 'FanDuel_Salary', 'Platform_AVG', 'sdPts']]
         return df
 
     def rm_FA(self, df):
@@ -44,8 +44,10 @@ class Remove:
         :return df: The Dataframe without NA's
         """
 
-        df = df[df.STD.str.contains("#N/A") == False]
+        df = df[df.sdPts.str.contains("#N/A") == False]
+        df = df[df.sdPts.str.contains("NA") == False]
         df = df[df.Actual_Points.str.contains("#N/A") == False]
+        df = df[df.FanDuel_Salary.str.contains("#N/A") == False]
 
         return df
 
@@ -70,9 +72,9 @@ class Remove:
         """
 
         # Convert STD Column to integers
-        df['STD'] = pd.to_numeric(df['STD'])
+        df['sdPts'] = pd.to_numeric(df['sdPts'])
 
-        df = df[~(df['STD'] >= 10.0)]
+        df = df[~(df['sdPts'] >= 10.0)]
 
         return df
 
@@ -111,7 +113,7 @@ class Remove:
         :return: The positional dataframe with only needed columns
         """
 
-        dfp = dfp[['player', 'team', 'Actual_Points', 'FanDuel_Salary', 'STD']]
+        dfp = dfp[['player', 'team', 'Actual_Points', 'FanDuel_Salary', 'sdPts']]
         for i in dfp['Actual_Points']:
             if i == 'NA' or i == '#N/A':
                 pass

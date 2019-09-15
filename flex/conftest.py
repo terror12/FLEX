@@ -70,7 +70,7 @@ def full_dataframe_prep(request, rawDataframe):
     df = rm.rm_High_Std(df)
 
     g.log.info('Converting STD Column to Integer Values')
-    df = FixUp_df.convert_to_num(df, 'STD')
+    df = FixUp_df.convert_to_num(df, 'sdPts')
 
     g.log.info('Clean FanDuel_Salary column')
     rm.clean_FanDuel_Salary(df)

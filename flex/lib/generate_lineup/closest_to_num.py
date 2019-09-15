@@ -19,7 +19,7 @@ class ClosestToNum():
         """
 
         # Use just to STD column
-        dfpSTD = dfp['STD']
+        dfpSTD = dfp['sdPts']
 
         # Convert values to a list
         dfpSTD = dfpSTD.values.tolist()
@@ -43,7 +43,7 @@ class ClosestToNum():
         """
 
         # Use just to STD column
-        dfpSTD = dfp['STD']
+        dfpSTD = dfp['sdPts']
 
         # Convert values to a list
         dfpSTD = dfpSTD.values.tolist()
@@ -69,7 +69,7 @@ class ClosestToNum():
         """
 
         # Use just to STD column
-        dfpSTD = dfp['STD']
+        dfpSTD = dfp['sdPts']
 
         # Convert values to a list
         dfpSTD = dfpSTD.values.tolist()
@@ -78,6 +78,6 @@ class ClosestToNum():
         dfpclosest = min(dfpSTD, key=lambda x: abs(x - STD))
 
         # Return the Dataframe with everything except the value = to dfpclosest
-        dfp = dfp[dfp.STD != dfpclosest]
+        dfp = dfp[dfp.sdPts != dfpclosest]
 
         return dfp
