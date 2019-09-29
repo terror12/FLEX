@@ -22,7 +22,7 @@ class Remove:
         :return df: The Dataframe without uneeded columns
         """
 
-        df = df[['player', 'team', 'position', 'Actual_Points', 'FanDuel_Salary', 'Platform_AVG', 'sdPts']]
+        df = df[['player', 'team', 'position', 'Actual_Points', 'FanDuel_Salary', 'sdPts']]
         return df
 
     def rm_FA(self, df):
@@ -53,14 +53,15 @@ class Remove:
 
     def rm_Low_Projections(self, df):
         """
+        LEGACY CODE
         Remove all players with a Platform_AVG Less than 1.0
         :param df: The Dataframe
         :return df: The Dataframe without Players < 1 in Platform_AVG
         """
 
-        df['Platform_AVG'] = pd.to_numeric(df['Platform_AVG'])
+        df['Actual_Points'] = pd.to_numeric(df['Actual_Points'])
 
-        df = df[~(df['Platform_AVG'] <= 1.0)]
+        df = df[~(df['Actual_Points'] <= 3.0)]
 
         return df
 
@@ -98,7 +99,7 @@ class Remove:
         """
 
         if len(dfp) > num:
-            dfp = dfp.sort_values(by=['Platform_AVG'], ascending=False)
+            dfp = dfp.sort_values(by=['Actual_Points'], ascending=False)
             diff = (len(dfp) - num)
             dfp = dfp[:-diff]
 

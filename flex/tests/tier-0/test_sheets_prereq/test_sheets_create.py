@@ -49,6 +49,7 @@ class TestSheetsCreate:
         """
         projections = deftestdata['projections']
         FanDuel_Salaries = deftestdata['FanDuel_Salaries']
+        Sheet_Name = deftestdata['Sheet_Name']
 
         g.log.info('Instantiate SheetsConnector object')
         FLEX = SheetsConnector()
@@ -58,7 +59,7 @@ class TestSheetsCreate:
         g.log.info('Instantiate Prereqs')
         prereq = PreReqs()
         g.log.info('create New sheet')
-        spreadsheet, service = prereq.createNewSheet(credentials, '2019 Week2 STD')
+        spreadsheet, service = prereq.createNewSheet(credentials, Sheet_Name)
 
         g.log.info('Instantiate Prereqs')
         prereq = PreReqs()
@@ -157,3 +158,8 @@ class TestSheetsCreate:
         g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
 
         prereq.copyFormula(spreadsheet, service, sheetId0, 8, 9)
+
+        #prereq.addCol(spreadsheet, service, sheetId1, 9, 10)
+
+        result = prereq.writeToCell(spreadsheet, service, 'Actual_Points', "H1")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
