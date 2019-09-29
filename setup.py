@@ -49,7 +49,8 @@ setup(
         'oauth2client',
         'pandas',
         'schema',
-        'google_auth_oauthlib'
+        'google_auth_oauthlib',
+        'retrying'
     ],
     classifiers=[
         "Programming Language :: Python :: 3"

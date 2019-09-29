@@ -1,18 +1,14 @@
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.support.ui import Select
 import time
 from selenium.webdriver.common.keys import Keys
+from retrying import retry
 
 class scrape_FD():
     """
     Class to hold functions needed to create a valid lineup.
     """
     # TODO: create __init__ method to instantiate assemble object
-
+    @retry
     def FanDuel(self, username, password):
 
         option = webdriver.ChromeOptions()
@@ -43,6 +39,6 @@ class scrape_FD():
         browser.find_element_by_xpath("//a[contains(@class, 'contest_details__enter_link')]").click()
         # All of this brings us to the point where we can select the download-players button.
         browser.find_element_by_xpath("//a[contains(@class, 'button tiny text download-players')]").click()
-        time.sleep(15)
+        time.sleep(5)
         # Close Window.
         browser.quit()

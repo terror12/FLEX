@@ -14,13 +14,7 @@ option.add_argument("--start-maximized")
 browser = webdriver.Chrome(executable_path='/usr/bin/chromedriver', options=option)
 
 browser.get("https://www.fanduel.com/contests/nfl/3036")
-
-
 print(browser)
-
-
-
-
 inputElement = browser.find_element_by_id("forms.login.email")
 inputElement.send_keys('REDACTED')
 

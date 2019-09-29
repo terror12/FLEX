@@ -3,8 +3,8 @@ from glusto.core import Glusto as g
 
 def findNewest(path):
     """
-
-    :param path:
+    Find the newest file in the absolute path given
+    :param path: Absolute path that you would like to find the newest file in.
     :return:
     """
 
