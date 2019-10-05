@@ -30,6 +30,7 @@ class scrape_FD():
         browser.find_element_by_xpath("//span[contains(text(), 'SUN-MON')]").click()
         print(browser)
         # Select a lobby
+        time.sleep(2)
         browser.find_element_by_xpath("//div[contains(@class, '_a _b _c _d _e _f _g')]")
         browser.find_element_by_xpath("//div[contains(@class, 'ReactVirtualized__Grid__innerScrollContainer')]").click()
         # Remove the Customer service pop up widget

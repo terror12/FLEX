@@ -54,7 +54,7 @@ class Assemble():
         :return None:
         """
 
-        if (lineup[-1] > 58000 and lineup[-1] < 60000):
+        if (lineup[-1] > 59200 and lineup[-1] < 60000):
             return True
         else:
 
