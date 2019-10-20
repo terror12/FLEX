@@ -106,6 +106,25 @@ class PreReqs():
 
         service.spreadsheets().batchUpdate(spreadsheetId=spreadsheet, body=add_col_request).execute()
 
+    def rmCol(self, spreadsheet, service, sheetId, start, end):
+
+
+
+        add_col_request = {
+            "requests": {
+                "deleteDimension": {
+                    "range": {
+                        "sheetId": sheetId,
+                        "dimension": "COLUMNS",
+                        "startIndex": start,
+                        "endIndex": end
+                    }
+                }
+            }
+        }
+
+        service.spreadsheets().batchUpdate(spreadsheetId=spreadsheet, body=add_col_request).execute()
+
     def writeToCell(self, spreadsheet, service, data, range):
         values = [
             [

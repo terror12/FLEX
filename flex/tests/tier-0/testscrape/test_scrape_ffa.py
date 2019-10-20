@@ -117,3 +117,4 @@ class TestScrape:
             g.log.info('Move the Downloaded file to the correct location')
             move(FanDuel_csv, dest)
             assert True
+
