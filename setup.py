@@ -50,7 +50,7 @@ setup(
         'pandas',
         'schema',
         'google_auth_oauthlib',
-        'retrying'
+        'retrying',
     ],
     classifiers=[
         "Programming Language :: Python :: 3"
