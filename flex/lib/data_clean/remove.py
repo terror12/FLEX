@@ -61,7 +61,7 @@ class Remove:
 
         df['Actual_Points'] = pd.to_numeric(df['Actual_Points'])
 
-        df = df[~(df['Actual_Points'] <= 3.0)]
+        df = df[~(df['Actual_Points'] <= 4.0)]
 
         return df
 
@@ -115,6 +115,24 @@ class Remove:
         """
 
         dfp = dfp[['player', 'team', 'Actual_Points', 'FanDuel_Salary', 'sdPts']]
+        for i in dfp['Actual_Points']:
+            if i == 'NA' or i == '#N/A':
+                pass
+            else:
+                dfp['Actual_Points'] = dfp['Actual_Points'].astype('float')
+
+        return dfp
+
+    def use_cols_for_data(self, dfp):
+        """
+        Use only the needed columns 'Actual_Points', 'STD'
+        This is meant to be run after dataframe is broken up into positional dataframe and cleanup tasks
+        using 'Platform Avg have been done.
+        :param dfp: The positional Dataframe
+        :return: The positional dataframe with only needed columns
+        """
+
+        dfp = dfp[['Actual_Points', 'sdPts']]
         for i in dfp['Actual_Points']:
             if i == 'NA' or i == '#N/A':
                 pass

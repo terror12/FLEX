@@ -100,6 +100,61 @@ def full_dataframe_prep(request, rawDataframe):
     return QB, RB, WR, TE, FLX, DST
 
 @pytest.fixture(scope='session')
+def full_dataframe_prep_for_data(request, rawDataframe):
+    """
+    Fixture to do everything necessary to prepare dataframes for lineup creation
+    :param request:
+    :return:
+    """
+
+    FixUp_df = FixUpDf()
+    df = FixUp_df.fix_header(rawDataframe)
+
+    rm = Remove()
+    g.log.info('Remove uneeded columns')
+    df = rm.rm_cols(df)
+
+    g.log.info('Removing All Free Agents using rm_FA()')
+    df = rm.rm_FA(df)
+
+    g.log.info('Removing All Not Available values from STD column using rm_NA()')
+    df = rm.rm_NA(df)
+
+    #g.log.info('Removing All players with < 1 in Platform_AVG')
+    #df = rm.rm_Low_Projections(df)
+
+    g.log.info('Removing All players with STD >= 10')
+    df = rm.rm_High_Std(df)
+
+    g.log.info('Converting STD Column to Integer Values')
+    df = FixUp_df.convert_to_num(df, 'sdPts')
+
+    g.log.info('Seperating Full Dataframe Into Positional Dataframes')
+    QB, RB, WR, TE, DST = FixUp_df.seperate_positions(df)
+
+    g.log.info('Set position limits')
+    QB = rm.hit_Position_Limits(QB, 32)
+    RB = rm.hit_Position_Limits(RB, 150)
+    WR = rm.hit_Position_Limits(WR, 150)
+    TE = rm.hit_Position_Limits(TE, 90)
+    DST = rm.hit_Position_Limits(DST, 32)
+
+    g.log.info('Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD')
+    QB = rm.use_cols_for_data(QB)
+    RB = rm.use_cols_for_data(RB)
+    WR = rm.use_cols_for_data(WR)
+    TE = rm.use_cols_for_data(TE)
+    DST = rm.use_cols_for_data(DST)
+
+    g.log.info('Create FLX Dataframe')
+    FLX = FixUp_df.flx_Create(RB, WR, TE)
+
+
+    #g.log.info(QB.head(5), RB.head(5), WR.head(5), TE.head(5), FLX.head(5), DST.head(5))
+
+    return QB, RB, WR, TE, FLX, DST
+
+@pytest.fixture(scope='session')
 def print_logging():
 
     g.add_log(g.log, filename='STDOUT')

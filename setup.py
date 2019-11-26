@@ -51,6 +51,7 @@ setup(
         'schema',
         'google_auth_oauthlib',
         'retrying',
+        'matplotlib',
     ],
     classifiers=[
         "Programming Language :: Python :: 3"

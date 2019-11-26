@@ -36,6 +36,7 @@ class scrape_FD():
         # Remove the Customer service pop up widget
         element = browser.find_element_by_xpath("//iframe[@class='zEWidget-launcher zEWidget-launcher--active']")
         browser.execute_script("arguments[0].style.visibility='hidden'", element)
+        time.sleep(20)
         # Click enter a lineup
         browser.find_element_by_xpath("//a[contains(@class, 'contest_details__enter_link')]").click()
         # All of this brings us to the point where we can select the download-players button.
