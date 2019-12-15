@@ -114,7 +114,7 @@ class Remove:
         :return: The positional dataframe with only needed columns
         """
 
-        dfp = dfp[['player', 'team', 'Actual_Points', 'FanDuel_Salary', 'sdPts']]
+        dfp = dfp[['player', 'team', 'position', 'Actual_Points', 'FanDuel_Salary', 'sdPts']]
         for i in dfp['Actual_Points']:
             if i == 'NA' or i == '#N/A':
                 pass

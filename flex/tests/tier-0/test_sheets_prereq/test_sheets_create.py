@@ -146,6 +146,22 @@ class TestSheetsCreate:
         g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
 
         prereq.copyFormula(spreadsheet, service, sheetId1, 10, 11)
+
+
+
+        #=================================================
+        g.log.info('Start removing Punctuation')
+        prereq.addCol(spreadsheet, service, sheetId1, 11, 12)
+
+        result = prereq.writeToCell(spreadsheet, service, 'player', "FanDuel!L1")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+
+        result = prereq.writeToCell(spreadsheet, service, '=IF (OR(S2="IR", S2="D", S2="O"), "#N/A", K2)', "FanDuel!L2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+
+        prereq.copyFormula(spreadsheet, service, sheetId1, 11, 12)
+
+
         # =REGEXREPLACE(D41, "Jr.","")
         # =REGEXREPLACE(D133, " Jr.","")
         # =REGEXREPLACE(D219, "DJ","D.J.")
@@ -157,7 +173,7 @@ class TestSheetsCreate:
         g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
 
                                                         #'=IF(D2="DST", VLOOKUP(B2,{FanDuel!$E$2:$E$1000,FanDuel!$H$2:$H$1000},2,FALSE), VLOOKUP(B2,{FanDuel!$D$2:$D$1000,FanDuel!$H$2:$H$1000},2,FALSE))', 'I2')
-        result = prereq.writeToCell(spreadsheet, service, '=IF(D2="DST", VLOOKUP(B2,{FanDuel!$E$2:$E$1000,FanDuel!$N$2:$N$1000},2,FALSE), VLOOKUP(B2,{FanDuel!$K$2:$K$1000,FanDuel!$N$2:$N$1000},2,FALSE))', 'I2')
+        result = prereq.writeToCell(spreadsheet, service, '=IF(D2="DST", VLOOKUP(B2,{FanDuel!$E$2:$E$1000,FanDuel!$O$2:$O$1000},2,FALSE), VLOOKUP(B2,{FanDuel!$L$2:$L$1000,FanDuel!$O$2:$O$1000},2,FALSE))', 'I2')
         g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
 
         prereq.copyFormula(spreadsheet, service, sheetId0, 8, 9)
@@ -165,6 +181,8 @@ class TestSheetsCreate:
         # Rename to Actual_Points bc this is what my code looks for
         result = prereq.writeToCell(spreadsheet, service, 'Actual_Points', "H1")
         g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+
+
 
         # TODO: Add check for Salary column
 

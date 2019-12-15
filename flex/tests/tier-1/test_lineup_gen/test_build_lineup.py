@@ -169,6 +169,8 @@ class TestBuildLineup:
         master_csv2 = deftestdata['master_csv2']
         collect_master_csv = deftestdata['collect_master_csv']
         count = deftestdata['count']
+        pairing = deftestdata['pairing']
+
 
         #target_STD = 3.5
         QB_STD = QB_STD
@@ -221,7 +223,7 @@ class TestBuildLineup:
 
         g.log.info(lineup)
 
-        lineup = assemble.findBestLineup(lineup, QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD, WR3_STD, TE_STD, FLX_STD, DST_STD, min_sal)
+        lineup = assemble.findBestLineup(lineup, QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD, WR3_STD, TE_STD, FLX_STD, DST_STD, min_sal, pairing)
         g.log.info('This is your winning lineup: \n %s' % lineup)
         if lineup:
             with open(master_csv, 'a') as f:
@@ -242,22 +244,37 @@ class TestBuildLineup:
                 WR = WR[WR['player'] != lineup[4][0]]
                 WR = WR[WR['player'] != lineup[5][0]]
                 TE = TE[TE['player'] != lineup[6][0]]
+                g.log.info('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+                g.log.info(lineup[7][0])
+                if RB['player'].str.contains(lineup[7][0]).any():
+                    RB = RB[RB['player'] != lineup[7][0]]
+                    g.log.info(RB)
+                if WR['player'].str.contains(lineup[7][0]).any():
+                    WR = WR[WR['player'] != lineup[7][0]]
+                if TE['player'].str.contains(lineup[7][0]).any():
+                    TE = TE[TE['player'] != lineup[7][0]]
                 FLX = FLX[FLX['player'] != lineup[7][0]]
+                FLX = FLX[FLX['player'] != lineup[1][0]]
+                FLX = FLX[FLX['player'] != lineup[2][0]]
+                FLX = FLX[FLX['player'] != lineup[3][0]]
+                FLX = FLX[FLX['player'] != lineup[4][0]]
+                FLX = FLX[FLX['player'] != lineup[5][0]]
+                FLX = FLX[FLX['player'] != lineup[6][0]]
                 DST = DST[DST['player'] != lineup[8][0]]
                 collect_lineup = pd.DataFrame(lineup[:9])
                 collect_lineup.to_csv(f, header=False)
 
             g.log.info('Generating second lineup with no duplicates!')
             #time.sleep(5)
-            lineup = assemble.createLineup(QB, RB, WR, TE, FLX, DST, QB_STD2, RB_STD2, RB2_STD2, WR_STD2, WR2_STD2, WR3_STD2, TE_STD2, FLX_STD2, DST_STD2)
-            g.log.info(lineup)
+            lineup2 = assemble.createLineup(QB, RB, WR, TE, FLX, DST, QB_STD2, RB_STD2, RB2_STD2, WR_STD2, WR2_STD2, WR3_STD2, TE_STD2, FLX_STD2, DST_STD2)
+            g.log.info(lineup2)
 
-            lineup = assemble.findBestLineup(lineup, QB, RB, WR, TE, FLX, DST, QB_STD2, RB_STD2, RB2_STD2, WR_STD2, WR2_STD2, WR3_STD2, TE_STD2, FLX_STD2, DST_STD2, min_sal)
-            g.log.info('This is your winning lineup: \n %s' % lineup)
-            if lineup:
+            lineup2 = assemble.findBestLineup(lineup2, QB, RB, WR, TE, FLX, DST, QB_STD2, RB_STD2, RB2_STD2, WR_STD2, WR2_STD2, WR3_STD2, TE_STD2, FLX_STD2, DST_STD2, min_sal, pairing)
+            g.log.info('This is your winning lineup: \n %s' % lineup2)
+            if lineup2:
                 with open(master_csv2, 'a') as f:
 
-                    master_lineup = pd.DataFrame(lineup[9:])
+                    master_lineup = pd.DataFrame(lineup2[9:])
                     master_lineup = master_lineup.transpose()
                     if os.stat(master_csv).st_size == 0:
                         master_lineup.columns = ["Points", "Salary"]
@@ -267,7 +284,7 @@ class TestBuildLineup:
                         master_lineup['Count'] = count
                         master_lineup.to_csv(f, header=False)
                 with open(collect_master_csv, 'a') as f:
-                    collect_lineup = pd.DataFrame(lineup[:9])
+                    collect_lineup = pd.DataFrame(lineup2[:9])
                     collect_lineup.to_csv(f, header=False)
             #assert True
 
@@ -304,6 +321,7 @@ class TestBuildLineup:
         min_sal = deftestdata['min_sal']
         master_csv = deftestdata['master_csv']
         count = deftestdata['count']
+        pairing = deftestdata['pairing']
 
         #target_STD = 3.5
         QB_STD = QB_STD
@@ -334,7 +352,7 @@ class TestBuildLineup:
 
         g.log.info(lineup)
 
-        lineup = assemble.findBestLineup(lineup, QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD, WR3_STD, TE_STD, FLX_STD, DST_STD, min_sal)
+        lineup = assemble.findBestLineup(lineup, QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD, WR3_STD, TE_STD, FLX_STD, DST_STD, min_sal, pairing)
         g.log.info('This is your winning lineup: \n %s' % lineup)
         if lineup:
             with open(master_csv, 'a') as f:

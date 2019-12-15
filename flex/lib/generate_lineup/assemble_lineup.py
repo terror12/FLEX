@@ -19,13 +19,13 @@ class Assemble():
         :return lineup: (list) full 9-player lineup + total points
         """
 
-        if lineup[0][2] == 'NA':
+        if lineup[0][3] == 'NA':
             totalPoints = 0
             lineup.append(totalPoints)
         else:
             totalPoints = sum(
-                [lineup[0][2], lineup[1][2], lineup[2][2], lineup[3][2], lineup[4][2], lineup[5][2], lineup[6][2], lineup[7][2],
-                 lineup[8][2]])
+                [lineup[0][3], lineup[1][3], lineup[2][3], lineup[3][3], lineup[4][3], lineup[5][3], lineup[6][3], lineup[7][3],
+                 lineup[8][3]])
 
             lineup.append(totalPoints)
 
@@ -40,33 +40,44 @@ class Assemble():
         """
 
         totalSalary = sum(
-            [lineup[0][3], lineup[1][3], lineup[2][3], lineup[3][3], lineup[4][3], lineup[5][3], lineup[6][3], lineup[7][3],
-             lineup[8][3]])
+            [lineup[0][4], lineup[1][4], lineup[2][4], lineup[3][4], lineup[4][4], lineup[5][4], lineup[6][4], lineup[7][4],
+             lineup[8][4]])
 
         lineup.append(totalSalary)
 
         return lineup
 
-    def hasValidSalary(self, lineup, min_sal):
+    def hasValidSalary(self, lineup, min_sal, pairing):
         """
         Test if the chosen lineup is a valid one
         :param lineup: (list) full 9-player lineup + total points and total salary
         :return None:
         """
 
-        # Force a QB WR pairing
-        #if (lineup[-1] > min_sal and lineup[-1] < 60000 and lineup[0][1] == lineup[3][1] or lineup[0][1] == lineup[4][1] or lineup[0][1] == lineup[5][1]):
+        if pairing:
+            # Force a QB WR pairing
+            print(pairing)
+            print(lineup[0][1])
+            print(lineup[3][1])
+            print(lineup[4][1])
+            print(lineup[5][1])
+            if (lineup[-1] > min_sal and lineup[-1] < 60000 and lineup[0][1] == lineup[3][1] and lineup[6][2] != lineup[7][2] or lineup[-1] > min_sal and lineup[-1] < 60000 and lineup[0][1] == lineup[4][1] and lineup[6][2] != lineup[7][2] or lineup[-1] > min_sal and lineup[-1] < 60000 and lineup[0][1] == lineup[5][1] and lineup[6][2] != lineup[7][2]):
+                return True
+            else:
+                return False
+
+        else:
+            # No Pairing
+            if (lineup[-1] > min_sal and lineup[-1] < 60000 and lineup[6][2] != lineup[7][2]):
+                #print(lineup[7][2])
+                #print(lineup[8][2])
+                return True
+            else:
+                return False
 
         # Force a QB WR pairing and a RB DST pairing
         # TODO This doesnt work need to fix
         #if (lineup[-1] > min_sal and lineup[-1] < 60000 and lineup[1][1] == lineup[8][1] and any([lineup[0][1] == lineup[3][1], lineup[0][1] == lineup[4][1], lineup[0][1] == lineup[5][1]])):
-
-        # No Pairing
-        if (lineup[-1] > min_sal and lineup[-1] < 60000):
-            return True
-        else:
-
-            return False
 
     def createLineup(self, QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD, WR3_STD, TE_STD, FLX_STD, DST_STD):
 
@@ -130,7 +141,7 @@ class Assemble():
 
         return lineup
 
-    def findBestLineup(self, lineup, QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD, WR3_STD, TE_STD, FLX_STD, DST_STD, min_sal):
+    def findBestLineup(self, lineup, QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD, WR3_STD, TE_STD, FLX_STD, DST_STD, min_sal, pairing):
 
         g.log.info('Instantiate Closest_to_num object')
         Closest_to_num = ClosestToNum()
@@ -143,7 +154,7 @@ class Assemble():
         for i in range(250):
             count += 1
             print(count)
-            if assemble.hasValidSalary(lineup, min_sal):
+            if assemble.hasValidSalary(lineup, min_sal, pairing):
                 #g.log.info('Your lineup is %s !!!!!!!!!!!!!!!!!!!!!!' % lineup)
                 return lineup
             else:
@@ -298,7 +309,7 @@ class Assemble():
 
                     g.log.info(lineup)
 
-    def collectLineupData(self, lineup, QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD, WR3_STD, TE_STD, FLX_STD, DST_STD):
+    def collectLineupData(self, lineup, QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD, WR3_STD, TE_STD, FLX_STD, DST_STD, pairing):
 
         #g.log.info('Instantiate Closest_to_num object')
         Closest_to_num = ClosestToNum()
@@ -324,7 +335,7 @@ class Assemble():
         for i in range(player_range):
             count += 1
             print(count)
-            if assemble.hasValidSalary(lineup, min_sal):
+            if assemble.hasValidSalary(lineup, min_sal, pairing):
                 g.log.info('Total Points: %s Total Salary: %s' % (lineup[9], lineup[10]))
                 if winner == 0:
                     winner = lineup[9]
