@@ -52,6 +52,11 @@ setup(
         'google_auth_oauthlib',
         'retrying',
         'matplotlib',
+	'selenium',
+	'gspread',
+	'plotly',
+	'pygsheets',
+	'pyautogui',
     ],
     classifiers=[
         "Programming Language :: Python :: 3"
