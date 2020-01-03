@@ -156,7 +156,7 @@ class TestSheetsCreate:
         result = prereq.writeToCell(spreadsheet, service, 'player', "FanDuel!L1")
         g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
 
-        result = prereq.writeToCell(spreadsheet, service, '=IF (OR(S2="IR", S2="D", S2="O"), "#N/A", K2)', "FanDuel!L2")
+        result = prereq.writeToCell(spreadsheet, service, '=IF (OR(S2="IR", S2="D", S2="O", AND(S2="Q", B2<>"QB")), "#N/A", K2)', "FanDuel!L2")
         g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
 
         prereq.copyFormula(spreadsheet, service, sheetId1, 11, 12)
@@ -258,20 +258,25 @@ class TestSheetsCreate:
             # full_path_filename = deftestdata['full_path_filename']
 #            spreadsheetID = deftestdata['full_path_filename']
 
-        time.sleep(35)
+        time.sleep(55)
+        # Click on FanDuel tab
+        pyautogui.moveTo(1586, 192)
+        pyautogui.click()
 
-        pyautogui.moveTo(1599, 696)
+        time.sleep(20)
+
+        pyautogui.moveTo(366, 1173)
             #time.sleep(30)
         pyautogui.click()
         time.sleep(10)
-        pyautogui.moveTo(1578, 241)
+        pyautogui.moveTo(295, 307)
         pyautogui.click()
         time.sleep(2)
 
-        pyautogui.moveTo(1700, 147)
+        pyautogui.moveTo(417, 213)
         pyautogui.click()
         time.sleep(2)
-        pyautogui.moveTo(1741, 231)
+        pyautogui.moveTo(474, 297)
         pyautogui.click()
         time.sleep(2)
         #pyautogui.moveTo(1271, 691)
@@ -293,10 +298,10 @@ class TestSheetsCreate:
         time.sleep(30)
 
         # start of right to the source
-        pyautogui.moveTo(2055, 571)
+        pyautogui.moveTo(934, 845)
         pyautogui.click()
         time.sleep(20)
-        pyautogui.moveTo(2149, 567)
+        pyautogui.moveTo(1029, 847)
         pyautogui.click()
 
         prereq.addCol(spreadsheet, service, sheetId1, 7, 8)

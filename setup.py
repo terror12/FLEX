@@ -42,7 +42,6 @@ setup(
         "glusto@git+git://github.com/loadtheaccumulator/glusto.git"
         "@python3_port4#egg-glusto"
         'httplib2',
-        'numba',
         'tqdm',
         'apiclient',
         'google-api-python-client',
