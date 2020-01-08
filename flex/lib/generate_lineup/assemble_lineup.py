@@ -51,6 +51,8 @@ class Assemble():
         """
         Test if the chosen lineup is a valid one
         :param lineup: (list) full 9-player lineup + total points and total salary
+        :param min_sal: (num) minimum salary I will allow.
+        :param pairing: (boolean) This will determine whether or not I want a QB/WR pairing for tournament play.
         :return None:
         """
 
@@ -61,14 +63,16 @@ class Assemble():
             print(lineup[3][1])
             print(lineup[4][1])
             print(lineup[5][1])
-            if (lineup[-1] > min_sal and lineup[-1] < 60000 and lineup[0][1] == lineup[3][1] and lineup[6][2] != lineup[7][2] or lineup[-1] > min_sal and lineup[-1] < 60000 and lineup[0][1] == lineup[4][1] and lineup[6][2] != lineup[7][2] or lineup[-1] > min_sal and lineup[-1] < 60000 and lineup[0][1] == lineup[5][1] and lineup[6][2] != lineup[7][2]):
+            if (lineup[-1] > min_sal and lineup[-1] <= 60000 and lineup[0][1] == lineup[3][1] and lineup[6][2] != lineup[7][2] or lineup[-1] > min_sal and lineup[-1] <= 60000 and lineup[0][1] == lineup[4][1] and lineup[6][2] != lineup[7][2] or lineup[-1] > min_sal and lineup[-1] <= 60000 and lineup[0][1] == lineup[5][1] and lineup[6][2] != lineup[7][2]):
                 return True
             else:
                 return False
 
         else:
-            # No Pairing
-            if (lineup[-1] > min_sal and lineup[-1] < 60000 and lineup[6][2] != lineup[7][2]):
+            # No Forced Pairing
+            # No TE in the FLX
+            # No RB1 and RB2 on the same team.
+            if (lineup[-1] > min_sal and lineup[-1] <= 60000 and lineup[6][2] != lineup[7][2] and lineup[1][1] != lineup[2][1]):
                 #print(lineup[7][2])
                 #print(lineup[8][2])
                 return True
