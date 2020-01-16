@@ -239,6 +239,20 @@ class TestSheetsCreate:
         #
         prereq.copyFormula(spreadsheet, service, sheetId1, 5, 6)
 
+        # I will do player name data cleaning at the end of the spreadsheet. This will be in the 'AT' and on column range
+        # This is the best way to use what I currently have which is working.
+
+        prereq.addCol(spreadsheet, service, sheetId1, 46, 47)
+
+        result = prereq.writeToCell(spreadsheet, service, 'Player', "FanDuel!C1")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+
+        result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(B2, " E.J."," EJ")', "FanDuel!AT2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        #
+        prereq.copyFormula(spreadsheet, service, sheetId1, 46, 47)
+
+
         prereq.addCol(spreadsheet, service, sheetId1, 2, 3)
 
         result = prereq.writeToCell(spreadsheet, service, 'Player', "FanDuel!C1")
