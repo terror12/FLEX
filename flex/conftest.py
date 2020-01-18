@@ -3,6 +3,8 @@ from flex.utils.read_cli import read_cli
 from flex.lib.connect.connect_to_sheets import SheetsConnector
 from flex.lib.data_clean.remove import Remove
 from flex.lib.data_clean.fix_df import FixUpDf
+from flex.lib.sheets.prerequisite import PreReqs
+
 
 from glusto.core import Glusto as g
 
@@ -41,6 +43,100 @@ def rawDataframe(request):
     full_df = FLEX.result_to_df()
 
     return full_df
+
+
+@pytest.fixture(scope='session')
+def shtCreatePreReq(deftestdata, print_logging):
+    """
+    #Test that we can read a sheet using the credential object
+    #:return:
+    """
+    projections = deftestdata['projections']
+    FanDuel_Salaries = deftestdata['FanDuel_Salaries']
+    Sheet_Name = deftestdata['Sheet_Name']
+
+    g.log.info('Instantiate SheetsConnector object')
+    FLEX = SheetsConnector()
+    g.log.info('Get Credentials')
+    credentials = FLEX.get_credentials()
+
+    g.log.info('Instantiate Prereqs')
+    prereq = PreReqs()
+    g.log.info('create New sheet')
+    spreadsheet, service = prereq.createNewSheet(credentials, Sheet_Name)
+
+    g.log.info('Instantiate Prereqs')
+    prereq = PreReqs()
+    g.log.info('Upload Data')
+    prereq.importData(credentials, spreadsheet, projections)
+
+    prereq.addTab(spreadsheet, service, 'FanDuel')
+
+    prereq.importSpecificTabData(credentials, spreadsheet, 'FanDuel', FanDuel_Salaries)
+
+    sheetId0 = prereq.gatherFacts(spreadsheet, service, 0)
+    sheetId1 = prereq.gatherFacts(spreadsheet, service, 1)
+
+    # ================================================
+    g.log.info('Create pre_salary column')
+    result = prereq.writeToCell(spreadsheet, service, 'pre_Salary', "FanDuel!E1")
+    g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
+
+    g.log.info('Populate pre_salary column with $$$s removed')
+    result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(TO_TEXT(D2), "\$","")', "FanDuel!E2")
+    g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
+
+    prereq.copyFormula(spreadsheet, service, sheetId1, 4, 5)
+
+    g.log.info('Create Salary column')
+    result = prereq.writeToCell(spreadsheet, service, 'Salary', "FanDuel!F1")
+    g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
+
+    g.log.info('Populate Salary column with commas removed')
+    result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(E2, "\,","")', "FanDuel!F2")
+    g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
+
+    prereq.copyFormula(spreadsheet, service, sheetId1, 5, 6)
+
+    prereq.addCol(spreadsheet, service, sheetId1, 2, 3)
+
+    g.log.info('Create Player column')
+    result = prereq.writeToCell(spreadsheet, service, 'Player', "FanDuel!C1")
+    g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
+
+    g.log.info('Populate PLayer column with Jr. removed')
+    result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(B2, " Jr.","")', "FanDuel!C2")
+    g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
+
+    prereq.copyFormula(spreadsheet, service, sheetId1, 2, 3)
+
+    g.log.info('Create new Player column')
+    prereq.addCol(spreadsheet, service, sheetId1, 3, 4)
+
+    g.log.info('Create Salary column')
+    result = prereq.writeToCell(spreadsheet, service, 'Player', "FanDuel!D1")
+    g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
+
+    g.log.info('Populate Salary column with hyphen removed')
+    result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(C2, "\'","")', "FanDuel!D2")
+    g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
+
+    prereq.copyFormula(spreadsheet, service, sheetId1, 3, 4)
+
+    g.log.info('Create new Player column')
+    prereq.addCol(spreadsheet, service, sheetId1, 4, 5)
+
+    g.log.info('Create Salary column')
+    result = prereq.writeToCell(spreadsheet, service, 'Player', "FanDuel!E1")
+    g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
+
+    g.log.info('Populate Salary column with II removed')
+    result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(D2, "II","")', "FanDuel!E2")
+    g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
+
+    prereq.copyFormula(spreadsheet, service, sheetId1, 4, 5)
+
+    return spreadsheet
 
 @pytest.fixture(scope='session')
 def full_dataframe_prep(request, rawDataframe):

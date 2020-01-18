@@ -52,8 +52,6 @@ class PreReqs():
 
         gc = gspread.authorize(credentials)
 
-
-
         gc.import_csv(spreadsheetId, content)
 
 
@@ -89,8 +87,6 @@ class PreReqs():
 
     def addCol(self, spreadsheet, service, sheetId, start, end):
 
-
-
         add_col_request = {
             "requests": {
                 "insertDimension": {
@@ -107,8 +103,6 @@ class PreReqs():
         service.spreadsheets().batchUpdate(spreadsheetId=spreadsheet, body=add_col_request).execute()
 
     def rmCol(self, spreadsheet, service, sheetId, start, end):
-
-
 
         add_col_request = {
             "requests": {
