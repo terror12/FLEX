@@ -136,7 +136,33 @@ def shtCreatePreReq(deftestdata, print_logging):
 
     prereq.copyFormula(spreadsheet, service, sheetId1, 4, 5)
 
-    return spreadsheet
+    g.log.info('Create new Player column')
+    prereq.addCol(spreadsheet, service, sheetId1, 5, 6)
+
+    g.log.info('Create Salary column')
+    result = prereq.writeToCell(spreadsheet, service, 'Player', "FanDuel!F1")
+    g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
+
+    g.log.info('Populate Salary column with II removed')
+    result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(E2, " I\,","\,")', "FanDuel!F2")
+    g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
+
+    prereq.copyFormula(spreadsheet, service, sheetId1, 5, 6)
+
+    g.log.info('Create new Player column')
+    prereq.addCol(spreadsheet, service, sheetId1, 6, 7)
+
+    g.log.info('Create Salary column')
+    result = prereq.writeToCell(spreadsheet, service, 'Player', "FanDuel!G1")
+    g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
+
+    g.log.info('Populate Salary column with . removed')
+    result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(F2, "E.J.","EJ")', "FanDuel!G2")
+    g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
+
+    prereq.copyFormula(spreadsheet, service, sheetId1, 6, 7)
+
+    return spreadsheet, service, sheetId0, sheetId1
 
 @pytest.fixture(scope='session')
 def full_dataframe_prep(request, rawDataframe):
