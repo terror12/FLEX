@@ -7,6 +7,9 @@ from oauth2client.file import Storage
 import gspread
 import pygsheets
 import csv
+import webbrowser
+import time
+import pyautogui
 
 class PreReqs():
 
@@ -53,6 +56,68 @@ class PreReqs():
         gc = gspread.authorize(credentials)
 
         gc.import_csv(spreadsheetId, content)
+
+
+    def pyau_sheets(self, spreadsheet):
+
+        a_website = 'https://docs.google.com/spreadsheets/d/%s' % spreadsheet
+            #
+        # Open url in a new window of the default browser, if possible
+        webbrowser.open_new(a_website)
+            # # username = deftestdata['username']
+            # # password = deftestdata['password']
+            # # full_path_filename = deftestdata['full_path_filename']
+            # #            spreadsheetID = deftestdata['full_path_filename']
+            #
+        time.sleep(55)
+        # Click on FanDuel tab
+        # Account for changes that were made!
+        pyautogui.moveTo(367, 1180)    #1586, 192)
+        pyautogui.click()
+       
+        time.sleep(20)
+      
+        # highlight entire player column
+        pyautogui.moveTo(707, 303)   #1173)
+        # time.sleep(30)
+        pyautogui.click()
+        time.sleep(10)
+        # Click on 'Add-ons'
+        pyautogui.moveTo(419, 213)  #295, 307)
+        pyautogui.click()
+        time.sleep(2)
+       
+        # Click on split names
+        #pyautogui.moveTo(473,297)   #417, 213)
+        #pyautogui.click()
+        #time.sleep(2)
+        #
+        #pyautogui.moveTo(474, 297)
+        #pyautogui.click()
+        #time.sleep(2)
+        # pyautogui.moveTo(1271, 691)
+        #pyautogui.click()
+        time.sleep(5)
+        pyautogui.press('down')
+        time.sleep(5)
+#        pyautogui.press('down')
+       
+        pyautogui.press('enter')
+       
+        time.sleep(5)
+       
+        pyautogui.press('enter')
+        # Click start in add on
+        # pyautogui.moveTo(1664, 394)
+        # pyautogui.click()
+        time.sleep(30)
+       
+        # start of right to the source
+        pyautogui.moveTo(926, 846)
+        pyautogui.click()
+        time.sleep(20)
+        pyautogui.moveTo(1033, 841)
+        pyautogui.click()
 
 
     def importSpecificTabData(self, credentials, spreadsheet, tab_name, data_file):

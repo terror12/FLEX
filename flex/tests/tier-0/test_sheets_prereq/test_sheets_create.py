@@ -677,8 +677,12 @@ class TestSheetsCreate:
             spreadsheet, service, sheetId0, sheetId1 = shtCreatePreReq
             g.log.info(spreadsheet)
 
+            g.log.info('Instantiate the prereq object')
+            prereq = PreReqs()
+            prereq.pyau_sheets(spreadsheet)
+
             # TODO: wrap this code below in a function.
-            time.sleep(60)
+            #time.sleep(60)
             # a_website = 'https://docs.google.com/spreadsheets/d/%s' % spreadsheet
             #
             # # Open url in a new window of the default browser, if possible
@@ -735,8 +739,8 @@ class TestSheetsCreate:
             #g.log.info('Instantiate SheetsConnector object')
             #FLEX = SheetsConnector()
 
-            g.log.info('Instantiate Prereqs')
-            prereq = PreReqs()
+#            g.log.info('Instantiate Prereqs')
+#            prereq = PreReqs()
 
             prereq.addCol(spreadsheet, service, sheetId1, 11, 12)
 
@@ -790,7 +794,7 @@ class TestSheetsCreate:
 
             prereq.addCol(spreadsheet, service, sheetId1, 13, 14)
 
-            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(M2, "New York J Defense", "Jets")',
+            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(M2, "New YorkJ Defense", "Jets")',
                                         "FanDuel!N2")
 
             g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
@@ -799,7 +803,7 @@ class TestSheetsCreate:
 
             prereq.addCol(spreadsheet, service, sheetId1, 14, 15)
 
-            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(N2, "Tampa Bay Defense", "Buccaneers")',
+            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(N2, "TampaBay Defense", "Buccaneers")',
                                         "FanDuel!O2")
 
             g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
@@ -817,7 +821,7 @@ class TestSheetsCreate:
 
             prereq.addCol(spreadsheet, service, sheetId1, 16, 17)
 
-            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(P2, "New England Defense", "Patriots")',
+            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(P2, "NewEngland Defense", "Patriots")',
                                         "FanDuel!Q2")
 
             g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
@@ -835,7 +839,7 @@ class TestSheetsCreate:
 
             prereq.addCol(spreadsheet, service, sheetId1, 18, 19)
 
-            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(R2, "Kansas City Defense", "Chiefs")',
+            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(R2, "KansasCity Defense", "Chiefs")',
                                         "FanDuel!S2")
 
             g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
@@ -844,7 +848,7 @@ class TestSheetsCreate:
 
             prereq.addCol(spreadsheet, service, sheetId1, 19, 20)
 
-            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(S2, "Philadelphia", "Eagles")',
+            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(S2, "Philadelphia Defense", "Eagles")',
                                         "FanDuel!T2")
 
             g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
@@ -853,7 +857,7 @@ class TestSheetsCreate:
 
             prereq.addCol(spreadsheet, service, sheetId1, 20, 21)
 
-            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(T2, "Pittsburgh", "Steelers")',
+            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(T2, "Pittsburgh Defense", "Steelers")',
                                         "FanDuel!U2")
 
             g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
@@ -871,7 +875,7 @@ class TestSheetsCreate:
 
             prereq.addCol(spreadsheet, service, sheetId1, 22, 23)
 
-            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(V2, "New Orleans Defense", "Saints")',
+            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(V2, "NewOrleans Defense", "Saints")',
                                         "FanDuel!W2")
 
             g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
@@ -880,7 +884,7 @@ class TestSheetsCreate:
 
             prereq.addCol(spreadsheet, service, sheetId1, 23, 24)
 
-            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(W2, "Green Bay Defense", "Packers")',
+            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(W2, "GreenBay Defense", "Packers")',
                                         "FanDuel!X2")
 
             g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
@@ -936,7 +940,7 @@ class TestSheetsCreate:
 
             prereq.addCol(spreadsheet, service, sheetId1, 29, 30)
 
-            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AC2, "LA Rams", "Rams")', "FanDuel!AD2")
+            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AC2, "LosAngeles Defense", "Rams")', "FanDuel!AD2")
 
             g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
             #
@@ -944,7 +948,7 @@ class TestSheetsCreate:
 
             prereq.addCol(spreadsheet, service, sheetId1, 30, 31)
 
-            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AD2, "San Diego Defense", "Chargers")',
+            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AD2, "SanDiego Defense", "Chargers")',
                                         "FanDuel!AE2")
 
             g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
@@ -972,81 +976,72 @@ class TestSheetsCreate:
             g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
             prereq.copyFormula(spreadsheet, service, sheetId1, 33, 34)
 
+#            prereq.addCol(spreadsheet, service, sheetId1, 34, 35)
+#            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AH2, "Detroit", "Lions")', "FanDuel!AI2")
+#            g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+#            prereq.copyFormula(spreadsheet, service, sheetId1, 34, 35)
+
             prereq.addCol(spreadsheet, service, sheetId1, 34, 35)
-            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AH2, "Detroit", "Lions")', "FanDuel!AI2")
+            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AH2, "Detroit Defense", "Lions")',
+                                        "FanDuel!AI2")
             g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
             prereq.copyFormula(spreadsheet, service, sheetId1, 34, 35)
 
             prereq.addCol(spreadsheet, service, sheetId1, 35, 36)
-            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AI2, "Detroit Defense", "Lions")',
+            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AI2, "Buffalo Defense", "Bills")',
                                         "FanDuel!AJ2")
             g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
             prereq.copyFormula(spreadsheet, service, sheetId1, 35, 36)
 
             prereq.addCol(spreadsheet, service, sheetId1, 36, 37)
-            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AJ2, "Buffalo Defense", "Bills")',
+            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AJ2, "New YorkG Defense", "Giants")',
                                         "FanDuel!AK2")
             g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
             prereq.copyFormula(spreadsheet, service, sheetId1, 36, 37)
 
             prereq.addCol(spreadsheet, service, sheetId1, 37, 38)
-            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AK2, "New York G Defense", "Giants")',
+            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AK2, "Tennessee Defense", "Titans")',
                                         "FanDuel!AL2")
             g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
             prereq.copyFormula(spreadsheet, service, sheetId1, 37, 38)
 
             prereq.addCol(spreadsheet, service, sheetId1, 38, 39)
-            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AL2, "Tennessee Defense", "Titans")',
+            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AL2, "Chicago Defense", "Bears")',
                                         "FanDuel!AM2")
             g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
             prereq.copyFormula(spreadsheet, service, sheetId1, 38, 39)
 
             prereq.addCol(spreadsheet, service, sheetId1, 39, 40)
-            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AM2, "Chicago Defense", "Bears")',
+            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AM2, "Miami Defense", "Dolphins")',
                                         "FanDuel!AN2")
             g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
             prereq.copyFormula(spreadsheet, service, sheetId1, 39, 40)
 
             prereq.addCol(spreadsheet, service, sheetId1, 40, 41)
-            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AN2, "Miami Defense", "Dolphins")',
+            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AN2, "Baltimore Defense", "Ravens")',
                                         "FanDuel!AO2")
             g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
             prereq.copyFormula(spreadsheet, service, sheetId1, 40, 41)
 
             prereq.addCol(spreadsheet, service, sheetId1, 41, 42)
-            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AO2, "Baltimore Defense", "Ravens")',
+            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AO2, "SanFrancisco Defense", "49ers")',
                                         "FanDuel!AP2")
             g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
             prereq.copyFormula(spreadsheet, service, sheetId1, 41, 42)
 
             prereq.addCol(spreadsheet, service, sheetId1, 42, 43)
-
-            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AP2, "San Francisco Defense", "49ers")',
+            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AP2, "Denver Defense", "Broncos")',
                                         "FanDuel!AQ2")
-
             g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
-
             prereq.copyFormula(spreadsheet, service, sheetId1, 42, 43)
 
             prereq.addCol(spreadsheet, service, sheetId1, 43, 44)
-
-            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AQ2, "Denver Defense", "Broncos")',
+            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AQ2, "Cleveland Defense", "Browns")',
                                         "FanDuel!AR2")
-
             g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
-
             prereq.copyFormula(spreadsheet, service, sheetId1, 43, 44)
 
-            prereq.addCol(spreadsheet, service, sheetId1, 44, 45)
-
-            result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(AR2, "Cleveland Defense", "Browns")',
-                                        "FanDuel!AS2")
-
-            g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
-            #
-            prereq.copyFormula(spreadsheet, service, sheetId1, 44, 45)
-
-            result = prereq.writeToCell(spreadsheet, service, 'player', "FanDuel!AS1")
+            result = prereq.writeToCell(spreadsheet, service, 'player', "FanDuel!AR1")
 
             #############################################################################
 
@@ -1055,7 +1050,7 @@ class TestSheetsCreate:
 
             g.log.info('Copy Over points scored')
             result = prereq.writeToCell(spreadsheet, service,
-                                        '=VLOOKUP(B2,{FanDuel!$AS$2:$AS$1000,FanDuel!$AT$2:$AT$1000},2,FALSE)', 'H2')
+                                        '=VLOOKUP(B2,{FanDuel!$AR$2:$AR$1000,FanDuel!$AS$2:$AS$1000},2,FALSE)', 'H2')
             g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
 
             prereq.copyFormula(spreadsheet, service, sheetId0, 7, 8)
@@ -1066,7 +1061,7 @@ class TestSheetsCreate:
             # '=IF(D2="DST", VLOOKUP(B2,{FanDuel!$E$2:$E$1000,FanDuel!$H$2:$H$1000},2,FALSE), VLOOKUP(B2,{FanDuel!$D$2:$D$1000,FanDuel!$H$2:$H$1000},2,FALSE))', 'I2')
             g.log.info('Copy over Salary')
             result = prereq.writeToCell(spreadsheet, service,
-                                        '=VLOOKUP(B2,{FanDuel!$AS$2:$AS$1000,FanDuel!$AW$2:$AW$1000},2,FALSE)', 'I2')
+                                        '=VLOOKUP(B2,{FanDuel!$AR$2:$AR$1000,FanDuel!$AV$2:$AV$1000},2,FALSE)', 'I2')
             g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
 
             prereq.copyFormula(spreadsheet, service, sheetId0, 8, 9)
