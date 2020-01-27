@@ -70,12 +70,19 @@ def shtCreatePreReq(deftestdata, print_logging):
     g.log.info('Upload Data')
     prereq.importData(credentials, spreadsheet, projections)
 
+    result = prereq.writeToCell(spreadsheet,service, '=REGEXREPLACE(B2, "\.","")', "A2")
+    
     prereq.addTab(spreadsheet, service, 'FanDuel')
 
     prereq.importSpecificTabData(credentials, spreadsheet, 'FanDuel', FanDuel_Salaries)
 
     sheetId0 = prereq.gatherFacts(spreadsheet, service, 0)
     sheetId1 = prereq.gatherFacts(spreadsheet, service, 1)
+
+    g.log.info('Extend removal of dot')
+    prereq.copyFormula(spreadsheet, service, sheetId0, 0, 1)
+
+#    result = prereq.writeToCell(spreadsheet,service, '=REGEXREPLACE(B2, "\.","")', "sheetId0!A2")
 
     # ================================================
     g.log.info('Create pre_salary column')
@@ -157,7 +164,7 @@ def shtCreatePreReq(deftestdata, print_logging):
     g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
 
     g.log.info('Populate Salary column with . removed')
-    result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(F2, "E.J.","EJ")', "FanDuel!G2")
+    result = prereq.writeToCell(spreadsheet, service, '=IF(OR(REGEXMATCH(F2, "E.J."), REGEXMATCH(F2, "A.J."), REGEXMATCH(F2, "T.Y."), REGEXMATCH(F2, "D.J."), REGEXMATCH(F2, "J.J."), REGEXMATCH(F2, "T.J."), REGEXMATCH(F2, "C.J.")), REGEXREPLACE(F2, "\.",""), F2)', "FanDuel!G2")
     g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
 
     prereq.copyFormula(spreadsheet, service, sheetId1, 6, 7)
