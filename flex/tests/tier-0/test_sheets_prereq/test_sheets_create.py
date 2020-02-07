@@ -701,4 +701,4 @@ class TestSheetsCreate:
             prereq.pyau_sheets(spreadsheet)
 
             g.log.info("Call to Gsheet function to fix DSTs and finish gsheet config")
-            prereq.Gsheet_dst_plus_config_17_19(spreadsheet, service, sheetId0, sheetId1, year)
+            prereq.Gsheet_dst_plus_config_17_19(spreadsheet, service, sheetId0, sheetId1)
