@@ -107,6 +107,15 @@ class PreReqs():
 
 
     def Gsheet_dst_plus_config(self, spreadsheet, service, sheetId0, sheetId1, year):
+        """
+        used to create sheets for the 15-16 season
+        :param spreadsheet:
+        :param service:
+        :param sheetId0:
+        :param sheetId1:
+        :param year:
+        :return:
+        """
         self.addCol(spreadsheet, service, sheetId1, 11, 12)
 
         result = self.writeToCell(spreadsheet, service, '=CONCATENATE(K2, H2, I2, " ", J2)', "FanDuel!L2")
@@ -347,7 +356,252 @@ class PreReqs():
 
         self.copyFormula(spreadsheet, service, sheetId0, 8, 9)
 
+    def Gsheet_dst_plus_config_17_19(self, spreadsheet, service, sheetId0, sheetId1, year):
+        """
+        used to create sheets for the 17,18 and 19 season.
+        :param spreadsheet:
+        :param service:
+        :param sheetId0:
+        :param sheetId1:
+        :param year:
+        :return:
+        """
+        self.addCol(spreadsheet, service, sheetId1, 11, 12)
 
+        result = self.writeToCell(spreadsheet, service, '=CONCATENATE(K2, H2, I2, " ", J2)', "FanDuel!L2")
+        g.log.info('Concatenating split player names')
+        g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
+
+        self.copyFormula(spreadsheet, service, sheetId1, 11, 12)
+
+        #######################################
+        # Code to map team cities to team name
+        #######################################
+
+        self.addCol(spreadsheet, service, sheetId1, 12, 13)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(L2, "Arizona ", "Cardinals")',
+                                    "FanDuel!M2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 12, 13)
+
+        self.addCol(spreadsheet, service, sheetId1, 13, 14)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(M2, "NewYork J", "Jets")',
+                                    "FanDuel!N2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 13, 14)
+
+        self.addCol(spreadsheet, service, sheetId1, 14, 15)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(N2, "Tampa Bay", "Buccaneers")',
+                                    "FanDuel!O2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 14, 15)
+
+        self.addCol(spreadsheet, service, sheetId1, 15, 16)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(O2, "Dallas ", "Cowboys")',
+                                    "FanDuel!P2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 15, 16)
+
+        self.addCol(spreadsheet, service, sheetId1, 16, 17)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(P2, "New England", "Patriots")',
+                                    "FanDuel!Q2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 16, 17)
+
+        self.addCol(spreadsheet, service, sheetId1, 17, 18)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(Q2, "Cincinnati ", "Bengals")',
+                                    "FanDuel!R2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 17, 18)
+
+        self.addCol(spreadsheet, service, sheetId1, 18, 19)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(R2, "Kansas City", "Chiefs")',
+                                    "FanDuel!S2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 18, 19)
+
+        self.addCol(spreadsheet, service, sheetId1, 19, 20)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(S2, "Philadelphia ", "Eagles")',
+                                    "FanDuel!T2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 19, 20)
+
+        self.addCol(spreadsheet, service, sheetId1, 20, 21)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(T2, "Pittsburgh ", "Steelers")',
+                                    "FanDuel!U2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 20, 21)
+
+        self.addCol(spreadsheet, service, sheetId1, 21, 22)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(U2, "Minnesota ", "Vikings")',
+                                    "FanDuel!V2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 21, 22)
+
+        self.addCol(spreadsheet, service, sheetId1, 22, 23)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(V2, "New Orleans", "Saints")',
+                                    "FanDuel!W2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 22, 23)
+
+        self.addCol(spreadsheet, service, sheetId1, 23, 24)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(W2, "Green Bay", "Packers")',
+                                    "FanDuel!X2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 23, 24)
+
+        self.addCol(spreadsheet, service, sheetId1, 24, 25)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(X2, "Houston ", "Texans")',
+                                    "FanDuel!Y2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 24, 25)
+
+        self.addCol(spreadsheet, service, sheetId1, 25, 26)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(Y2, "Atlanta ", "Falcons")',
+                                    "FanDuel!Z2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 25, 26)
+
+        self.addCol(spreadsheet, service, sheetId1, 26, 27)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(Z2, "Washington ", "Redskins")',
+                                    "FanDuel!AA2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 26, 27)
+
+        time.sleep(60)
+
+        self.addCol(spreadsheet, service, sheetId1, 27, 28)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(AA2, "Carolina ", "Panthers")',
+                                    "FanDuel!AB2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 27, 28)
+
+        self.addCol(spreadsheet, service, sheetId1, 28, 29)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(AB2, "Seattle ", "Seahawks")',
+                                    "FanDuel!AC2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 28, 29)
+
+        self.addCol(spreadsheet, service, sheetId1, 29, 30)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(AC2, "LA Rams ", "Rams")', "FanDuel!AD2")
+
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        #
+        self.copyFormula(spreadsheet, service, sheetId1, 29, 30)
+
+        self.addCol(spreadsheet, service, sheetId1, 30, 31)
+
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(AD2, "LA Chargers ", "Chargers")',
+                                    "FanDuel!AE2")
+
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        #
+        self.copyFormula(spreadsheet, service, sheetId1, 30, 31)
+
+        self.addCol(spreadsheet, service, sheetId1, 31, 32)
+
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(AE2, "Indianapolis ", "Colts")',
+                                    "FanDuel!AF2")
+
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        #
+        self.copyFormula(spreadsheet, service, sheetId1, 31, 32)
+
+        self.addCol(spreadsheet, service, sheetId1, 32, 33)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(AF2, "Oakland ", "Raiders")',
+                                    "FanDuel!AG2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 32, 33)
+
+        self.addCol(spreadsheet, service, sheetId1, 33, 34)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(AG2, "Jacksonville ", "Jaguars")',
+                                    "FanDuel!AH2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 33, 34)
+
+        self.addCol(spreadsheet, service, sheetId1, 34, 35)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(AH2, "Detroit ", "Lions")',
+                                    "FanDuel!AI2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 34, 35)
+
+        self.addCol(spreadsheet, service, sheetId1, 35, 36)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(AI2, "Buffalo ", "Bills")',
+                                    "FanDuel!AJ2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 35, 36)
+
+        self.addCol(spreadsheet, service, sheetId1, 36, 37)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(AJ2, "NewYork G", "Giants")',
+                                    "FanDuel!AK2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 36, 37)
+
+        self.addCol(spreadsheet, service, sheetId1, 37, 38)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(AK2, "Tennessee ", "Titans")',
+                                    "FanDuel!AL2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 37, 38)
+
+        self.addCol(spreadsheet, service, sheetId1, 38, 39)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(AL2, "Chicago ", "Bears")',
+                                    "FanDuel!AM2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 38, 39)
+
+        self.addCol(spreadsheet, service, sheetId1, 39, 40)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(AM2, "Miami ", "Dolphins")',
+                                    "FanDuel!AN2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 39, 40)
+
+        self.addCol(spreadsheet, service, sheetId1, 40, 41)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(AN2, "Baltimore ", "Ravens")',
+                                    "FanDuel!AO2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 40, 41)
+
+        self.addCol(spreadsheet, service, sheetId1, 41, 42)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(AO2, "San Francisco", "49ers")',
+                                    "FanDuel!AP2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 41, 42)
+
+        self.addCol(spreadsheet, service, sheetId1, 42, 43)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(AP2, "Denver ", "Broncos")',
+                                    "FanDuel!AQ2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 42, 43)
+
+        self.addCol(spreadsheet, service, sheetId1, 43, 44)
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(AQ2, "Cleveland ", "Browns")',
+                                    "FanDuel!AR2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        self.copyFormula(spreadsheet, service, sheetId1, 43, 44)
+
+        result = self.writeToCell(spreadsheet, service, 'player', "FanDuel!AR1")
+
+        #############################################################################
+
+        result = self.writeToCell(spreadsheet, service, 'Actual_Points', 'H1')
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+
+        g.log.info('Copy Over points scored')
+        result = self.writeToCell(spreadsheet, service,
+                                    '=VLOOKUP(A2,{FanDuel!$AR$2:$AR$1000,FanDuel!$AS$2:$AS$1000},2,FALSE)', 'H2')
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+
+        self.copyFormula(spreadsheet, service, sheetId0, 7, 8)
+
+        result = self.writeToCell(spreadsheet, service, 'FanDuel_Salary', 'I1')
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+
+        g.log.info('Copy over Salary')
+        result = self.writeToCell(spreadsheet, service,
+                                    '=VLOOKUP(A2,{FanDuel!$AR$2:$AR$1000,FanDuel!$AV$2:$AV$1000},2,FALSE)', 'I2')
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+
+        self.copyFormula(spreadsheet, service, sheetId0, 8, 9)
 
     def importSpecificTabData(self, credentials, spreadsheet, tab_name, data_file):
         gc = gspread.authorize(credentials)
