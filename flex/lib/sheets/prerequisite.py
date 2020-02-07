@@ -356,7 +356,7 @@ class PreReqs():
 
         self.copyFormula(spreadsheet, service, sheetId0, 8, 9)
 
-    def Gsheet_dst_plus_config_17_19(self, spreadsheet, service, sheetId0, sheetId1, year):
+    def Gsheet_dst_plus_config_17_19(self, spreadsheet, service, sheetId0, sheetId1, year=None):
         """
         used to create sheets for the 17,18 and 19 season.
         :param spreadsheet:
