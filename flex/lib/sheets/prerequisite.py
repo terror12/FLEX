@@ -385,7 +385,7 @@ class PreReqs():
         self.copyFormula(spreadsheet, service, sheetId1, 12, 13)
 
         self.addCol(spreadsheet, service, sheetId1, 13, 14)
-        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(M2, "NewYork J", "Jets")',
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(M2, "New J", "Jets")',
                                     "FanDuel!N2")
         g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
         self.copyFormula(spreadsheet, service, sheetId1, 13, 14)
@@ -532,7 +532,7 @@ class PreReqs():
         self.copyFormula(spreadsheet, service, sheetId1, 35, 36)
 
         self.addCol(spreadsheet, service, sheetId1, 36, 37)
-        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(AJ2, "NewYork G", "Giants")',
+        result = self.writeToCell(spreadsheet, service, '=REGEXREPLACE(AJ2, "New G ", "Giants")',
                                     "FanDuel!AK2")
         g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
         self.copyFormula(spreadsheet, service, sheetId1, 36, 37)
