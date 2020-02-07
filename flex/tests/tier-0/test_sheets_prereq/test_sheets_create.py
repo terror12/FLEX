@@ -692,8 +692,6 @@ class TestSheetsCreate:
             Creates google sheet for 2017 to 2019 season.
             :return:
             """
-            year = deftestdata["year"]
-
             g.log.info('Instantiate the spreadsheet object')
             spreadsheet, service, sheetId0, sheetId1 = shtCreatePreReq
             g.log.info(spreadsheet)
