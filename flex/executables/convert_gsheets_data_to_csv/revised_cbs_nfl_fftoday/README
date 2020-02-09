@@ -1,0 +1,2 @@
+# This directory holds the shell scripts that we run to convert our Database from
+# Google sheets into a csv file holding only the necessary info to analyze the STD.

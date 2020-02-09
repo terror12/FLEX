@@ -12,13 +12,16 @@ we can construct a standard deviation (STD) value for every player for the upcom
 
 We will use a program to generate lineups along with a community driven approach to increase the number of different STD combinations that we can record. This will be accomplished by providing a website for users to control sliders and generate their own lineups, which will be recorded and combined with all other previous runs in the database.
 
+
+
 Tickets will be tracked and assigned on the following Trello board
 https://trello.com/b/k1UY8kRD/flex-project
 ======================
 
 High Level Tasks:
 ======================
- 1. Collect database of historical data as far back as possible (3 years currently)
+ 1. Collect database of historical data as far back as possible (5 years currently)
+    a. Using Google Sheets as the database, making API calls to Google Sheets to work with the Data.
  2. Write python script/library to scrape webpages to pull down current projections week to week while in season. Save files as XMLs or CSVs
  3. Depending how files are stored import into Google sheets and automate how to create the STD list
  4. Build webpage that allows you to generate lineups for that weeks players.
