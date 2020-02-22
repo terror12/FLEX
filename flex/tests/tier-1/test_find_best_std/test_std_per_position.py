@@ -40,7 +40,7 @@ class TestSTDPerPosition:
 
 
     @pytest.mark.csv_all_data
-    def test_create_csv_all_data(self, rawDataframe, print_logging, full_dataframe_prep_for_data):
+    def test_create_csv_all_data(self, rawDataframe, print_logging, full_dataframe_prep_for_data, round=0):
         """
         This test will create a single csv of each Position using a Google sheet as input
         The result of this csv will be a file containing all relevant information needed for
@@ -58,12 +58,12 @@ class TestSTDPerPosition:
         QB, RB, WR, TE, FLX, DST = full_dataframe_prep_for_data
 
         # TODO: change STD value to hundreths 22.42
-        QB = QB.round(1)
-        RB = RB.round(1)
-        WR = WR.round(1)
-        TE = TE.round(1)
-        DST = DST.round(1)
-        FLX = FLX.round(1)
+        QB = QB.round(round)
+        RB = RB.round(round)
+        WR = WR.round(round)
+        TE = TE.round(round)
+        DST = DST.round(round)
+        FLX = FLX.round(round)
         #g.log.info(type(QB))
         # TODO: list from highest to lowest Actual points
         #g.log.info(QB)

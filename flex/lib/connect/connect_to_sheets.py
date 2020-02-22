@@ -27,11 +27,11 @@ class SheetsConnector():
         Returns:
             Credentials, the obtained credential.
         """
-        # try:
-        #    import argparse
-        #    flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
-        # except ImportError:
-        #    flags = None
+        #try:
+        #   import argparse
+        #   flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
+        #except ImportError:
+        #   flags = None
         SCOPES = 'https://www.googleapis.com/auth/drive'
         CLIENT_SECRET_FILE = 'client_secret.json'
         APPLICATION_NAME = 'Google Sheets API FLEX'
