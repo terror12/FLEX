@@ -1,39 +1,30 @@
 **Table of Contents**
 
-[TOCM]
-
-[TOC]
-
-#H1 header
-##H2 header
-###H3 header
-####H4 header
-#####H5 header
-######H6 header
-#Heading 1 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-##Heading 2 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-###Heading 3 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-####Heading 4 link [Heading link](https://github.com/pandao/editor.md "Heading link") Heading link [Heading link](https://github.com/pandao/editor.md "Heading link")
-#####Heading 5 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-######Heading 6 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+- [Mission Statement](#Mission Statement)
+- [Methodology](#Methodology)
+  * [Example](##Example)
+    + [Becomes](###Becomes)
+- [Lineup Generation](#Lineup Generation)
+- [High Level Tasks](#High Level Tasks)
 
 #Mission Statement
 #Methodology
 ##Example
-##Results in
+###Becomes
 #Lineup Generation
 #High Level Tasks
 
-Mission Statement:
+
+#Mission Statement:
 ==================
 To openly share daily fantasy football generated lineups that result in victory atleast 51% of the time.
 
-Methodology:
+#Methodology:
 =====================
 Using top Fantasy Football projection predicting platforms (nfl.com, cbssports.com, fftoday.com) assign each player
 a standard deviation value each week.
 This value is determined by taking the three projections and finding the standard deviation of the 3 numbers.[1]
-###For example:
+##For example:
 
 | Platform  | Player | Projections |
 | :---:         |     :---:      |          :---: |
@@ -41,7 +32,7 @@ This value is determined by taking the three projections and finding the standar
 | CBS    | Duke Johnson       | 13   |
 | FFToday    | Duke Johnson       | 12   |
 
-###Results in:
+###Becomes:
 | Player | Standard Deviation |
 |     :---:      |          :---: |
 | Duke Johnson     |  1.247   |
@@ -51,7 +42,7 @@ Once we have our list where each player has a standard deviation value assigned 
 
 [1] https://www.mathsisfun.com/data/standard-deviation.html
 
-Lineup Generation:
+#Lineup Generation:
 ======================
 
 ![](flex/Data/images/Lineup_Generator.png)
@@ -69,7 +60,7 @@ Tickets will be tracked and assigned on the following Trello board
 https://trello.com/b/k1UY8kRD/flex-project
 ======================
 
-High Level Tasks:
+#High Level Tasks:
 ======================
  1. Collect database of historical data as far back as possible (5 years currently)
     a. Using Google Sheets as the database, making API calls to Google Sheets to work with the Data.
