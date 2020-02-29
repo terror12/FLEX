@@ -1,5 +1,15 @@
-FLEX Project Guidelines:
-========================
+**Table of Contents**
+
+[TOCM]
+
+[TOC]
+
+#Mission Statement
+#Methodology
+##Example
+##Results in
+#Lineup Generation
+#High Level Tasks
 
 Mission Statement:
 ==================
@@ -7,6 +17,33 @@ To openly share daily fantasy football generated lineups that result in victory 
 
 Methodology:
 =====================
+Using top Fantasy Football projection predicting platforms (nfl.com, cbssports.com, fftoday.com) assign each player a standard deviation value each week.
+This value is determined by taking the three projections and finding the standard deviation of the 3 numbers.[1]
+###For example:
+
+| Platform  | Player | Projections |
+| :---:         |     :---:      |          :---: |
+| NFL   | Duke Johnson     | 10  |
+| CBS    | Duke Johnson       | 13   |
+| FFToday    | Duke Johnson       | 12   |
+
+###Results in:
+| Player | Standard Deviation |
+|     :---:      |          :---: |
+| Duke Johnson     |  1.247   |
+
+We then generate a list of all the players for the upcoming week according to this model.
+Once we have our list where each player has a standard deviation value assigned to them we can generate our daily fantasy lineup.
+
+[1] https://www.mathsisfun.com/data/standard-deviation.html
+
+Lineup Generation:
+======================
+
+
+
+With this list and the code in place to generate valid lineups based on the players standard deviation value, we will use a database of previous years actual results to evaluate the success of a lineup. Overtime the optimal STD value for each postion in a lineup will reveal itself.
+
 Using Fanduels salary system compared with the average of the other top Fantasy prediction engines(NFL.com, Yahoo, ESPN) 
 we can construct a standard deviation (STD) value for every player for the upcoming week. With this list and the code in place to generate valid lineups based on the players standard deviation value, we will use a database of previous years actual results to evaluate the success of a lineup. Overtime the optimal STD value for each postion in a lineup will reveal itself. 
 
@@ -29,3 +66,7 @@ High Level Tasks:
     b. Store all generated lineups and evaluate based on post week results save only lineup configuration that yeild a high result.
  5. Send link to community and advertise that using this can help them win $$$
  6. Create Facebook, Instagram, and twitter for Flexproject
+
+
+[1] https://www.mathsisfun.com/data/standard-deviation.html
+[2]
