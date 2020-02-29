@@ -72,32 +72,15 @@ Lineup Generation
 
 ![](flex/Data/images/Lineup_Generator.png)
 
-### Steps
-#### 1.
-All projection data will be downloaded from the following web application
-[FFAnalytics Projections](https://github.com/terror12/FLEX/tree/master/flex/Revised_Data/ffa_proj)
 
-#### 2.
-placeholder for Fanduel affiliate link...
-
-#### 3.
-We then store that weeks projections and FanDuel player and salary data in the FLEX github repo.
-[FLEX/flex/Revised_data/ffa_proj](https://github.com/terror12/FLEX/tree/master/flex/Revised_Data/ffa_proj)
-
-#### 4&5.
-Then we will use Python with the Google Sheets API to ensure the projection data corresponds to the appropriate FanDuel player data.
-We rely on the following tests to accomplish this.
-[FLEX/flex/tests/tier-0/test_sheets_prereq](https://github.com/terror12/FLEX/tree/master/flex/tests/tier-0/test_sheets_prereq)
-(Each week will be its own sheet.)
-#TODO Figure out how to make Google Sheets available to public in view only and available through the api for fellow developers.
-
-#### 6.
-Then we use Python to read the data from the Google Sheet and use it to drive our build lineup tests.
-[FLEX/flex/tests/tier-0/test_sheets_prereq](https://github.com/terror12/FLEX/tree/master/flex/tests/tier-0/test_sheets_prereq)https://github.com/terror12/FLEX/tree/master/flex/tests/tier-1/test_lineup_gen
-
-#### 7.
-The output of step 6 will be a valid Fanduel lineup that can now be manually entered into the app or web for the proper NFL contest.
-#TODO Make output into .csv file for easier consumption.
+| Step | Description                    |
+| ------------- | ------------------------------ |
+| **1**      | All projection data will be downloaded from the following web application[FFAnalytics Projections](https://github.com/terror12/FLEX/tree/master/flex/Revised_Data/ffa_proj)       |
+| **2**   | placeholder for Fanduel affiliate link...     |
+| **3**   | We then store that weeks projections and FanDuel player and salary data in the FLEX github repo.[FLEX/flex/Revised_data/ffa_proj](https://github.com/terror12/FLEX/tree/master/flex/Revised_Data/ffa_proj)     |
+| **4&5**   | Then we will use Python with the Google Sheets API to ensure the projection data corresponds to the appropriate FanDuel player data. We rely on the following tests to accomplish this. [FLEX/flex/tests/tier-0/test_sheets_prereq](https://github.com/terror12/FLEX/tree/master/flex/tests/tier-0/test_sheets_prereq) (Each week will be its own sheet.) #TODO Figure out how to make Google Sheets available to public in view only and available through the api for fellow developers.    |
+| **6**   | Then we use Python to read the data from the Google Sheet and use it to drive our build lineup tests. [FLEX/flex/tests/tier-0/test_sheets_prereq](https://github.com/terror12/FLEX/tree/master/flex/tests/tier-1/test_lineup_gen |
+| **7**   | The output of step 6 will be a valid Fanduel lineup that can now be manually entered into the app or web for the proper NFL contest. #TODO Make output into .csv file for easier consumption.   |
 
 
 Using a community driven approach to increase the number of different standard deviation combinations that we can record.
