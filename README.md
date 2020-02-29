@@ -40,7 +40,7 @@ Once we have our list where each player has a standard deviation value assigned 
 Lineup Generation:
 ======================
 
-
+![](flex/Data/imagesLineup_Generator.png)
 
 With this list and the code in place to generate valid lineups based on the players standard deviation value, we will use a database of previous years actual results to evaluate the success of a lineup. Overtime the optimal STD value for each postion in a lineup will reveal itself.
 
