@@ -17,6 +17,7 @@ Methodology
 =====================
 Using top Fantasy Football projection predicting platforms (nfl.com, cbssports.com, fftoday.com) we will assign each player
 a standard deviation value each week.
+
 This value is determined by taking the three projections and finding the [standard deviation](https://www.mathsisfun.com/data/standard-deviation.html) of the 3 numbers.
 #### Platform Projection Example
 
@@ -40,7 +41,7 @@ Once we have our list where each player has a standard deviation value assigned 
 
 ### Why is this useful?
 By assigning each player a standard deviation value we can now pose the question..
-|Which standard deviation value yields the highest points scored?|
+**Which standard deviation value yields the highest points scored?**
 
 In order to answer this question we first need to collect data.. which we have.
 
@@ -68,7 +69,8 @@ we can construct a standard deviation (STD) value for every player for the upcom
 
 We will use a program to generate lineups along with a community driven approach to increase the number of different STD combinations that we can record. This will be accomplished by providing a website for users to control sliders and generate their own lineups, which will be recorded and combined with all other previous runs in the database.
 
-
+Historical Analyses
+======================
 
 Tickets will be tracked and assigned on the following Trello board
 https://trello.com/b/k1UY8kRD/flex-project
