@@ -1,20 +1,17 @@
 **Table of Contents**
 
-<<<<<<< HEAD
 - [Mission Statement](Mission-Statement)
 - [Methodology](Methodology)
   * [Example](Example)
     + [Becomes](Becomes)
 - [Lineup Generation](Lineup-Generation)
 - [High Level Tasks](High-Level-Tasks)
-=======
 - [Mission Statement](Mission%20Statement)
 - [Methodology](Methodology)
   * [Example](##Example)
     + [Becomes](###Becomes)
 - [Lineup Generation](Lineup$20Generation)
 - [High Level Tasks](High%20Level%20Tasks)
->>>>>>> ed184486015661db05d6f8685bc457e7b914aa52
 
 
 
@@ -27,11 +24,7 @@ Methodology:
 Using top Fantasy Football projection predicting platforms (nfl.com, cbssports.com, fftoday.com) assign each player
 a standard deviation value each week.
 This value is determined by taking the three projections and finding the standard deviation of the 3 numbers.[1]
-<<<<<<< HEAD
 ###Example:
-=======
-##Example:
->>>>>>> ed184486015661db05d6f8685bc457e7b914aa52
 
 | Platform  | Player | Projections |
 | :---:         |     :---:      |          :---: |
