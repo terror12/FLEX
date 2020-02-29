@@ -70,7 +70,7 @@ Historical Analyses
 Lineup Generation
 ======================
 
-![](flex/Data/images/Lineup_Generator.png)
+![](flex/Data/images/gen_line.png)
 
 
 | Step | Description                    |
