@@ -41,6 +41,7 @@ Once we have our list where each player has a standard deviation value assigned 
 
 ### Why is this useful?
 By assigning each player a standard deviation value we can now pose the question..
+
 **Which standard deviation value yields the highest points scored?**
 
 In order to answer this question we first need to collect data.. which we have.
