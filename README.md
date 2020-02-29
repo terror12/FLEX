@@ -65,7 +65,7 @@ days before the game.
 
 Historical Analyses
 ======================
-####TODO Update with detailed explanation or link to report of data analsis.
+#### TODO Update with detailed explanation or link to report of data analsis.
 
 Lineup Generation
 ======================
