@@ -7,7 +7,7 @@
   * [Why is this useful?](#why-is-this-useful?)
 - [Historical Analyses](#historical-analyses)
 - [Lineup Generation](#lineup-generation)
-  * [Steps](#steps)
+  * [Steps Taken](#steps-taken)
 - [Task Management](#task-management)
 - [High Level Tasks](#high-level-tasks)
 
