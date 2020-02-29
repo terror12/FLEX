@@ -40,7 +40,7 @@ class TestSTDPerPosition:
 
 
     @pytest.mark.csv_all_data
-    def test_create_csv_all_data(self, rawDataframe, print_logging, full_dataframe_prep_for_data, round=0):
+    def test_create_csv_all_data(self, deftestdata, rawDataframe, full_dataframe_prep_for_data, round=0):
         """
         This test will create a single csv of each Position using a Google sheet as input
         The result of this csv will be a file containing all relevant information needed for
@@ -57,6 +57,14 @@ class TestSTDPerPosition:
         g.log.info('Instantiate the positional dataframes')
         QB, RB, WR, TE, FLX, DST = full_dataframe_prep_for_data
 
+        # Instantiate the file names that get assigned at the command line
+        QBfile = deftestdata['QBfile']
+        RBfile = deftestdata['RBfile']
+        WRfile = deftestdata['WRfile']
+        TEfile = deftestdata['TEfile']
+        DSTfile = deftestdata['DSTfile']
+        FLXfile = deftestdata['FLXfile']
+
         # TODO: change STD value to hundreths 22.42
         QB = QB.round(round)
         RB = RB.round(round)
@@ -71,33 +79,33 @@ class TestSTDPerPosition:
         # TODO: figure out how to analyze the data, we need to find which STD comes up the highest most frequently.
 
 
-        with open('revised_QB.csv', 'a') as f:
-            if os.stat('revised_QB.csv').st_size == 0:
+        with open(QBfile, 'a') as f:
+            if os.stat(QBfile).st_size == 0:
                 QB.to_csv(f)
             else:
                 QB.to_csv(f, header=False)
-        with open('revised_RB.csv', 'a') as f:
-            if os.stat('revised_RB.csv').st_size == 0:
+        with open(RBfile, 'a') as f:
+            if os.stat(RBfile).st_size == 0:
                 RB.to_csv(f)
             else:
                 RB.to_csv(f, header=False)
-        with open('revised_WR.csv', 'a') as f:
-            if os.stat('revised_WR.csv').st_size == 0:
+        with open(WRfile, 'a') as f:
+            if os.stat(WRfile).st_size == 0:
                 WR.to_csv(f)
             else:
                 WR.to_csv(f, header=False)
-        with open('revised_TE.csv', 'a') as f:
-            if os.stat('revised_TE.csv').st_size == 0:
+        with open(TEfile, 'a') as f:
+            if os.stat(TEfile).st_size == 0:
                 TE.to_csv(f)
             else:
                 TE.to_csv(f, header=False)
-        with open('revised_DST.csv', 'a') as f:
-            if os.stat('revised_DST.csv').st_size == 0:
+        with open(DSTfile, 'a') as f:
+            if os.stat(DSTfile).st_size == 0:
                 DST.to_csv(f)
             else:
                 DST.to_csv(f, header=False)
-        with open('revised_FLX.csv', 'a') as f:
-            if os.stat('revised_FLX.csv').st_size == 0:
+        with open(FLXfile, 'a') as f:
+            if os.stat(FLXfile).st_size == 0:
                 FLX.to_csv(f)
             else:
                 FLX.to_csv(f, header=False)

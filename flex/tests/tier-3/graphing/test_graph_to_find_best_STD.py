@@ -21,17 +21,24 @@ class TestGraphSTD:
     @pytest.mark.graph_select_data
     def test_create_graph_select_data(self, print_logging, deftestdata):
         """
-        This test will dgraph each postion all_dta_csvs
-        :param rawDataframe:
+        This test will be used to graph the relationship of points to STD
+        value for a single position at a time.
         :param print_logging:
         :param full_dataframe_prep:
         :return:
+
+        x = The header of the column whose data you want to display in the x-axis
+        y = The header of the column whose data you want to display in the y-axis
+
         """
-        # Scatter Plot for QB
-        #
+
+        # The csv that we generate from running "csv-all_data"
         master_csv = deftestdata['master_csv']
+        # Arbitrary tittle of chart
         title = deftestdata['title']
+        # Value for x axis
         x = deftestdata['x']
+        # Value for y axis
         y = deftestdata['y']
         df = pd.read_csv(master_csv)
         N = 100000
@@ -59,7 +66,7 @@ class TestGraphSTD:
     @pytest.mark.dub_graph
     def test_double_graph(self, print_logging, deftestdata):
         """
-        This test will dgraph each postion all_dta_csvs
+        This test will graph each postion all_dta_csvs
         :param rawDataframe:
         :param print_logging:
         :param full_dataframe_prep:

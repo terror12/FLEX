@@ -67,6 +67,14 @@ class TestCreatePostGSheet:
         #
         prereq.copyFormula(spreadsheet, service, sheetId1, 5, 6)
 
+        result = prereq.writeToCell(spreadsheet, service, 'Salary', "FanDuel!F1")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        #
+        result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(E2, "\,","")', "FanDuel!F2")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        #
+        prereq.copyFormula(spreadsheet, service, sheetId1, 5, 6)
+
         prereq.addCol(spreadsheet, service, sheetId1, 2, 3)
 
         result = prereq.writeToCell(spreadsheet, service, 'Player', "FanDuel!C1")

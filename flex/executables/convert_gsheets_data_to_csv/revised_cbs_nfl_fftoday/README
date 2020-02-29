@@ -1,2 +1,19 @@
-# This directory holds the shell scripts that we run to convert our Database from
-# Google sheets into a csv file holding only the necessary info to analyze the STD.
+=========
+  INFO
+=========
+
+This directory holds the shell scripts that we run to convert our Database from
+Google sheets into a csv file holding only the necessary info to analyze the STD.
+
+This info will look like the following.
+
+,Actual_Points,sdPts
+33,10.0,2.0
+366,10.0,1.0
+141,10.0,2.0
+26,9.0,2.0
+2,6.0,2.0
+103,3.0,1.0
+
+With this we can now use the actual points scored and the corresponding assigned
+standard deviation that was assigned to the player that had scored those points.
