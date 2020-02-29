@@ -5,7 +5,10 @@
   * [Platform Projection Example](#platform-projection-example)
   * [Standard Deviation List Example](#standard-deviation-list-example)
   * [Why is this useful?](#why-is-this-useful?)
+- [Historical Analyses](#historical-analyses)
 - [Lineup Generation](#lineup-generation)
+  * [Steps](#steps)
+- [Task Management](#task-management)
 - [High Level Tasks](#high-level-tasks)
 
 
@@ -48,14 +51,20 @@ In order to answer this question we first need to collect data.. which we have.
 
 [FLEX/flex/Revised_data/ffa_proj](https://github.com/terror12/FLEX/tree/master/flex/Revised_Data/ffa_proj)
 
-We will take these standard deviation values assigned to each play and pair them with the actual points each player scored
+We will take these standard deviation values, that are assigned to each player, and pair them with the actual points each player scored
 for every week over the past 5 years.
 
-What this will give us is the performance of a player grouped by the standard deviation that was assigned to them.
+This allows us to analyze which standard deviation is the best over time in numerous different ways.
+With this list and the code in place to generate valid lineups based on the players standard deviation value and FanDuel salary,
+overtime the optimal standard deviation value for each position in a lineup will reveal itself.
 
 Our goal will be to then generate a lineup for the upcoming week based on players that have our desired standard deviation value.
 We can easily do this since the standard deviation value is being calculated based on incoming projections that are released
 days before the game.
+
+#TODO Update with detailed explanation or link to report of data analsis.
+Historical Analyses
+======================
 
 
 Lineup Generation
@@ -63,19 +72,43 @@ Lineup Generation
 
 ![](flex/Data/images/Lineup_Generator.png)
 
-With this list and the code in place to generate valid lineups based on the players standard deviation value, we will use a database of previous years actual results to evaluate the success of a lineup. Overtime the optimal STD value for each postion in a lineup will reveal itself.
+### Steps
+#### 1.
+All projection data will be downloaded from the following web application
+[FFAnalytics Projections](https://github.com/terror12/FLEX/tree/master/flex/Revised_Data/ffa_proj)
 
-Using Fanduels salary system compared with the average of the other top Fantasy prediction engines(NFL.com, Yahoo, ESPN) 
-we can construct a standard deviation (STD) value for every player for the upcoming week. With this list and the code in place to generate valid lineups based on the players standard deviation value, we will use a database of previous years actual results to evaluate the success of a lineup. Overtime the optimal STD value for each postion in a lineup will reveal itself. 
+#### 2.
+placeholder for Fanduel affiliate link...
 
-We will use a program to generate lineups along with a community driven approach to increase the number of different STD combinations that we can record. This will be accomplished by providing a website for users to control sliders and generate their own lineups, which will be recorded and combined with all other previous runs in the database.
+#### 3.
+We then store that weeks projections and FanDuel player and salary data in the FLEX github repo.
+[FLEX/flex/Revised_data/ffa_proj](https://github.com/terror12/FLEX/tree/master/flex/Revised_Data/ffa_proj)
 
-Historical Analyses
+#### 4&5.
+Then we will use Python with the Google Sheets API to ensure the projection data corresponds to the appropriate FanDuel player data.
+We rely on the following tests to accomplish this.
+[FLEX/flex/tests/tier-0/test_sheets_prereq](https://github.com/terror12/FLEX/tree/master/flex/tests/tier-0/test_sheets_prereq)
+(Each week will be its own sheet.)
+#TODO Figure out how to make Google Sheets available to public in view only and available through the api for fellow developers.
+
+#### 6.
+Then we use Python to read the data from the Google Sheet and use it to drive our build lineup tests.
+[FLEX/flex/tests/tier-0/test_sheets_prereq](https://github.com/terror12/FLEX/tree/master/flex/tests/tier-0/test_sheets_prereq)https://github.com/terror12/FLEX/tree/master/flex/tests/tier-1/test_lineup_gen
+
+#### 7.
+The output of step 6 will be a valid Fanduel lineup that can now be manually entered into the app or web for the proper NFL contest.
+#TODO Make output into .csv file for easier consumption.
+
+
+Using a community driven approach to increase the number of different standard deviation combinations that we can record.
+This will be accomplished by providing a website for users to control sliders and generate their own lineups,
+which will be recorded and combined with all other previous runs in the database.
+
+
+Task Management
 ======================
-
 Tickets will be tracked and assigned on the following Trello board
 https://trello.com/b/k1UY8kRD/flex-project
-======================
 
 High Level Tasks
 ======================
@@ -88,7 +121,3 @@ High Level Tasks
     b. Store all generated lineups and evaluate based on post week results save only lineup configuration that yeild a high result.
  5. Send link to community and advertise that using this can help them win $$$
  6. Create Facebook, Instagram, and twitter for Flexproject
-
-
-[1] https://www.mathsisfun.com/data/standard-deviation.html
-[2]
