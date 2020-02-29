@@ -62,10 +62,10 @@ Our goal will be to then generate a lineup for the upcoming week based on player
 We can easily do this since the standard deviation value is being calculated based on incoming projections that are released
 days before the game.
 
-#TODO Update with detailed explanation or link to report of data analsis.
+
 Historical Analyses
 ======================
-
+####TODO Update with detailed explanation or link to report of data analsis.
 
 Lineup Generation
 ======================
