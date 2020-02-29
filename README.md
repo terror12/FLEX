@@ -1,18 +1,11 @@
 **Table of Contents**
 
-- [Mission Statement](Mission-Statement)
-- [Methodology](Methodology)
-  * [Example](Example)
-    + [Becomes](Becomes)
-- [Lineup Generation](Lineup-Generation)
-- [High Level Tasks](High-Level-Tasks)
-- [Mission Statement](Mission%20Statement)
-- [Methodology](Methodology)
-  * [Example](##Example)
-    + [Becomes](###Becomes)
-- [Lineup Generation](Lineup$20Generation)
-- [High Level Tasks](High%20Level%20Tasks)
-
+- [Mission Statement](#mission-statement)
+- [Methodology](#methodology)
+  * [Example](#example)
+    + [Becomes](#becomes)
+- [Lineup Generation](#lineup-generation)
+- [High Level Tasks](#high-level-tasks)
 
 
 Mission Statement:
@@ -24,7 +17,7 @@ Methodology:
 Using top Fantasy Football projection predicting platforms (nfl.com, cbssports.com, fftoday.com) assign each player
 a standard deviation value each week.
 This value is determined by taking the three projections and finding the standard deviation of the 3 numbers.[1]
-###Example:
+### Example:
 
 | Platform  | Player | Projections |
 | :---:         |     :---:      |          :---: |
@@ -32,7 +25,7 @@ This value is determined by taking the three projections and finding the standar
 | CBS    | Duke Johnson       | 13   |
 | FFToday    | Duke Johnson       | 12   |
 
-####Becomes:
+#### Becomes:
 | Player | Standard Deviation |
 |     :---:      |          :---: |
 | Duke Johnson     |  1.247   |
