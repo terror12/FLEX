@@ -21,6 +21,9 @@ This value is determined by taking the three projections and finding the standar
 
 | Platform  | Player | Projections |
 | :---:         |     :---:      |          :---: |
+| NFL   | Derrick Henry     | 18  |
+| CBS    | Derrick Henry       | 15   |
+| FFToday    | Derrick Henry       | 22   |
 | NFL   | Duke Johnson     | 10  |
 | CBS    | Duke Johnson       | 13   |
 | FFToday    | Duke Johnson       | 12   |
@@ -28,6 +31,7 @@ This value is determined by taking the three projections and finding the standar
 ### Standard Deviation List Example
 | Player | Standard Deviation |
 |     :---:      |          :---: |
+| Derrick Henry     |  2.867   |
 | Duke Johnson     |  1.247   |
 
 We then generate a list of all the players for the upcoming week according to this model.
