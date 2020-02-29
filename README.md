@@ -1,4 +1,4 @@
-**Table of Contents**
+#**Table of Contents**
 
 - [Mission Statement](#mission-statement)
 - [Methodology](#methodology)
@@ -72,7 +72,7 @@ Lineup Generation
 
 ![](flex/Data/images/gen_line.png)
 
-
+### Steps Taken
 | Step | Description                    |
 | ------------- | ------------------------------ |
 | **1**      | All projection data will be downloaded from the following web application[FFAnalytics Projections](https://github.com/terror12/FLEX/tree/master/flex/Revised_Data/ffa_proj)       |
