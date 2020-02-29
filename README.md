@@ -2,22 +2,22 @@
 
 - [Mission Statement](#mission-statement)
 - [Methodology](#methodology)
-  * [Example](#example)
-    + [Becomes](#becomes)
+  * [Platform Projection Example](#platform-projection-example)
+  * [Standard Deviation List Example](#standard-deviation-list-example)
 - [Lineup Generation](#lineup-generation)
 - [High Level Tasks](#high-level-tasks)
 
 
-Mission Statement:
+Mission Statement
 ==================
 To openly share daily fantasy football generated lineups that result in victory atleast 51% of the time.
 
-Methodology:
+Methodology
 =====================
 Using top Fantasy Football projection predicting platforms (nfl.com, cbssports.com, fftoday.com) assign each player
 a standard deviation value each week.
 This value is determined by taking the three projections and finding the standard deviation of the 3 numbers.[1]
-### Example:
+### Platform Projection Example
 
 | Platform  | Player | Projections |
 | :---:         |     :---:      |          :---: |
@@ -25,7 +25,7 @@ This value is determined by taking the three projections and finding the standar
 | CBS    | Duke Johnson       | 13   |
 | FFToday    | Duke Johnson       | 12   |
 
-#### Becomes:
+### Standard Deviation List Example
 | Player | Standard Deviation |
 |     :---:      |          :---: |
 | Duke Johnson     |  1.247   |
@@ -35,7 +35,7 @@ Once we have our list where each player has a standard deviation value assigned 
 
 [1] https://www.mathsisfun.com/data/standard-deviation.html
 
-Lineup Generation:
+Lineup Generation
 ======================
 
 ![](flex/Data/images/Lineup_Generator.png)
@@ -53,7 +53,7 @@ Tickets will be tracked and assigned on the following Trello board
 https://trello.com/b/k1UY8kRD/flex-project
 ======================
 
-High Level Tasks:
+High Level Tasks
 ======================
  1. Collect database of historical data as far back as possible (5 years currently)
     a. Using Google Sheets as the database, making API calls to Google Sheets to work with the Data.
