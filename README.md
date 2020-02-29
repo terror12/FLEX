@@ -74,7 +74,7 @@ Lineup Generation
 
 ### Steps Taken
 | Step | Description                    |
-| :---:         |     ---:      |
+| :---:         |     :---      |
 | **1**      | All projection data will be downloaded from the following web application[FFAnalytics Projections](https://github.com/terror12/FLEX/tree/master/flex/Revised_Data/ffa_proj)       |
 | **2**   | placeholder for Fanduel affiliate link...     |
 | **3**   | We then store that weeks projections and FanDuel player and salary data in the FLEX github repo.[FLEX/flex/Revised_data/ffa_proj](https://github.com/terror12/FLEX/tree/master/flex/Revised_Data/ffa_proj)     |
