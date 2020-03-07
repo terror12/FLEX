@@ -62,6 +62,7 @@ class TestConnection:
         # g.log.info(validated)
 
     @pytest.mark.conn
+    # TODO: move to tier-1 simple workflows
     def test_connectivity(self, deftestdata, print_logging):
         """
         Assert that we can connect with our creds file and return a Dataframe

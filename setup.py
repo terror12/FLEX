@@ -56,6 +56,9 @@ setup(
 	'plotly',
 	'pygsheets',
 	'pyautogui',
+        'flake8',
+        'pytest', 
+        'pytest-cov',
     ],
     classifiers=[
         "Programming Language :: Python :: 3"
