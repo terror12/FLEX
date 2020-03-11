@@ -1,11 +1,11 @@
-
 from apiclient import discovery
 import httplib2
 from oauth2client import client
-from oauth2client import tools
+# from oauth2client import tools
 from oauth2client.file import Storage
 import os
 import pandas as pd
+
 
 class SheetsConnector():
     """
@@ -17,7 +17,6 @@ class SheetsConnector():
         self.spreadsheetId = spreadsheetId
         self.rangeName = rangeName
 
-
     def get_credentials(self):
         """Gets valid user credentials from storage.
 
@@ -27,15 +26,14 @@ class SheetsConnector():
         Returns:
             Credentials, the obtained credential.
         """
-        #try:
-        #   import argparse
-        #   flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
-        #except ImportError:
-        #   flags = None
+        # try:
+        #     import argparse
+        #     flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
+        # except ImportError:
+        #     flags = None
         SCOPES = 'https://www.googleapis.com/auth/drive'
         CLIENT_SECRET_FILE = 'client_secret.json'
         APPLICATION_NAME = 'Google Sheets API FLEX'
-
 
         home_dir = os.path.expanduser('~')
         credential_dir = os.path.join(home_dir, '.credentials')
@@ -49,13 +47,12 @@ class SheetsConnector():
         if not credentials or credentials.invalid:
             flow = client.flow_from_clientsecrets(CLIENT_SECRET_FILE, SCOPES)
             flow.user_agent = APPLICATION_NAME
-            if flags:
-                credentials = tools.run_flow(flow, store, flags)
-            else:  # Needed only for compatibility with Python 2.6
-                credentials = tools.run(flow, store)
-            print('Storing credentials to ' + credential_path)
+            # if flags:
+            #     credentials = tools.run_flow(flow, store, flags)
+            # else:  # Needed only for compatibility with Python 2.6
+            #     credentials = tools.run(flow, store)
+            # print('Storing credentials to ' + credential_path)
         return credentials
-
 
     def rd_sheet(self):
         """
@@ -72,7 +69,6 @@ class SheetsConnector():
             spreadsheetId=self.spreadsheetId, range=self.rangeName).execute()
 
         return result
-
 
     def result_to_df(self):
         """

@@ -1,18 +1,19 @@
 from glusto.core import Glusto as g
-from flex.lib.connect.connect_to_sheets import SheetsConnector
-from flex.lib.data_clean.fix_df import FixUpDf
-from flex.lib.data_clean.remove import Remove
-from flex.lib.generate_lineup.closest_to_num import ClosestToNum
+# from flex.lib.connect.connect_to_sheets import SheetsConnector
+# from flex.lib.data_clean.fix_df import FixUpDf
+# from flex.lib.data_clean.remove import Remove
+# from flex.lib.generate_lineup.closest_to_num import ClosestToNum
 import pytest
-import random
+# import random
 import pandas as pd
-import csv
-import matplotlib.pyplot as plt
-import plotly.express as px
-import plotly.graph_objects as go
-import numpy as np
+# import csv
+# import matplotlib.pyplot as plt
+# import plotly.express as px
+# import plotly.graph_objects as go
+# import numpy as np
 import os
-from plotly.subplots import make_subplots
+# from plotly.subplots import make_subplots
+
 
 class TestSTDPerPosition:
 
@@ -35,9 +36,7 @@ class TestSTDPerPosition:
 
         std_mean.to_csv('Mean' + master_csv)
 
-        #g.log.info(df_by_std.describe().head(500))
-
-
+        # g.log.info(df_by_std.describe().head(500))
 
     @pytest.mark.csv_all_data
     def test_create_csv_all_data(self, deftestdata, rawDataframe, full_dataframe_prep_for_data, round=0):
@@ -72,12 +71,11 @@ class TestSTDPerPosition:
         TE = TE.round(round)
         DST = DST.round(round)
         FLX = FLX.round(round)
-        #g.log.info(type(QB))
+        # g.log.info(type(QB))
         # TODO: list from highest to lowest Actual points
-        #g.log.info(QB)
+        # g.log.info(QB)
 
         # TODO: figure out how to analyze the data, we need to find which STD comes up the highest most frequently.
-
 
         with open(QBfile, 'a') as f:
             if os.stat(QBfile).st_size == 0:

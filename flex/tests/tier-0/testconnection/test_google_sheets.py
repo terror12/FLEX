@@ -1,7 +1,7 @@
 from glusto.core import Glusto as g
 from flex.lib.connect.connect_to_sheets import SheetsConnector
-#from schema import Schema, And, Use, Optional
-import os.path
+# from schema import Schema, And, Use, Optional
+# import os.path
 from os import path
 import pytest
 
@@ -9,7 +9,6 @@ import pytest
 class TestConnection:
 
     g.add_log(g.log, filename='./logs/connectorlog')
-
 
     @pytest.mark.json
     def test_creds_file(self, print_logging):
@@ -19,7 +18,6 @@ class TestConnection:
         """
         g.log.info('Assert that we have a .credentials object')
         assert path.exists("sheets.googleapis.com-python-quickstart.json")
-
 
     @pytest.mark.rd_sheet
     def test_read_sheet(self, deftestdata, print_logging):
@@ -38,28 +36,6 @@ class TestConnection:
         g.log.info(type(result))
 
         assert isinstance(result, dict)
-
-        # TODO: Code to test specific schema not working!
-        #g.log.info(full_df)
-        #assert 'FanDuel_Salary' in full_df
-
-        # schema = Schema([{'player': And(str),
-        #                   'team': And(str),
-        #                   'position': And(str),
-        #                   'Actual_Points': And(str),
-        #                   'CBS Projected Points': And(str),
-        #                   'ESPN': And(str),
-        #                   'NFL': And(str),
-        #                   'FFToday': And(str),
-        #                   'FanDuel_Salary': And(str),
-        #                   'FanDuel': And(str),
-        #                   'Platform_AVG': And(str),
-        #                   'STD': And(str)
-        #                   }])
-        #
-        # validated = schema.validate(result)
-        #
-        # g.log.info(validated)
 
     @pytest.mark.conn
     # TODO: move to tier-1 simple workflows

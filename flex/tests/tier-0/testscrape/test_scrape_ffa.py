@@ -1,13 +1,14 @@
 from glusto.core import Glusto as g
-from flex.lib.connect.connect_to_sheets import SheetsConnector
+# from flex.lib.connect.connect_to_sheets import SheetsConnector
 from flex.lib.scrape.scrape_ffa import scrape_ffa
-import glob
+# import glob
 import os
 import pytest
 import pyautogui
 import time
 from flex.utils.os_files import findNewest
 from shutil import move
+
 
 class TestScrape:
 
@@ -117,4 +118,3 @@ class TestScrape:
             g.log.info('Move the Downloaded file to the correct location')
             move(FanDuel_csv, dest)
             assert True
-

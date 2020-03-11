@@ -12,6 +12,7 @@ SCOPES = ['https://www.googleapis.com/auth/drive']
 SAMPLE_SPREADSHEET_ID = '1VZLj2gegd6RwDmE3UYprClaGsMe91TDrNw8fsC5ZbD4'
 SAMPLE_RANGE_NAME = 'A1:L537'
 
+
 def main():
     """Shows basic usage of the Sheets API.
     Prints values from a sample spreadsheet.
@@ -50,6 +51,7 @@ def main():
         for row in values:
             # Print columns A and E, which correspond to indices 0 and 4.
             print('%s, %s' % (row[0], row[4]))
+
 
 if __name__ == '__main__':
     main()

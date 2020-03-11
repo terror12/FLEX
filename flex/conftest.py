@@ -4,8 +4,6 @@ from flex.lib.connect.connect_to_sheets import SheetsConnector
 from flex.lib.data_clean.remove import Remove
 from flex.lib.data_clean.fix_df import FixUpDf
 from flex.lib.sheets.prerequisite import PreReqs
-
-
 from glusto.core import Glusto as g
 
 
@@ -18,12 +16,14 @@ def pytest_generate_tests(metafunc):
     if 'testdata' in metafunc.fixturenames:
         metafunc.parametrize("testdata", metafunc.config.getoption('testdata'))
 
+
 @pytest.fixture(scope='session')
 def deftestdata(request):
     testdata = request.config.option.testdata[0]
     deftestdata = read_cli(testdata)
 
     return deftestdata
+
 
 @pytest.fixture(scope='session')
 def rawDataframe(request):
@@ -70,8 +70,8 @@ def shtCreatePreReq(deftestdata, print_logging):
     g.log.info('Upload Data')
     prereq.importData(credentials, spreadsheet, projections)
 
-    result = prereq.writeToCell(spreadsheet,service, '=REGEXREPLACE(B2, "\.","")', "A2")
-    
+    result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(B2, "\.", "")', "A2")  # noqa W605
+
     prereq.addTab(spreadsheet, service, 'FanDuel')
 
     prereq.importSpecificTabData(credentials, spreadsheet, 'FanDuel', FanDuel_Salaries)
@@ -90,7 +90,7 @@ def shtCreatePreReq(deftestdata, print_logging):
     g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
 
     g.log.info('Populate pre_salary column with $$$s removed')
-    result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(TO_TEXT(D2), "\$","")', "FanDuel!E2")
+    result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(TO_TEXT(D2), "\$","")', "FanDuel!E2")  # noqa W605
     g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
 
     prereq.copyFormula(spreadsheet, service, sheetId1, 4, 5)
@@ -100,7 +100,7 @@ def shtCreatePreReq(deftestdata, print_logging):
     g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
 
     g.log.info('Populate Salary column with commas removed')
-    result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(E2, "\,","")', "FanDuel!F2")
+    result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(E2, "\,","")', "FanDuel!F2")  # noqa W605
     g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
 
     prereq.copyFormula(spreadsheet, service, sheetId1, 5, 6)
@@ -151,7 +151,7 @@ def shtCreatePreReq(deftestdata, print_logging):
     g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
 
     g.log.info('Populate Salary column with II removed')
-    result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(E2, " I\,","\,")', "FanDuel!F2")
+    result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(E2, " I\,","\,")', "FanDuel!F2")  # noqa W605
     g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
 
     prereq.copyFormula(spreadsheet, service, sheetId1, 5, 6)
@@ -164,12 +164,13 @@ def shtCreatePreReq(deftestdata, print_logging):
     g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
 
     g.log.info('Populate Salary column with . removed')
-    result = prereq.writeToCell(spreadsheet, service, '=IF(OR(REGEXMATCH(F2, "E.J."), REGEXMATCH(F2, "A.J."), REGEXMATCH(F2, "T.Y."), REGEXMATCH(F2, "D.J."), REGEXMATCH(F2, "J.J."), REGEXMATCH(F2, "T.J."), REGEXMATCH(F2, "C.J.")), REGEXREPLACE(F2, "\.",""), F2)', "FanDuel!G2")
+    result = prereq.writeToCell(spreadsheet, service, '=IF(OR(REGEXMATCH(F2, "E.J."), REGEXMATCH(F2, "A.J."), REGEXMATCH(F2, "T.Y."), REGEXMATCH(F2, "D.J."), REGEXMATCH(F2, "J.J."), REGEXMATCH(F2, "T.J."), REGEXMATCH(F2, "C.J.")), REGEXREPLACE(F2, "\.",""), F2)', "FanDuel!G2")  # noqa E501
     g.log.info('{0} cell(s) updated.'.format(result.get('updatedCells')))
 
     prereq.copyFormula(spreadsheet, service, sheetId1, 6, 7)
 
     return spreadsheet, service, sheetId0, sheetId1
+
 
 @pytest.fixture(scope='session')
 def full_dataframe_prep(request, rawDataframe):
@@ -224,9 +225,10 @@ def full_dataframe_prep(request, rawDataframe):
     g.log.info('Create FLX Dataframe')
     FLX = FixUp_df.flx_Create(RB, WR, TE)
 
-    #g.log.info(QB.head(5), RB.head(5), WR.head(5), TE.head(5), FLX.head(5), DST.head(5))
+    # g.log.info(QB.head(5), RB.head(5), WR.head(5), TE.head(5), FLX.head(5), DST.head(5))
 
     return QB, RB, WR, TE, FLX, DST
+
 
 @pytest.fixture(scope='session')
 def full_dataframe_prep_for_data(request, rawDataframe):
@@ -249,8 +251,8 @@ def full_dataframe_prep_for_data(request, rawDataframe):
     g.log.info('Removing All Not Available values from STD column using rm_NA()')
     df = rm.rm_NA(df)
 
-    #g.log.info('Removing All players with < 1 in Platform_AVG')
-    #df = rm.rm_Low_Projections(df)
+    # g.log.info('Removing All players with < 1 in Platform_AVG')
+    # df = rm.rm_Low_Projections(df)
 
     g.log.info('Removing All players with STD >= 10')
     df = rm.rm_High_Std(df)
@@ -277,11 +279,10 @@ def full_dataframe_prep_for_data(request, rawDataframe):
 
     g.log.info('Create FLX Dataframe')
     FLX = FixUp_df.flx_Create(RB, WR, TE)
-
-
-    #g.log.info(QB.head(5), RB.head(5), WR.head(5), TE.head(5), FLX.head(5), DST.head(5))
+    # g.log.info(QB.head(5), RB.head(5), WR.head(5), TE.head(5), FLX.head(5), DST.head(5))
 
     return QB, RB, WR, TE, FLX, DST
+
 
 @pytest.fixture(scope='session')
 def print_logging():

@@ -1,5 +1,5 @@
 
-from flex.lib.connect.connect_to_sheets import  GoogleSheetsConnector
+from flex.lib.connect.connect_to_sheets import GoogleSheetsConnector
 from flex.lib.data_clean.fix_df import FixUpDf
 from flex.lib.data_clean.remove import Remove
 

@@ -1,20 +1,19 @@
 from glusto.core import Glusto as g
-from flex.lib.connect.connect_to_sheets import SheetsConnector
+# from flex.lib.connect.connect_to_sheets import SheetsConnector
 from flex.lib.data_clean.fix_df import FixUpDf
 from flex.lib.data_clean.remove import Remove
-#from schema import Schema, And, Use, Optional
-import os.path
-from os import path
+# from schema import Schema, And, Use, Optional
+# import os.path
+# from os import path
 import pytest
-from pandas import Series, DataFrame
-from pandas import Series
-import pandas
+# from pandas import Series, DataFrame
+# from pandas import Series
+# import pandas
 
 
 class TestCleanup:
 
     g.add_log(g.log, filename='./logs/Dataframecleanuplog')
-
 
     @pytest.mark.header
     def test_header(self, rawDataframe, print_logging):
@@ -27,14 +26,18 @@ class TestCleanup:
 
         head = FixUpDf()
         new_head = head.fix_header(rawDataframe)
-        schema = ['player', 'team', 'position', 'Actual_Points', 'CBS Projected Points', 'ESPN', 'NFL', 'FFToday', 'FanDuel_Salary', 'FanDuel', 'Platform_AVG', 'STD']
+        schema = ['playerId', 'player', 'team', 'position', 'age', 'exp', 'bye', 'Actual_Points', 'FanDuel_Salary', 'lower', 'upper', 'sdPts']
 
-        if new_head.columns.tolist() == schema:
-            g.log.info('Success headers match!!')
-            assert True
+        try:
+            assert new_head.columns.tolist() == schema
+        except ValueError as v_err:
+            g.log.info(v_err)
         else:
-            g.log.info('Headers DO NOT match')
-            assert False
+            if new_head.columns.tolist() == schema:
+                g.log.info('Success headers match!!')
+            else:
+                g.log.info('Headers DO NOT match')
+                assert False
 
     @pytest.mark.cols
     def test_rm_cols(self, rawDataframe, print_logging):
@@ -50,15 +53,18 @@ class TestCleanup:
         rm = Remove()
         df = rm.rm_cols(df)
 
-        schema = ['player', 'team', 'position', 'Actual_Points', 'FanDuel_Salary', 'Platform_AVG', 'STD']
+        schema = ['player', 'team', 'position', 'Actual_Points', 'FanDuel_Salary', 'sdPts']
 
-        if df.columns.tolist() == schema:
-            g.log.info('Success Only necessary Columns Exist!!')
-            assert True
+        try:
+            assert df.columns.tolist() == schema
+        except ValueError as v_err:
+            g.log.info(v_err)
         else:
-            g.log.info('Column Configuration is Incorrect!!')
-            assert False
-
+            if df.columns.tolist() == schema:
+                g.log.info('Success Only necessary Columns Exist!!')
+            else:
+                g.log.info('Column Configuration is Incorrect!!')
+                assert False
 
     @pytest.mark.FA
     def test_rm_FA(self, rawDataframe, print_logging):
@@ -105,11 +111,11 @@ class TestCleanup:
 
         g.log.info('Instantiate Remove() object')
         rm = Remove()
-        g.log.info('Removing All Not Available values from STD column using rm_NA()')
+        g.log.info('Removing All Not Available values from sdPts column using rm_NA()')
         df = rm.rm_NA(df)
         df.values.tolist()
 
-        for i in df.STD:
+        for i in df.sdPts:
             if i == '#N/A':
                 g.log.info('Non Available Players Exist When They Shouldnt!!')
                 assert False
@@ -117,7 +123,7 @@ class TestCleanup:
         assert True
 
     @pytest.mark.rm_low
-    def test_rm_Low_Projections(self, rawDataframe, print_logging):
+    def test_rm_low_projections(self, rawDataframe, print_logging):
         """
         Method to remove all players with < 1 in Platform_AVG in Dataframe.
         :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
@@ -129,12 +135,16 @@ class TestCleanup:
 
         g.log.info('Instantiate Remove() object')
         rm = Remove()
+        g.log.info('Instantiate Remove() object')
+        FixUp_df = FixUpDf()
         g.log.info('Removing All players with < 1 in Platform_AVG')
         df = rm.rm_Low_Projections(df)
 
         df.values.tolist()
 
-        for i in df.Platform_AVG:
+        FixUp_df.convert_to_num(df, "upper")
+
+        for i in df.upper:
             if i <= 1.0:
                 g.log.info('Players With Platform_AVG under 1 Exist When They Shouldnt!!')
                 assert False
@@ -142,11 +152,10 @@ class TestCleanup:
         g.log.info('All Player With Platform_AVG Under 1 have Been Removed!!')
         assert True
 
-
     @pytest.mark.rm_high
-    def test_rm_High_Std(self, rawDataframe, print_logging):
+    def test_rm_high_sdpts(self, rawDataframe, print_logging):
         """
-        Method to remove all Players with STD greater then 10.
+        Method to remove all Players with sdPts greater then 10.
         :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
         :param print_logging: Fixture to initialize logging.
         :assert: True or False
@@ -156,24 +165,23 @@ class TestCleanup:
 
         g.log.info('Instantiate Remove() object')
         rm = Remove()
-        g.log.info('Removing All Not Available values from STD column using rm_NA()')
+        g.log.info('Removing All Not Available values from sdPts column using rm_NA()')
         df = rm.rm_NA(df)
-        g.log.info('Removing All players with STD >= 10')
+        g.log.info('Removing All players with sdPts >= 10')
         df = rm.rm_High_Std(df)
-
 
         df.values.tolist()
 
-        for i in df.STD:
+        for i in df.sdPts:
             if i >= 10.0:
-                g.log.info('Players With STD >= 10.0 Exist When They Shouldnt!!')
+                g.log.info('Players With sdPts >= 10.0 Exist When They Shouldnt!!')
                 assert False
 
-        g.log.info('All players with STD >= 10.0 have Been Removed!!')
+        g.log.info('All players with sdPts >= 10.0 have Been Removed!!')
         assert True
 
     @pytest.mark.seperate
-    def test_seperate_Positions(self, rawDataframe, print_logging):
+    def test_seperate_positions(self, rawDataframe, print_logging):
         """
         Test that the full Dataframe is broken up by position
         :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
@@ -187,7 +195,6 @@ class TestCleanup:
 
         g.log.info('Seperating Full Dataframe Into Positional Dataframes')
         QB, RB, WR, TE, DST = FixUp_df.seperate_positions(df)
-
 
         g.log.info('Ensure that no other position is in QB Datframe')
         CHECK_QB = False
@@ -225,24 +232,23 @@ class TestCleanup:
             else:
                 CHECK_DST = True
 
-        if CHECK_QB == True:
+        if CHECK_QB:
             g.log.info('QB Positional Dataframe Created Succesfully!!')
             g.log.info('\n %s' % QB.head(3))
-        if CHECK_RB == True:
+        if CHECK_RB:
             g.log.info('RB Positional Dataframe Created Succesfully!!')
             g.log.info('\n %s' % RB.head(3))
-        if CHECK_WR == True:
+        if CHECK_WR:
             g.log.info('WR Positional Dataframe Created Succesfully!!')
             g.log.info('\n %s' % WR.head(3))
-        if CHECK_TE == True:
+        if CHECK_TE:
             g.log.info('TE Positional Dataframe Created Succesfully!!')
             g.log.info('\n %s' % TE.head(3))
-        if CHECK_DST == True:
+        if CHECK_DST:
             g.log.info('DST Positional Dataframe Created Succesfully!!')
             g.log.info('\n %s' % DST.head(3))
 
-
-        if CHECK_QB == CHECK_RB == CHECK_WR == CHECK_TE == CHECK_DST == True:
+        if (CHECK_QB == CHECK_RB == CHECK_WR == CHECK_TE == CHECK_DST) is True:
             g.log.info('=================================================')
             g.log.info('All Positional Dataframes Created Succesfully!!')
             g.log.info('=================================================')
@@ -254,9 +260,9 @@ class TestCleanup:
             assert False
 
     @pytest.mark.dupe
-    def test_seperate_Positions(self, rawDataframe, print_logging):
+    def test_dupe_positions(self, rawDataframe, print_logging):
         """
-        Test to remove all players except the one with the highest Platform_AVG.
+        Test to remove all duplicate players keeping the ones with the higher Platform_AVG.
         :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
         :param print_logging: Fixture to initialize logging.
         :assert: True or False
@@ -274,7 +280,6 @@ class TestCleanup:
         g.log.info("Change Dataframe to a list")
         QB.values.tolist()
 
-
         df_list = []
         g.log.info("Loop Through QB Dataframe and check for duplicates")
         for i in QB.team:
@@ -288,7 +293,7 @@ class TestCleanup:
         assert True
 
     @pytest.mark.limit
-    def test_hit_Position_Limit(self, rawDataframe, print_logging):
+    def test_hit_position_limit(self, rawDataframe, print_logging):
         """
         Test to make sure we can limit the length of the positional dataframes.
         :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
@@ -323,31 +328,34 @@ class TestCleanup:
 
         g.log.info('All dataframes hit position limits!!')
         assert True
-    @pytest.mark.needed
-    def test_use_Needed_Cols(self, rawDataframe, print_logging):
-        """
-        Only the following 5 coumns are needed to begin creating lineups from the datframe.
-        We need to check to make sure the dataframes that should have been removed were removed.
-        :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
-        :param print_logging: Fixture to initialize logging.
-        :assert: True or False
-        """
 
-        FixUp_df = FixUpDf()
-        df = FixUp_df.fix_header(rawDataframe)
-
-        QB, RB, WR, TE, DST = FixUp_df.seperate_positions(df)
-
-        g.log.info('Instantiate Remove() object')
-        rm = Remove()
-        QB = rm.rm_NA(QB)
-        g.log.info('Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD')
-        g.log.info(QB)
-        QB = rm.use_Needed_Cols(QB)
-
-        if ('Platform_AVG', 'position') in QB:
-            g.log.info('Dataframe is holding columns that should have been removed')
-            assert False
-
-        g.log.info('Only needed columns Remain!!')
-        assert True
+    # TODO: ensure that I can remove this code before actually deleting it
+    # @pytest.mark.needed
+    # def test_use_Needed_Cols(self, rawDataframe, print_logging):
+    #     """
+    #     Only the following 5 columns are needed to begin creating lineups from the dataframe.
+    #     We need to check to make sure the columns that should have been removed were removed.
+    #     :param rawDataframe: Fixture to run all code to read Googlesheet and create Dataframe
+    #     :param print_logging: Fixture to initialize logging.
+    #     :assert: True or False
+    #     """
+    #
+    #     FixUp_df = FixUpDf()
+    #     df = FixUp_df.fix_header(rawDataframe)
+    #
+    #     QB, RB, WR, TE, DST = FixUp_df.seperate_positions(df)
+    #
+    #     g.log.info('Instantiate Remove() object')
+    #     rm = Remove()
+    #     QB = rm.rm_NA(QB)
+    #     g.log.info('Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, sdPts')
+    #     g.log.info(f"Before: {QB.head(0)}")
+    #     QB = rm.use_Needed_Cols(QB)
+    #     g.log.info(f"After: {QB.head(0)}")
+    #
+    #     if ('position') in QB:
+    #         g.log.info('Dataframe is holding columns that should have been removed')
+    #         assert False
+    #
+    #     g.log.info('Only needed columns Remain!!')
+    #     assert True

@@ -1,11 +1,12 @@
 from glusto.core import Glusto as g
-from flex.lib.connect.connect_to_sheets import SheetsConnector
+# from flex.lib.connect.connect_to_sheets import SheetsConnector
 from flex.lib.scrape.selenium_FanDuel import scrape_FD
-import glob
+# import glob
 import os
 import pytest
 from flex.utils.os_files import findNewest
 from shutil import move
+
 
 class TestScrape:
 

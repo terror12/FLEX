@@ -1,5 +1,5 @@
 import os
-from glusto.core import Glusto as g
+
 
 def findNewest(path):
     """

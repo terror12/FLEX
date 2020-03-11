@@ -1,9 +1,9 @@
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.support.ui import Select
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.support import expected_conditions as EC
+# from selenium.common.exceptions import TimeoutException
+# from selenium.webdriver.support.ui import Select
 import time
 from selenium.webdriver.common.keys import Keys
 
@@ -29,7 +29,7 @@ browser.find_element_by_xpath("//span[contains(text(), 'SUN-MON')]").click()
 print('#0')
 
 print(browser)
-browser.find_element_by_xpath("//div[contains(@class, '_a _b _c _d _e _f _g')]") #.click()
+browser.find_element_by_xpath("//div[contains(@class, '_a _b _c _d _e _f _g')]")  # .click()
 print(browser)
 browser.find_element_by_xpath("//div[contains(@class, 'ReactVirtualized__Grid__innerScrollContainer')]").click()
 element = browser.find_element_by_xpath("//iframe[@class='zEWidget-launcher zEWidget-launcher--active']")

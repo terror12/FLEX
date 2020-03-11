@@ -3,22 +3,16 @@ import pandas as pd
 
 class FixUpDf:
 
-
     def fix_header(self, df):
         """
-
+        Creates proper header
         :param full_df:
         :return:
         """
 
-        # Create proper header
-        #adam = solution.posDframe(spreadsheetId, rangeName)
-
         # Set column labels to equal values in the 1st row
         df.columns = df.iloc[0]
         df = df[1:]
-
- #       print(full_df_head.head(10))
 
         return df
 
@@ -59,14 +53,14 @@ class FixUpDf:
 
     def hitpositionLimits(self, df, limit):
         """
-
+        Remove the players at the bottom of the list
+        to fit the specific dataframe list size
         :param df:
         :param limit:
         :return:
         """
 
         if len(df) > limit:
-            df = df.sort_values(by=[col], ascending=False)
             diff = (len(df) - limit)
             df = df[:-diff]
 
@@ -95,7 +89,7 @@ class FixUpDf:
 
         # Create the FLX dataframe
         FLX = pd.DataFrame()
-        FLX = pd.concat([RB,WR,TE], ignore_index=True)
+        FLX = pd.concat([RB, WR, TE], ignore_index=True)
 
         return FLX
 
