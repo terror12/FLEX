@@ -28,7 +28,7 @@ class TestCreation:
         FLX = FixUp_df.flx_Create(RB, WR, TE)
 
         for i in FLX.position:
-            if i in ('QB','DST'):
+            if i in ('QB', 'DST'):
                 g.log.info('There is either a Defense or QB in the FLX!!')
                 assert False
             elif i not in ('RB', 'WR', 'TE'):

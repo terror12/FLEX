@@ -1,7 +1,7 @@
-from altair import *
-from math import *
+# from altair import *
+# from math import *
 import pandas as pd
-import os
+# import os
 import altair as alt
 
 
@@ -10,4 +10,4 @@ data = pd.read_csv(file)
 
 data.head()
 
-chart = alt.Chart(data).mark_bar().encode(x = X('Actual_Points', bin = Bin( maxbins = 20)),y = 'sdPts',)
+chart = alt.Chart(data).mark_bar().encode(x=X('Actual_Points', bin=Bin(maxbins=20)), y='sdPts', )  # noqa F821

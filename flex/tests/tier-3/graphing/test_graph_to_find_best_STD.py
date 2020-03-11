@@ -1,18 +1,19 @@
 from glusto.core import Glusto as g
-from flex.lib.connect.connect_to_sheets import SheetsConnector
-from flex.lib.data_clean.fix_df import FixUpDf
-from flex.lib.data_clean.remove import Remove
-from flex.lib.generate_lineup.closest_to_num import ClosestToNum
+# from flex.lib.connect.connect_to_sheets import SheetsConnector
+# from flex.lib.data_clean.fix_df import FixUpDf
+# from flex.lib.data_clean.remove import Remove
+# from flex.lib.generate_lineup.closest_to_num import ClosestToNum
 import pytest
-import random
+# import random
 import pandas as pd
-import csv
-import matplotlib.pyplot as plt
-import plotly.express as px
+# import csv
+# import matplotlib.pyplot as plt
+# import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
-import os
-from plotly.subplots import make_subplots
+# import os
+# from plotly.subplots import make_subplots
+
 
 class TestGraphSTD:
 
@@ -62,7 +63,6 @@ class TestGraphSTD:
         )
         fig.show()
 
-
     @pytest.mark.dub_graph
     def test_double_graph(self, print_logging, deftestdata):
         """
@@ -84,13 +84,13 @@ class TestGraphSTD:
         master_csv = deftestdata['master_csv']
         master_csv2 = deftestdata['master_csv2']
 
-        title = deftestdata['title']
+        # title = deftestdata['title']
         # x = deftestdata['x']
         # y = deftestdata['y']
         df = pd.read_csv(master_csv)
         df2 = pd.read_csv(master_csv2)
 
-        N = 100000
+        # N = 100000
 
         trace1 = go.Scattergl(
             x=df[x],
@@ -121,7 +121,6 @@ class TestGraphSTD:
         fig = go.Figure(data=data)
         fig.show()
 
-
     @pytest.mark.multi_graph
     def test_multi_graph(self, print_logging, deftestdata):
         """
@@ -144,14 +143,14 @@ class TestGraphSTD:
         master_csv2 = deftestdata['master_csv2']
         master_csv3 = deftestdata['master_csv3']
         master_csv4 = deftestdata['master_csv4']
-        title = deftestdata['title']
+        # title = deftestdata['title']
         # x = deftestdata['x']
         # y = deftestdata['y']
         df = pd.read_csv(master_csv)
         df2 = pd.read_csv(master_csv2)
         df3 = pd.read_csv(master_csv3)
         df4 = pd.read_csv(master_csv4)
-        N = 100000
+        # N = 100000
 
         trace1 = go.Scattergl(
             x=df[x],
@@ -253,7 +252,7 @@ class TestGraphSTD:
         # fig.show()
         # Scatter Plot for QB
         #
-        ### Set your path to the folder containing the .csv files
+        # Set your path to the folder containing the .csv files
         # PATH = './'  # Use your path
         #
         # ### Fetch all files in path
@@ -290,7 +289,6 @@ class TestGraphSTD:
         #     )
         #     plt.plot(df)
         # fig.show()
-
 
     @pytest.mark.graph_all_data
     def test_create_graph_all_data(self, print_logging):

@@ -3,6 +3,7 @@ import time
 from selenium.webdriver.common.keys import Keys
 from retrying import retry
 
+
 class scrape_FD():
     """
     Class to hold functions needed to create a valid lineup.

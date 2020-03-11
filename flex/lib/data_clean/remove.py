@@ -1,19 +1,8 @@
 import pandas as pd
-from flex.lib.connect.connect_to_sheets import  SheetsConnector
+# from flex.lib.connect.connect_to_sheets import  SheetsConnector
+
 
 class Remove:
-
-    # def columns(self, full_df_head):
-    #     """
-    #
-    #     :param full_df_head:
-    #     :return:
-    #     """
-    #     # remove columns that I do not need
-    #     df = full_df_head[['player', 'team', 'position', 'Actual_Points', 'FanDuel_Salary', 'Platform_AVG', 'STD']]
-    #     print('\n %s' % df.head(10))
-    #     return df
-
 
     def rm_cols(self, df):
         """
@@ -44,10 +33,10 @@ class Remove:
         :return df: The Dataframe without NA's
         """
 
-        df = df[df.sdPts.str.contains("#N/A") == False]
-        df = df[df.sdPts.str.contains("NA") == False]
-        df = df[df.Actual_Points.str.contains("#N/A") == False]
-        df = df[df.FanDuel_Salary.str.contains("#N/A") == False]
+        df = df[df.sdPts.str.contains("#N/A") == False]  # noqa: E712
+        df = df[df.sdPts.str.contains("NA") == False]  # noqa: E712
+        df = df[df.Actual_Points.str.contains("#N/A") == False]  # noqa: E712
+        df = df[df.FanDuel_Salary.str.contains("#N/A") == False]  # noqa: E712
 
         return df
 

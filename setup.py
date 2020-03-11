@@ -14,11 +14,11 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.If not, see < https://www.gnu.org/licenses/>.
 
-import os
 from os import walk
 from os.path import join
 from setuptools import setup, find_packages
 from flex import __version__
+
 
 def package_files(directory):
     paths = []
@@ -27,7 +27,9 @@ def package_files(directory):
             paths.append((path, [join(path, filename)]))
     return paths
 
+
 extra_files = package_files("flex")
+
 
 setup(
     name="flex",
@@ -51,13 +53,13 @@ setup(
         'google_auth_oauthlib',
         'retrying',
         'matplotlib',
-	'selenium',
-	'gspread',
-	'plotly',
-	'pygsheets',
-	'pyautogui',
+        'selenium',
+        'gspread',
+        'plotly',
+        'pygsheets',
+        'pyautogui',
         'flake8',
-        'pytest', 
+        'pytest',
         'pytest-cov',
     ],
     classifiers=[

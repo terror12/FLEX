@@ -1,24 +1,24 @@
 from glusto.core import Glusto as g
 from flex.lib.connect.connect_to_sheets import SheetsConnector
 from flex.lib.sheets.prerequisite import PreReqs
-from apiclient import discovery
-import os.path
-from os import path
+# from apiclient import discovery
+# import os.path
+# from os import path
 import pyautogui
 import pytest
 import time
 import webbrowser
 
+
 class TestCreatePostGSheet:
 
     g.add_log(g.log, filename='./logs/post_Gsheets_create')
 
-
     @pytest.mark.post_gsheet
     def test_post_gsheet_create(self, deftestdata, print_logging):
         """
-        #Test that we can read a sheet using the credential object
-        #:return:
+        Test that we can read a sheet using the credential object
+        :return:
         """
         projections = deftestdata['projections']
         FanDuel_Salaries = deftestdata['FanDuel_Salaries']
@@ -49,30 +49,30 @@ class TestCreatePostGSheet:
 
         # ================================================
         g.log.info('Start removing $$$s')
-        #prereq.addCol(spreadsheet, service, sheetId1, 3, 4)
+        # prereq.addCol(spreadsheet, service, sheetId1, 3, 4)
 
         result = prereq.writeToCell(spreadsheet, service, 'pre_Salary', "FanDuel!E1")
         g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
-        #
-        result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(TO_TEXT(D2), "\$","")', "FanDuel!E2")
+
+        result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(TO_TEXT(D2), "\$","")', "FanDuel!E2")  # noqa W605
         g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
-        #
+
         prereq.copyFormula(spreadsheet, service, sheetId1, 4, 5)
 
         result = prereq.writeToCell(spreadsheet, service, 'Salary', "FanDuel!F1")
         g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
-        #
-        result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(E2, "\,","")', "FanDuel!F2")
+
+        result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(E2, "\,","")', "FanDuel!F2")  # noqa W605
         g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
-        #
+
         prereq.copyFormula(spreadsheet, service, sheetId1, 5, 6)
 
         result = prereq.writeToCell(spreadsheet, service, 'Salary', "FanDuel!F1")
         g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
-        #
-        result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(E2, "\,","")', "FanDuel!F2")
+
+        result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(E2, "\,","")', "FanDuel!F2")  # noqa W605
         g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
-        #
+
         prereq.copyFormula(spreadsheet, service, sheetId1, 5, 6)
 
         prereq.addCol(spreadsheet, service, sheetId1, 2, 3)
@@ -82,24 +82,20 @@ class TestCreatePostGSheet:
 
         result = prereq.writeToCell(spreadsheet, service, '=REGEXREPLACE(B2, " Jr.","")', "FanDuel!C2")
         g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
-        #
+
         prereq.copyFormula(spreadsheet, service, sheetId1, 2, 3)
 
         a_website = 'https://docs.google.com/spreadsheets/d/%s' % spreadsheet
 
         # Open url in a new window of the default browser, if possible
         webbrowser.open_new(a_website)
-            # username = deftestdata['username']
-            # password = deftestdata['password']
-            # full_path_filename = deftestdata['full_path_filename']
-#            spreadsheetID = deftestdata['full_path_filename']
 
         time.sleep(35)
 
         # TODO: Update for Rasberry Pi
 
         pyautogui.moveTo(1599, 696)
-            #time.sleep(30)
+        # time.sleep(30)
         pyautogui.click()
         time.sleep(10)
         pyautogui.moveTo(1578, 241)
@@ -112,7 +108,7 @@ class TestCreatePostGSheet:
         pyautogui.moveTo(1741, 231)
         pyautogui.click()
         time.sleep(2)
-        #pyautogui.moveTo(1271, 691)
+        # pyautogui.moveTo(1271, 691)
         pyautogui.click()
         time.sleep(5)
         pyautogui.press('down')
@@ -121,8 +117,6 @@ class TestCreatePostGSheet:
         pyautogui.press('enter')
 
         time.sleep(5)
-
-
 
         pyautogui.press('enter')
         # Click start in add on
@@ -138,16 +132,12 @@ class TestCreatePostGSheet:
         pyautogui.click()
 
         prereq.addCol(spreadsheet, service, sheetId1, 7, 8)
-#
+
         result = prereq.writeToCell(spreadsheet, service, '=CONCATENATE(G2, D2, E2, " ", F2)', "FanDuel!H2")
-#
+
         g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
 
         prereq.copyFormula(spreadsheet, service, sheetId1, 7, 8)
-
-
-
-
 
         prereq.addCol(spreadsheet, service, sheetId1, 8, 9)
 
@@ -156,7 +146,6 @@ class TestCreatePostGSheet:
         g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
 
         prereq.copyFormula(spreadsheet, service, sheetId1, 8, 9)
-
 
         prereq.addCol(spreadsheet, service, sheetId1, 9, 10)
 
@@ -174,7 +163,7 @@ class TestCreatePostGSheet:
 
         prereq.copyFormula(spreadsheet, service, sheetId1, 10, 11)
 
-        #time.sleep(200)
+        # time.sleep(200)
 
         prereq.addCol(spreadsheet, service, sheetId1, 11, 12)
 
@@ -417,7 +406,7 @@ class TestCreatePostGSheet:
         result = prereq.writeToCell(spreadsheet, service, 'FanDuel_Salary', 'I1')
         g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
 
-                                                        #'=IF(D2="DST", VLOOKUP(B2,{FanDuel!$E$2:$E$1000,FanDuel!$H$2:$H$1000},2,FALSE), VLOOKUP(B2,{FanDuel!$D$2:$D$1000,FanDuel!$H$2:$H$1000},2,FALSE))', 'I2')
+        # '=IF(D2="DST", VLOOKUP(B2,{FanDuel!$E$2:$E$1000,FanDuel!$H$2:$H$1000},2,FALSE), VLOOKUP(B2,{FanDuel!$D$2:$D$1000,FanDuel!$H$2:$H$1000},2,FALSE))', 'I2')
         result = prereq.writeToCell(spreadsheet, service, '=VLOOKUP(B2,{FanDuel!$AN$2:$AN$1000,FanDuel!$AR$2:$AR$1000},2,FALSE)', 'I2')
         g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
 
@@ -430,7 +419,7 @@ class TestCreatePostGSheet:
         ###################################################################################
 
         # Code to update using the actual points from fanduel tab.
-        result = prereq.writeToCell(spreadsheetId, service, '=VLOOKUP(B2,{FanDuel!$AN$2:$AN$1000,FanDuel!$AO$2:$AO$1000},2,FALSE)', 'H2')
+        result = prereq.writeToCell(spreadsheet, service, '=VLOOKUP(B2,{FanDuel!$AN$2:$AN$1000,FanDuel!$AO$2:$AO$1000},2,FALSE)', 'H2')
         g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
 
-        prereq.copyFormula(spreadsheetId, service, sheetId0, 7, 8)
+        prereq.copyFormula(spreadsheet, service, sheetId0, 7, 8)

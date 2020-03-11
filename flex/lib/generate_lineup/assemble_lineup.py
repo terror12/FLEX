@@ -63,7 +63,7 @@ class Assemble():
             print(lineup[3][1])
             print(lineup[4][1])
             print(lineup[5][1])
-            if (lineup[-1] > min_sal and lineup[-1] <= 60000 and lineup[0][1] == lineup[3][1] and lineup[6][2] != lineup[7][2] or lineup[-1] > min_sal and lineup[-1] <= 60000 and lineup[0][1] == lineup[4][1] and lineup[6][2] != lineup[7][2] or lineup[-1] > min_sal and lineup[-1] <= 60000 and lineup[0][1] == lineup[5][1] and lineup[6][2] != lineup[7][2]):
+            if (lineup[-1] > min_sal and lineup[-1] <= 60000 and lineup[0][1] == lineup[3][1] and lineup[6][2] != lineup[7][2] or lineup[-1] > min_sal and lineup[-1] <= 60000 and lineup[0][1] == lineup[4][1] and lineup[6][2] != lineup[7][2] or lineup[-1] > min_sal and lineup[-1] <= 60000 and lineup[0][1] == lineup[5][1] and lineup[6][2] != lineup[7][2]):  # noqa E501
                 return True
             else:
                 return False
@@ -73,15 +73,17 @@ class Assemble():
             # No TE in the FLX
             # No RB1 and RB2 on the same team.
             if (lineup[-1] > min_sal and lineup[-1] <= 60000 and lineup[6][2] != lineup[7][2] and lineup[1][1] != lineup[2][1]):
-                #print(lineup[7][2])
-                #print(lineup[8][2])
+                # print(lineup[7][2])
+                # print(lineup[8][2])
                 return True
             else:
                 return False
 
         # Force a QB WR pairing and a RB DST pairing
         # TODO This doesnt work need to fix
-        #if (lineup[-1] > min_sal and lineup[-1] < 60000 and lineup[1][1] == lineup[8][1] and any([lineup[0][1] == lineup[3][1], lineup[0][1] == lineup[4][1], lineup[0][1] == lineup[5][1]])):
+        # if (lineup[-1] > min_sal and lineup[-1] < 60000
+                # and lineup[1][1] == lineup[8][1]
+                # and any([lineup[0][1] == lineup[3][1], lineup[0][1] == lineup[4][1], lineup[0][1] == lineup[5][1]])):
 
     def createLineup(self, QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD, WR3_STD, TE_STD, FLX_STD, DST_STD):
 
@@ -103,12 +105,7 @@ class Assemble():
         closest_FLX_pos = Closest_to_num.find_closest_STD(FLX, FLX_STD)
         closest_DST_pos = Closest_to_num.find_closest_STD(DST, DST_STD)
 
-        return_QB = QB
-        return_RB = RB
-        return_WR = WR
-        return_TE = TE
         return_FLX = FLX
-        return_DST = DST
 
         QB = QB.values.tolist()
         RB = RB.values.tolist()
@@ -130,7 +127,7 @@ class Assemble():
         lineup.append(WR2[closest_WR2_pos])
         lineup.append(WR3[closest_WR3_pos])
         lineup.append(TE[closest_TE_pos])
-        while FLX[closest_FLX_pos] == RB[closest_RB_pos] or FLX[closest_FLX_pos] == RB2[closest_RB2_pos] or FLX[closest_FLX_pos] == WR[closest_WR_pos] or FLX[closest_FLX_pos] == WR2[closest_WR2_pos] or FLX[closest_FLX_pos] == WR3[closest_WR3_pos] or FLX[closest_FLX_pos] == TE[closest_TE_pos]:
+        while FLX[closest_FLX_pos] == RB[closest_RB_pos] or FLX[closest_FLX_pos] == RB2[closest_RB2_pos] or FLX[closest_FLX_pos] == WR[closest_WR_pos] or FLX[closest_FLX_pos] == WR2[closest_WR2_pos] or FLX[closest_FLX_pos] == WR3[closest_WR3_pos] or FLX[closest_FLX_pos] == TE[closest_TE_pos]:  # noqa E501
             return_FLX = Closest_to_num.remove_closest(return_FLX, FLX_STD)
             closest_FLX_pos = Closest_to_num.find_closest_STD(return_FLX, FLX_STD)
             FLX = return_FLX.values.tolist()
@@ -159,84 +156,8 @@ class Assemble():
             count += 1
             print(count)
             if assemble.hasValidSalary(lineup, min_sal, pairing):
-                #g.log.info('Your lineup is %s !!!!!!!!!!!!!!!!!!!!!!' % lineup)
                 return lineup
             else:
-                # I am going to be rearranging this as part of testing for best lineup...
-                # original is:
-                # if past == 'GO':
-                #     # TODO: Figure out way to have the code loop back to rm QB(CHECK)
-                #
-                #     DST = Closest_to_num.remove_closest(DST, DST_STD)
-                #     g.log.info('Lineup failed salary check!!')
-                #     lineup = assemble.createLineup(QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD, WR3_STD, TE_STD, FLX_STD, DST_STD)
-                #
-                #     past = 'RB'
-                #     g.log.info(lineup)
-                # elif past == 'RB':
-                #     RB = Closest_to_num.remove_closest(RB, RB_STD)
-                #     g.log.info('Lineup failed salary check!!')
-                #     lineup = assemble.createLineup(QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD,
-                #                                    WR3_STD, TE_STD, FLX_STD, DST_STD)
-                #
-                #     past = 'RB2'
-                #     g.log.info(lineup)
-                # elif past == 'RB2':
-                #     RB = Closest_to_num.remove_closest(RB, RB_STD)
-                #     g.log.info('Lineup failed salary check!!')
-                #     lineup = assemble.createLineup(QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD,
-                #                                    WR3_STD, TE_STD, FLX_STD, DST_STD)
-                #
-                #     past = 'WR'
-                #     g.log.info(lineup)
-                # elif past == 'WR':
-                #     WR = Closest_to_num.remove_closest(WR, TE_STD)
-                #     g.log.info('Lineup failed salary check!!')
-                #     lineup = assemble.createLineup(QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD,
-                #                                    WR3_STD, TE_STD, FLX_STD, DST_STD)
-                #
-                #     past = 'WR2'
-                #     g.log.info(lineup)
-                # elif past == 'WR2':
-                #     WR = Closest_to_num.remove_closest(WR, TE_STD)
-                #     g.log.info('Lineup failed salary check!!')
-                #     lineup = assemble.createLineup(QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD,
-                #                                    WR3_STD, TE_STD, FLX_STD, DST_STD)
-                #
-                #     past = 'WR3'
-                #     g.log.info(lineup)
-                # elif past == 'WR3':
-                #     WR = Closest_to_num.remove_closest(WR, TE_STD)
-                #     g.log.info('Lineup failed salary check!!')
-                #     lineup = assemble.createLineup(QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD,
-                #                                    WR3_STD, TE_STD, FLX_STD, DST_STD)
-                #
-                #     past = 'TE'
-                #     g.log.info(lineup)
-                # elif past == 'TE':
-                #     TE = Closest_to_num.remove_closest(TE, TE_STD)
-                #     g.log.info('Lineup failed salary check!!')
-                #     lineup = assemble.createLineup(QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD,
-                #                                    WR3_STD, TE_STD, FLX_STD, DST_STD)
-                #
-                #     past = 'FLX'
-                #     g.log.info(lineup)
-                # elif past == 'FLX':
-                #     FLX = Closest_to_num.remove_closest(FLX, FLX_STD)
-                #     g.log.info('Lineup failed salary check!!')
-                #     lineup = assemble.createLineup(QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD,
-                #                                    WR3_STD, TE_STD, FLX_STD, DST_STD)
-                #
-                #     past = 'QB'
-                #     g.log.info(lineup)
-                # elif past == 'QB':
-                #     QB = Closest_to_num.remove_closest(QB, QB_STD)
-                #     g.log.info('Lineup failed salary check!!')
-                #     lineup = assemble.createLineup(QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD,
-                #                                    WR3_STD, TE_STD, FLX_STD, DST_STD)
-                #
-                #     past = 'GO'
-
                 if past == 'GO':
                     # TODO: Figure out way to have the code loop back to rm QB(CHECK)
 
@@ -308,17 +229,16 @@ class Assemble():
                     g.log.info('Lineup failed salary check!!')
                     lineup = assemble.createLineup(QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD, WR3_STD, TE_STD, FLX_STD, DST_STD)
 
-
                     past = 'GO'
 
                     g.log.info(lineup)
 
-    def collectLineupData(self, lineup, QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD, WR3_STD, TE_STD, FLX_STD, DST_STD, pairing):
+    def collectLineupData(self, lineup, QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD, WR3_STD, TE_STD, FLX_STD, DST_STD, pairing, min_sal):
 
-        #g.log.info('Instantiate Closest_to_num object')
+        g.log.info('Instantiate Closest_to_num object')
         Closest_to_num = ClosestToNum()
 
-        # Instantiate assemble object
+        g.log.info('Instantiate assemble object')
         assemble = Assemble()
 
         # Player ranges for this value
