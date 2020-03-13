@@ -1,8 +1,8 @@
 # from altair import *
 # from math import *
-import pandas as pd
+# import pandas as pd
 # import os
-import altair as alt
+# import altair as alt
 
 
 # file = "/home/ascerra/FLEX_dev/scenario/flex/wk_1_revised_QB.csv"
