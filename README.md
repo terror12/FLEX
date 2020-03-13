@@ -1,4 +1,4 @@
-#**Table of Contents**
+**Table of Contents**
 
 - [Mission Statement](#mission-statement)
 - [Methodology](#methodology)

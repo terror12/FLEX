@@ -30,12 +30,15 @@ class TestSheetsCreate:
         g.log.info('Instantiate Prereqs')
         prereq = PreReqs()
         g.log.info('create New sheet')
-        prereq.createNewSheet(credentials, '2019 Week2 STD')
+        prereq.createNewSheet(credentials, 'Pytest Test Sheet')
+
+        # TODO: add remove GoogleSheet
 
     @pytest.mark.import_data
     def test_import_data(self, deftestdata, print_logging):
         """
         Test that we can read a sheet using the credential object
+        Requires testdata[] pointing to valid sheet
         :return:
         """
         projections = deftestdata['projections']
@@ -171,6 +174,7 @@ class TestSheetsCreate:
         This test is meant to test the fixture sht_create_pretest
         Which is meant to be a common way to create the base of all
         of our google sheets and start to correct naming convention.
+        Requires testdata[] pointing to valid sheet.
         :param self:
         :param deftestdata:
         :param print_logging:
@@ -184,7 +188,8 @@ class TestSheetsCreate:
     @pytest.mark.create_15_16_gsheet
     def test_import_historic_data_15_16(self, shtCreatePreReq, deftestdata, print_logging):
         """
-        Creates google sheet for 2015 to 2016 season,
+        Creates google sheet for 2015 to 2016 season.
+        Requires testdata[] pointing to valid sheet
         :return:
         """
         year = deftestdata["year"]
@@ -201,6 +206,7 @@ class TestSheetsCreate:
     def test_import_historic_data_17_19(self, shtCreatePreReq, deftestdata, print_logging):
         """
         Creates google sheet for 2017 to 2019 season.
+        Requires testdata[] pointing to valid sheet
         :return:
         """
         g.log.info('Instantiate the spreadsheet object')
