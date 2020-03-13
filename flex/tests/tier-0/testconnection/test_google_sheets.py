@@ -19,6 +19,8 @@ class TestConnection:
         g.log.info('Assert that we have a .credentials object')
         assert path.exists("sheets.googleapis.com-python-quickstart.json")
 
+        # TODO either extend this test to check for client_secret.json
+
     @pytest.mark.rd_sheet
     def test_read_sheet(self, deftestdata, print_logging):
         """
