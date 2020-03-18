@@ -8,6 +8,7 @@ class TestCreation:
     g.add_log(g.log, filename='./logs/DataframeCreationLog')
 
     @pytest.mark.flx
+    @pytest.mark.regression
     def test_flx_create(self, rawDataframe, print_logging):
         """
         Create the FLX Dataframe
