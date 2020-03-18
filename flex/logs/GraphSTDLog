@@ -1,0 +1,1058 @@
+2020-02-09 13:36:03,447 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:36:03,453 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:36:03,456 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:36:03,466 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:36:03,469 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:36:03,469 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:36:03,473 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:36:03,474 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:36:03,557 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:36:03,559 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:36:10,800 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:36:10,803 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:36:10,805 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:36:10,815 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:36:10,818 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:36:10,818 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:36:10,822 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:36:10,823 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:36:10,902 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:36:10,904 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:36:18,519 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:36:18,522 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:36:18,524 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:36:18,534 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:36:18,537 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:36:18,538 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:36:18,542 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:36:18,543 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:36:18,625 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:36:18,627 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:37:09,784 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:37:09,787 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:37:09,790 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:37:09,800 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:37:09,803 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:37:09,804 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:37:09,808 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:37:09,809 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:37:09,902 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:37:09,904 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:37:17,778 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:37:17,784 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:37:17,787 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:37:17,796 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:37:17,799 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:37:17,799 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:37:17,803 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:37:17,804 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:37:17,876 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:37:17,879 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:37:24,765 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:37:24,768 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:37:24,770 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:37:24,780 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:37:24,783 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:37:24,784 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:37:24,788 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:37:24,789 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:37:24,874 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:37:24,876 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:37:32,451 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:37:32,454 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:37:32,456 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:37:32,465 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:37:32,469 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:37:32,470 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:37:32,474 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:37:32,474 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:37:32,558 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:37:32,560 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:37:40,198 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:37:40,201 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:37:40,202 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:37:40,207 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:37:40,209 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:37:40,209 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:37:40,213 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:37:40,214 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:37:40,308 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:37:40,310 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:37:47,870 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:37:47,872 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:37:47,873 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:37:47,879 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:37:47,881 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:37:47,881 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:37:47,886 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:37:47,886 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:37:47,974 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:37:47,976 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:37:55,556 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:37:55,559 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:37:55,562 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:37:55,572 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:37:55,575 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:37:55,576 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:37:55,579 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:37:55,580 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:37:55,652 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:37:55,654 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:38:03,542 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:38:03,544 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:38:03,546 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:38:03,555 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:38:03,559 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:38:03,560 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:38:03,565 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:38:03,566 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:38:03,639 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:38:03,641 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:38:11,833 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:38:11,834 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:38:11,836 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:38:11,841 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:38:11,843 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:38:11,843 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:38:11,848 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:38:11,848 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:38:11,929 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:38:11,932 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:38:19,100 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:38:19,103 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:38:19,105 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:38:19,115 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:38:19,118 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:38:19,119 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:38:19,123 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:38:19,124 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:38:19,190 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:38:19,192 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:38:27,198 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:38:27,201 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:38:27,203 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:38:27,211 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:38:27,214 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:38:27,215 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:38:27,218 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:38:27,219 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:38:27,292 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:38:27,294 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:38:35,332 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:38:35,334 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:38:35,337 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:38:35,345 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:38:35,348 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:38:35,349 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:38:35,352 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:38:35,353 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:38:35,435 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:38:35,437 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:38:43,479 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:38:43,481 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:38:43,483 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:38:43,492 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:38:43,496 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:38:43,497 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:38:43,502 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:38:43,504 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:38:43,581 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:38:43,583 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:38:51,468 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:38:51,471 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:38:51,473 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:38:51,484 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:38:51,487 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:38:51,488 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:38:51,492 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:38:51,494 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:38:51,576 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:38:51,578 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:38:59,146 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:38:59,149 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:38:59,151 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:38:59,158 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:38:59,161 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:38:59,162 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:38:59,165 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:38:59,166 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:38:59,241 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:38:59,244 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:39:08,292 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:39:08,295 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:39:08,297 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:39:08,307 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:39:08,311 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:39:08,312 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:39:08,317 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:39:08,318 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:39:08,394 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:39:08,396 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:47:22,962 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:47:22,966 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:47:22,968 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:47:22,979 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:47:22,981 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:47:22,982 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:47:22,986 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:47:22,987 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:47:23,066 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:47:23,068 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:47:30,027 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:47:30,030 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:47:30,032 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:47:30,041 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:47:30,045 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:47:30,045 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:47:30,049 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:47:30,050 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:47:30,123 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:47:30,125 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:47:37,501 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:47:37,510 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:47:37,513 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:47:37,522 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:47:37,526 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:47:37,527 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:47:37,531 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:47:37,532 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:47:37,611 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:47:37,614 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:47:46,001 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:47:46,005 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:47:46,008 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:47:46,019 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:47:46,022 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:47:46,022 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:47:46,027 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:47:46,027 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:47:46,096 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:47:46,098 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:47:53,990 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:47:53,993 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:47:53,995 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:47:54,007 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:47:54,010 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:47:54,011 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:47:54,014 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:47:54,016 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:47:54,091 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:47:54,093 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:48:01,977 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:48:01,980 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:48:01,982 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:48:01,994 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:48:01,997 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:48:01,998 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:48:02,001 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:48:02,002 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:48:02,077 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:48:02,080 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:48:09,965 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:48:09,969 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:48:09,971 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:48:09,981 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:48:09,984 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:48:09,985 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:48:09,988 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:48:09,989 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:48:10,058 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:48:10,060 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:48:17,497 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:48:17,500 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:48:17,502 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:48:17,513 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:48:17,516 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:48:17,517 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:48:17,523 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:48:17,526 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:48:17,603 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:48:17,606 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:48:25,411 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:48:25,414 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:48:25,416 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:48:25,426 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:48:25,429 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:48:25,430 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:48:25,434 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:48:25,434 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:48:25,495 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:48:25,497 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:48:33,071 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:48:33,074 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:48:33,076 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:48:33,085 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:48:33,089 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:48:33,090 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:48:33,093 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:48:33,094 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:48:33,160 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:48:33,162 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:48:41,297 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:48:41,300 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:48:41,302 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:48:41,311 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:48:41,315 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:48:41,316 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:48:41,321 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:48:41,321 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:48:41,389 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:48:41,391 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:48:49,238 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:48:49,241 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:48:49,244 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:48:49,254 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:48:49,257 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:48:49,258 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:48:49,262 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:48:49,263 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:48:49,339 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:48:49,341 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:48:57,579 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:48:57,582 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:48:57,584 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:48:57,595 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:48:57,598 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:48:57,599 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:48:57,602 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:48:57,604 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:48:57,674 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:48:57,677 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:49:05,874 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:49:05,878 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:49:05,880 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:49:05,890 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:49:05,892 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:49:05,893 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:49:05,897 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:49:05,898 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:49:05,969 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:49:05,972 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:49:13,245 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:49:13,248 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:49:13,250 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:49:13,260 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:49:13,264 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:49:13,271 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:49:13,276 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:49:13,277 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:49:13,353 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:49:13,355 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:49:21,207 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:49:21,211 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:49:21,213 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:49:21,223 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:49:21,226 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:49:21,227 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:49:21,231 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:49:21,232 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:49:21,308 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:49:21,310 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 13:49:29,017 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 13:49:29,021 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 13:49:29,023 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 13:49:29,034 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 13:49:29,037 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 13:49:29,038 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 13:49:29,041 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 13:49:29,043 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 13:49:29,112 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 13:49:29,114 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-09 14:10:22,916 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-09 14:10:22,919 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-09 14:10:22,922 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-09 14:10:22,932 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-09 14:10:22,934 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-09 14:10:22,935 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-09 14:10:22,939 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-09 14:10:22,940 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-09 14:10:23,029 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-09 14:10:23,031 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-22 08:05:39,386 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-22 08:05:39,397 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-22 08:05:39,399 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-22 08:05:39,408 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-22 08:05:39,412 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-22 08:05:39,414 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-22 08:05:39,418 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-22 08:05:39,420 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-22 08:05:39,509 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-22 08:05:39,512 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-22 08:09:24,066 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-22 08:09:24,069 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-22 08:09:24,071 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-22 08:09:24,080 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-22 08:09:24,084 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-22 08:09:24,085 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-22 08:09:24,090 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-22 08:09:24,092 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-22 08:09:24,211 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-22 08:09:24,215 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-22 15:11:38,973 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-22 15:11:38,989 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-22 15:11:38,991 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-22 15:11:39,001 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-22 15:11:39,005 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-22 15:11:39,007 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-22 15:11:39,014 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-22 15:11:39,017 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-22 15:11:39,112 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-22 15:11:39,115 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-22 15:11:46,832 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-22 15:11:46,835 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-22 15:11:46,838 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-22 15:11:46,849 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-22 15:11:46,853 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-22 15:11:46,853 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-22 15:11:46,857 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-22 15:11:46,858 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-22 15:11:46,948 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-22 15:11:46,950 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-22 15:11:54,054 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-22 15:11:54,057 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-22 15:11:54,060 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-22 15:11:54,068 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-22 15:11:54,070 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-22 15:11:54,071 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-22 15:11:54,076 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-22 15:11:54,077 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-22 15:11:54,221 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-22 15:11:54,227 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-22 15:12:06,286 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-22 15:12:06,289 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-22 15:12:06,291 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-22 15:12:06,301 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-22 15:12:06,305 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-22 15:12:06,306 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-22 15:12:06,310 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-22 15:12:06,311 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-22 15:12:06,391 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-22 15:12:06,393 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-22 15:12:14,195 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-22 15:12:14,198 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-22 15:12:14,200 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-22 15:12:14,211 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-22 15:12:14,214 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-22 15:12:14,215 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-22 15:12:14,219 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-22 15:12:14,220 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-22 15:12:14,310 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-22 15:12:14,312 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-22 15:12:21,577 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-22 15:12:21,579 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-22 15:12:21,582 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-22 15:12:21,593 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-22 15:12:21,597 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-22 15:12:21,597 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-22 15:12:21,602 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-22 15:12:21,604 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-22 15:12:21,729 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-22 15:12:21,732 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-22 15:19:52,631 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-22 15:19:52,634 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-22 15:19:52,636 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-22 15:19:52,648 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-22 15:19:52,651 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-22 15:19:52,652 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-22 15:19:52,657 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-22 15:19:52,658 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-22 15:19:52,738 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-22 15:19:52,740 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-22 15:25:04,822 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-22 15:25:04,832 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-22 15:25:04,834 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-22 15:25:04,845 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-22 15:25:04,848 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-22 15:25:04,849 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-22 15:25:04,855 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-22 15:25:04,856 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-22 15:25:04,954 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-22 15:25:04,956 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-22 15:26:27,081 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-22 15:26:27,084 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-22 15:26:27,086 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-22 15:26:27,097 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-22 15:26:27,100 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-22 15:26:27,100 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-22 15:26:27,104 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-22 15:26:27,106 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-22 15:26:27,250 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-22 15:26:27,254 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-22 15:27:42,044 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-22 15:27:42,049 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-22 15:27:42,051 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-22 15:27:42,064 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-22 15:27:42,069 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-22 15:27:42,072 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-22 15:27:42,081 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-22 15:27:42,084 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-22 15:27:42,232 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-22 15:27:42,236 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-22 15:29:43,911 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-22 15:29:43,914 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-22 15:29:43,917 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-22 15:29:43,928 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-22 15:29:43,931 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-22 15:29:43,932 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-22 15:29:43,936 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-22 15:29:43,937 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-22 15:29:44,044 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-22 15:29:44,047 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-22 15:30:24,045 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-22 15:30:24,048 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-22 15:30:24,050 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-22 15:30:24,060 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-22 15:30:24,064 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-22 15:30:24,065 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-22 15:30:24,070 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-22 15:30:24,072 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-22 15:30:24,166 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-22 15:30:24,169 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-22 15:30:31,723 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-22 15:30:31,726 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-22 15:30:31,728 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-22 15:30:31,739 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-22 15:30:31,743 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-22 15:30:31,744 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-22 15:30:31,748 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-22 15:30:31,750 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-22 15:30:31,828 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-22 15:30:31,830 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-22 15:30:39,574 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-22 15:30:39,577 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-22 15:30:39,579 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-22 15:30:39,590 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-22 15:30:39,593 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-22 15:30:39,594 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-22 15:30:39,598 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-22 15:30:39,599 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-22 15:30:39,711 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-22 15:30:39,714 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-22 15:30:52,305 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-22 15:30:52,308 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-22 15:30:52,311 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-22 15:30:52,321 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-22 15:30:52,324 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-22 15:30:52,325 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-22 15:30:52,329 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-22 15:30:52,330 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-22 15:30:52,405 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-22 15:30:52,407 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-22 15:32:05,537 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-22 15:32:05,540 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-22 15:32:05,542 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-22 15:32:05,553 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-22 15:32:05,556 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-22 15:32:05,557 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-22 15:32:05,561 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-22 15:32:05,562 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-22 15:32:05,659 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-22 15:32:05,662 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-02-22 15:32:39,629 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-02-22 15:32:39,633 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-02-22 15:32:39,638 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-02-22 15:32:39,655 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-02-22 15:32:39,659 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-02-22 15:32:39,660 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-02-22 15:32:39,667 INFO (full_dataframe_prep_for_data) Set position limits
+2020-02-22 15:32:39,669 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-02-22 15:32:39,846 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-02-22 15:32:39,849 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-03-08 12:04:13,607 INFO (test_hit_Position_Limit) Instantiate Remove() object
+2020-03-08 12:04:13,636 INFO (test_hit_Position_Limit) Set position limits
+2020-03-08 12:04:13,636 INFO (test_hit_Position_Limit) All dataframes hit position limits!!
+2020-03-08 12:07:16,386 INFO (test_hit_Position_Limit) Instantiate Remove() object
+2020-03-08 12:07:16,402 INFO (test_hit_Position_Limit) Set position limits
+2020-03-08 12:07:16,402 INFO (test_hit_Position_Limit) All dataframes hit position limits!!
+2020-03-08 12:10:34,666 INFO (test_hit_Position_Limit) Instantiate Remove() object
+2020-03-08 12:10:34,670 INFO (test_hit_Position_Limit) Set position limits
+2020-03-08 12:10:34,671 INFO (test_hit_Position_Limit) 0  playerId              player team position age exp bye       points        lower     upper         sdPts positionRank
+1   2558125     Patrick Mahomes   KC       QB  NA   2  12  20.67052778      18.8128   22.3708   2.201742479            1
+2   2558063      Deshaun Watson  HOU       QB  24   2  10  20.09522778      18.5458   21.6344   1.654291545            2
+3   2504775          Drew Brees   NO       QB  40  18   9  19.15696667      17.7317   20.5598   1.942101513            3
+4   2560757       Lamar Jackson  BAL       QB  22   1   8      19.0057      17.9716  19.98998  0.8240279191            4
+5   2532975      Russell Wilson  SEA       QB  31   7  11  18.99728571     18.42002   19.5552  0.7361657012            5
+6   2555260        Dak Prescott  DAL       QB  26   3   8  18.51097857  16.98536857   20.2744    1.39120256            6
+7   2555259        Carson Wentz  PHI       QB  27   3  10  18.32425833    17.511225   19.1768   1.261535751            7
+8   2552033      Jameis Winston   TB       QB  25   4   7  18.21193333      17.3418  19.30508   1.295948568            8
+9   2506363       Aaron Rodgers   GB       QB  36  14  11  18.20506111      16.2546   19.9512   1.609046335            9
+10  2495455          Cam Newton  CAR       QB  30   8   7  18.07727857  16.55202857   19.3985   1.598917999           10
+11  2555334          Jared Goff  LAR       QB  25   3   9  17.75290278    16.591825     19.12   1.390028962           11
+12  2558008   Mitchell Trubisky  CHI       QB  25   2   6  17.58860714  16.29665714   18.5256   1.300913047           12
+13  2504211           Tom Brady   NE       QB  42  19  10    17.434075    15.971575     18.67   1.204121774           13
+14  2560800      Baker Mayfield  CLE       QB  24   1   7  17.33459167    15.653425    19.378   2.121982963           14
+15  2506109  Ben Roethlisberger  PIT       QB  37  15   7    17.117525      15.7836  18.25612  0.9916863097           15
+17      310           Matt Ryan  ATL       QB  34  11   9     16.76485     15.24857    18.204   1.504369055           16
+19  2506121       Philip Rivers  LAC       QB  38  15  12    16.681975      15.7787    17.705   1.078485436           17
+20  2532820        Kirk Cousins  MIN       QB  31   7  12  16.64300833       16.038   17.5702  0.6204877472           18
+22  2543801     Jimmy Garoppolo   SF       QB  28   5   4  16.01942857  13.34562857  18.08722   2.962191492           19
+23  2562382        Kyler Murray  ARI       QB  49   0  12  15.73100714  12.89145714   17.8238    2.36606988           20
+24  2560955          Josh Allen  BUF       QB  23   1   6  15.48228571      14.7106   16.1921  0.8117075225           21
+26    79860    Matthew Stafford  DET       QB  31  10   5       15.375     14.26682   16.6216   1.532255663           22
+31  2532842          Nick Foles  JAC       QB  30   7  10  14.08798571     12.31776   15.4404   2.110642037           23
+37  2555261     Jacoby Brissett  IND       QB  27   3   6      13.5014      12.5408  14.74588   1.040213209           24
+40  2543499          Derek Carr  OAK       QB  28   5   6  13.34556667      10.3947    15.286   2.148009136           25
+41      382          Joe Flacco  DEN       QB  34  11  10   13.2302619      11.4401  15.08052   1.605237023           26
+44  2495143         Andy Dalton  CIN       QB  32   8   9      13.1077      12.0012  14.71704   1.317042314           27
+47  2552466      Marcus Mariota  TEN       QB  26   4  11  12.90029048      11.8088  14.33412   1.199615689           28
+56  2561036         Sam Darnold  NYJ       QB  22   1   4  12.46800952  10.41706667  14.29152   1.923492058           29
+65  2505996         Eli Manning  NYG       QB  38  15  11  11.75677619      10.1912  13.71144   1.746822317           30
+75  2506581    Ryan Fitzpatrick  MIA       QB  37  14   5   11.2693619       8.9168  14.01664   2.879389769           31
+77  2532888         Case Keenum  WAS       QB  31   7  10   11.1117619       9.0784  13.16436   1.896544498           32
+2020-03-08 12:10:35,104 INFO (test_hit_Position_Limit) All dataframes hit position limits!!
+2020-03-08 12:11:09,112 INFO (test_hit_Position_Limit) Instantiate Remove() object
+2020-03-08 12:11:09,113 INFO (test_hit_Position_Limit) Set position limits
+2020-03-08 12:11:09,113 INFO (test_hit_Position_Limit) 0  playerId              player team position age exp bye       points        lower     upper         sdPts positionRank
+1   2558125     Patrick Mahomes   KC       QB  NA   2  12  20.67052778      18.8128   22.3708   2.201742479            1
+2   2558063      Deshaun Watson  HOU       QB  24   2  10  20.09522778      18.5458   21.6344   1.654291545            2
+3   2504775          Drew Brees   NO       QB  40  18   9  19.15696667      17.7317   20.5598   1.942101513            3
+4   2560757       Lamar Jackson  BAL       QB  22   1   8      19.0057      17.9716  19.98998  0.8240279191            4
+5   2532975      Russell Wilson  SEA       QB  31   7  11  18.99728571     18.42002   19.5552  0.7361657012            5
+6   2555260        Dak Prescott  DAL       QB  26   3   8  18.51097857  16.98536857   20.2744    1.39120256            6
+7   2555259        Carson Wentz  PHI       QB  27   3  10  18.32425833    17.511225   19.1768   1.261535751            7
+8   2552033      Jameis Winston   TB       QB  25   4   7  18.21193333      17.3418  19.30508   1.295948568            8
+9   2506363       Aaron Rodgers   GB       QB  36  14  11  18.20506111      16.2546   19.9512   1.609046335            9
+10  2495455          Cam Newton  CAR       QB  30   8   7  18.07727857  16.55202857   19.3985   1.598917999           10
+11  2555334          Jared Goff  LAR       QB  25   3   9  17.75290278    16.591825     19.12   1.390028962           11
+12  2558008   Mitchell Trubisky  CHI       QB  25   2   6  17.58860714  16.29665714   18.5256   1.300913047           12
+13  2504211           Tom Brady   NE       QB  42  19  10    17.434075    15.971575     18.67   1.204121774           13
+14  2560800      Baker Mayfield  CLE       QB  24   1   7  17.33459167    15.653425    19.378   2.121982963           14
+15  2506109  Ben Roethlisberger  PIT       QB  37  15   7    17.117525      15.7836  18.25612  0.9916863097           15
+17      310           Matt Ryan  ATL       QB  34  11   9     16.76485     15.24857    18.204   1.504369055           16
+19  2506121       Philip Rivers  LAC       QB  38  15  12    16.681975      15.7787    17.705   1.078485436           17
+20  2532820        Kirk Cousins  MIN       QB  31   7  12  16.64300833       16.038   17.5702  0.6204877472           18
+22  2543801     Jimmy Garoppolo   SF       QB  28   5   4  16.01942857  13.34562857  18.08722   2.962191492           19
+23  2562382        Kyler Murray  ARI       QB  49   0  12  15.73100714  12.89145714   17.8238    2.36606988           20
+24  2560955          Josh Allen  BUF       QB  23   1   6  15.48228571      14.7106   16.1921  0.8117075225           21
+26    79860    Matthew Stafford  DET       QB  31  10   5       15.375     14.26682   16.6216   1.532255663           22
+31  2532842          Nick Foles  JAC       QB  30   7  10  14.08798571     12.31776   15.4404   2.110642037           23
+37  2555261     Jacoby Brissett  IND       QB  27   3   6      13.5014      12.5408  14.74588   1.040213209           24
+40  2543499          Derek Carr  OAK       QB  28   5   6  13.34556667      10.3947    15.286   2.148009136           25
+41      382          Joe Flacco  DEN       QB  34  11  10   13.2302619      11.4401  15.08052   1.605237023           26
+44  2495143         Andy Dalton  CIN       QB  32   8   9      13.1077      12.0012  14.71704   1.317042314           27
+47  2552466      Marcus Mariota  TEN       QB  26   4  11  12.90029048      11.8088  14.33412   1.199615689           28
+56  2561036         Sam Darnold  NYJ       QB  22   1   4  12.46800952  10.41706667  14.29152   1.923492058           29
+65  2505996         Eli Manning  NYG       QB  38  15  11  11.75677619      10.1912  13.71144   1.746822317           30
+75  2506581    Ryan Fitzpatrick  MIA       QB  37  14   5   11.2693619       8.9168  14.01664   2.879389769           31
+77  2532888         Case Keenum  WAS       QB  31   7  10   11.1117619       9.0784  13.16436   1.896544498           32
+2020-03-08 12:11:09,563 INFO (test_hit_Position_Limit) All dataframes hit position limits!!
+2020-03-08 12:13:28,404 INFO (test_hit_Position_Limit) Instantiate Remove() object
+2020-03-08 12:13:28,410 INFO (test_hit_Position_Limit) Set position limits
+2020-03-08 12:13:28,411 INFO (test_hit_Position_Limit) 0  playerId              player team position age exp bye       points        lower     upper         sdPts positionRank
+1   2558125     Patrick Mahomes   KC       QB  NA   2  12  20.67052778      18.8128   22.3708   2.201742479            1
+2   2558063      Deshaun Watson  HOU       QB  24   2  10  20.09522778      18.5458   21.6344   1.654291545            2
+3   2504775          Drew Brees   NO       QB  40  18   9  19.15696667      17.7317   20.5598   1.942101513            3
+4   2560757       Lamar Jackson  BAL       QB  22   1   8      19.0057      17.9716  19.98998  0.8240279191            4
+5   2532975      Russell Wilson  SEA       QB  31   7  11  18.99728571     18.42002   19.5552  0.7361657012            5
+6   2555260        Dak Prescott  DAL       QB  26   3   8  18.51097857  16.98536857   20.2744    1.39120256            6
+7   2555259        Carson Wentz  PHI       QB  27   3  10  18.32425833    17.511225   19.1768   1.261535751            7
+8   2552033      Jameis Winston   TB       QB  25   4   7  18.21193333      17.3418  19.30508   1.295948568            8
+9   2506363       Aaron Rodgers   GB       QB  36  14  11  18.20506111      16.2546   19.9512   1.609046335            9
+10  2495455          Cam Newton  CAR       QB  30   8   7  18.07727857  16.55202857   19.3985   1.598917999           10
+11  2555334          Jared Goff  LAR       QB  25   3   9  17.75290278    16.591825     19.12   1.390028962           11
+12  2558008   Mitchell Trubisky  CHI       QB  25   2   6  17.58860714  16.29665714   18.5256   1.300913047           12
+13  2504211           Tom Brady   NE       QB  42  19  10    17.434075    15.971575     18.67   1.204121774           13
+14  2560800      Baker Mayfield  CLE       QB  24   1   7  17.33459167    15.653425    19.378   2.121982963           14
+15  2506109  Ben Roethlisberger  PIT       QB  37  15   7    17.117525      15.7836  18.25612  0.9916863097           15
+17      310           Matt Ryan  ATL       QB  34  11   9     16.76485     15.24857    18.204   1.504369055           16
+19  2506121       Philip Rivers  LAC       QB  38  15  12    16.681975      15.7787    17.705   1.078485436           17
+20  2532820        Kirk Cousins  MIN       QB  31   7  12  16.64300833       16.038   17.5702  0.6204877472           18
+22  2543801     Jimmy Garoppolo   SF       QB  28   5   4  16.01942857  13.34562857  18.08722   2.962191492           19
+23  2562382        Kyler Murray  ARI       QB  49   0  12  15.73100714  12.89145714   17.8238    2.36606988           20
+24  2560955          Josh Allen  BUF       QB  23   1   6  15.48228571      14.7106   16.1921  0.8117075225           21
+26    79860    Matthew Stafford  DET       QB  31  10   5       15.375     14.26682   16.6216   1.532255663           22
+31  2532842          Nick Foles  JAC       QB  30   7  10  14.08798571     12.31776   15.4404   2.110642037           23
+37  2555261     Jacoby Brissett  IND       QB  27   3   6      13.5014      12.5408  14.74588   1.040213209           24
+40  2543499          Derek Carr  OAK       QB  28   5   6  13.34556667      10.3947    15.286   2.148009136           25
+41      382          Joe Flacco  DEN       QB  34  11  10   13.2302619      11.4401  15.08052   1.605237023           26
+44  2495143         Andy Dalton  CIN       QB  32   8   9      13.1077      12.0012  14.71704   1.317042314           27
+47  2552466      Marcus Mariota  TEN       QB  26   4  11  12.90029048      11.8088  14.33412   1.199615689           28
+56  2561036         Sam Darnold  NYJ       QB  22   1   4  12.46800952  10.41706667  14.29152   1.923492058           29
+65  2505996         Eli Manning  NYG       QB  38  15  11  11.75677619      10.1912  13.71144   1.746822317           30
+75  2506581    Ryan Fitzpatrick  MIA       QB  37  14   5   11.2693619       8.9168  14.01664   2.879389769           31
+77  2532888         Case Keenum  WAS       QB  31   7  10   11.1117619       9.0784  13.16436   1.896544498           32
+2020-03-08 12:13:28,792 INFO (test_hit_Position_Limit) All dataframes hit position limits!!
+2020-03-08 12:14:52,141 INFO (test_hit_Position_Limit) Instantiate Remove() object
+2020-03-08 12:14:52,310 INFO (test_hit_Position_Limit) Set position limits
+2020-03-08 12:14:52,311 INFO (test_hit_Position_Limit) 0  playerId              player team position age exp bye       points        lower     upper         sdPts positionRank
+1   2558125     Patrick Mahomes   KC       QB  NA   2  12  20.67052778      18.8128   22.3708   2.201742479            1
+2   2558063      Deshaun Watson  HOU       QB  24   2  10  20.09522778      18.5458   21.6344   1.654291545            2
+3   2504775          Drew Brees   NO       QB  40  18   9  19.15696667      17.7317   20.5598   1.942101513            3
+4   2560757       Lamar Jackson  BAL       QB  22   1   8      19.0057      17.9716  19.98998  0.8240279191            4
+5   2532975      Russell Wilson  SEA       QB  31   7  11  18.99728571     18.42002   19.5552  0.7361657012            5
+6   2555260        Dak Prescott  DAL       QB  26   3   8  18.51097857  16.98536857   20.2744    1.39120256            6
+7   2555259        Carson Wentz  PHI       QB  27   3  10  18.32425833    17.511225   19.1768   1.261535751            7
+8   2552033      Jameis Winston   TB       QB  25   4   7  18.21193333      17.3418  19.30508   1.295948568            8
+9   2506363       Aaron Rodgers   GB       QB  36  14  11  18.20506111      16.2546   19.9512   1.609046335            9
+10  2495455          Cam Newton  CAR       QB  30   8   7  18.07727857  16.55202857   19.3985   1.598917999           10
+11  2555334          Jared Goff  LAR       QB  25   3   9  17.75290278    16.591825     19.12   1.390028962           11
+12  2558008   Mitchell Trubisky  CHI       QB  25   2   6  17.58860714  16.29665714   18.5256   1.300913047           12
+13  2504211           Tom Brady   NE       QB  42  19  10    17.434075    15.971575     18.67   1.204121774           13
+14  2560800      Baker Mayfield  CLE       QB  24   1   7  17.33459167    15.653425    19.378   2.121982963           14
+15  2506109  Ben Roethlisberger  PIT       QB  37  15   7    17.117525      15.7836  18.25612  0.9916863097           15
+17      310           Matt Ryan  ATL       QB  34  11   9     16.76485     15.24857    18.204   1.504369055           16
+19  2506121       Philip Rivers  LAC       QB  38  15  12    16.681975      15.7787    17.705   1.078485436           17
+20  2532820        Kirk Cousins  MIN       QB  31   7  12  16.64300833       16.038   17.5702  0.6204877472           18
+22  2543801     Jimmy Garoppolo   SF       QB  28   5   4  16.01942857  13.34562857  18.08722   2.962191492           19
+23  2562382        Kyler Murray  ARI       QB  49   0  12  15.73100714  12.89145714   17.8238    2.36606988           20
+24  2560955          Josh Allen  BUF       QB  23   1   6  15.48228571      14.7106   16.1921  0.8117075225           21
+26    79860    Matthew Stafford  DET       QB  31  10   5       15.375     14.26682   16.6216   1.532255663           22
+31  2532842          Nick Foles  JAC       QB  30   7  10  14.08798571     12.31776   15.4404   2.110642037           23
+37  2555261     Jacoby Brissett  IND       QB  27   3   6      13.5014      12.5408  14.74588   1.040213209           24
+40  2543499          Derek Carr  OAK       QB  28   5   6  13.34556667      10.3947    15.286   2.148009136           25
+41      382          Joe Flacco  DEN       QB  34  11  10   13.2302619      11.4401  15.08052   1.605237023           26
+44  2495143         Andy Dalton  CIN       QB  32   8   9      13.1077      12.0012  14.71704   1.317042314           27
+47  2552466      Marcus Mariota  TEN       QB  26   4  11  12.90029048      11.8088  14.33412   1.199615689           28
+56  2561036         Sam Darnold  NYJ       QB  22   1   4  12.46800952  10.41706667  14.29152   1.923492058           29
+65  2505996         Eli Manning  NYG       QB  38  15  11  11.75677619      10.1912  13.71144   1.746822317           30
+75  2506581    Ryan Fitzpatrick  MIA       QB  37  14   5   11.2693619       8.9168  14.01664   2.879389769           31
+77  2532888         Case Keenum  WAS       QB  31   7  10   11.1117619       9.0784  13.16436   1.896544498           32
+2020-03-08 12:14:53,029 INFO (test_hit_Position_Limit) All dataframes hit position limits!!
+2020-03-08 20:13:41,524 INFO (test_rm_cols) Column Configuration is Incorrect!!
+2020-03-08 20:36:06,140 INFO (test_rm_cols) Column Configuration is Incorrect!!
+2020-03-08 20:48:12,103 INFO (test_rm_cols) Success Only necessary Columns Exist!!
+2020-03-08 20:57:13,335 INFO (test_rm_cols) Column Configuration is Incorrect!!
+2020-03-08 21:01:58,130 INFO (test_rm_cols) Success Only necessary Columns Exist!!
+2020-03-08 21:02:28,849 INFO (test_header) Headers DO NOT match
+2020-03-08 21:03:18,619 INFO (test_header) Headers DO NOT match
+2020-03-08 21:08:45,023 INFO (test_header) Success headers match!!
+2020-03-08 21:09:08,214 INFO (test_header) Headers DO NOT match
+2020-03-08 21:10:54,151 INFO (test_header) Success headers match!!
+2020-03-08 21:12:16,797 INFO (test_header) Success headers match!!
+2020-03-08 21:12:50,907 INFO (test_rm_FA) Connect to Googlesheet and prep the data
+2020-03-08 21:12:50,909 INFO (test_rm_FA) Instantiate Remove() object
+2020-03-08 21:12:50,910 INFO (test_rm_FA) Removing All Free Agents using rm_FA()
+2020-03-08 21:12:50,919 INFO (test_rm_FA) All FAs have Been Removed!!
+2020-03-08 21:13:05,377 INFO (test_rm_NA) Connect to Googlesheet and prep the data
+2020-03-08 21:13:05,380 INFO (test_rm_NA) Instantiate Remove() object
+2020-03-08 21:13:05,380 INFO (test_rm_NA) Removing All Not Available values from STD column using rm_NA()
+2020-03-08 21:13:52,684 INFO (test_rm_NA) Connect to Googlesheet and prep the data
+2020-03-08 21:13:52,686 INFO (test_rm_NA) Instantiate Remove() object
+2020-03-08 21:13:52,687 INFO (test_rm_NA) Removing All Not Available values from sdPts column using rm_NA()
+2020-03-08 21:13:52,698 INFO (test_rm_NA) All Non-Available have Been Removed!!
+2020-03-08 21:14:48,904 INFO (test_rm_Low_Projections) Instantiate Remove() object
+2020-03-08 21:14:48,905 INFO (test_rm_Low_Projections) Removing All players with < 1 in Platform_AVG
+2020-03-08 21:16:08,161 INFO (test_rm_Low_Projections) Instantiate Remove() object
+2020-03-08 21:16:08,162 INFO (test_rm_Low_Projections) Removing All players with < 1 in Platform_AVG
+2020-03-08 21:19:28,682 INFO (test_rm_Low_Projections) Instantiate Remove() object
+2020-03-08 21:19:28,683 INFO (test_rm_Low_Projections) Removing All players with < 1 in Platform_AVG
+2020-03-08 21:24:44,418 INFO (test_rm_Low_Projections) Instantiate Remove() object
+2020-03-08 21:24:44,419 INFO (test_rm_Low_Projections) Instantiate Remove() object
+2020-03-08 21:24:44,420 INFO (test_rm_Low_Projections) Removing All players with < 1 in Platform_AVG
+2020-03-08 21:26:25,642 INFO (test_rm_Low_Projections) Instantiate Remove() object
+2020-03-08 21:26:25,643 INFO (test_rm_Low_Projections) Instantiate Remove() object
+2020-03-08 21:26:25,643 INFO (test_rm_Low_Projections) Removing All players with < 1 in Platform_AVG
+2020-03-08 21:27:35,378 INFO (test_rm_Low_Projections) Instantiate Remove() object
+2020-03-08 21:27:35,381 INFO (test_rm_Low_Projections) Instantiate Remove() object
+2020-03-08 21:27:35,381 INFO (test_rm_Low_Projections) Removing All players with < 1 in Platform_AVG
+2020-03-08 21:27:35,388 INFO (test_rm_Low_Projections) All Player With Platform_AVG Under 1 have Been Removed!!
+2020-03-08 21:28:15,927 INFO (test_rm_High_Std) Instantiate Remove() object
+2020-03-08 21:28:15,928 INFO (test_rm_High_Std) Removing All Not Available values from STD column using rm_NA()
+2020-03-08 21:28:15,936 INFO (test_rm_High_Std) Removing All players with STD >= 10
+2020-03-08 21:29:21,554 INFO (test_rm_High_Std) Instantiate Remove() object
+2020-03-08 21:29:21,555 INFO (test_rm_High_Std) Removing All Not Available values from sdPts column using rm_NA()
+2020-03-08 21:29:21,565 INFO (test_rm_High_Std) Removing All players with sdPts >= 10
+2020-03-08 21:29:21,570 INFO (test_rm_High_Std) All players with sdPts >= 10.0 have Been Removed!!
+2020-03-08 21:29:47,172 INFO (test_use_Needed_Cols) Instantiate Remove() object
+2020-03-08 21:29:47,185 INFO (test_use_Needed_Cols) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, sdPts
+2020-03-08 21:29:47,186 INFO (test_use_Needed_Cols) 0  playerId              player team position age exp bye Actual_Points FanDuel_Salary        lower     upper         sdPts
+1   2558125     Patrick Mahomes   KC       QB  NA   2  12   20.67052778           8700      18.8128   22.3708   2.201742479
+2   2558063      Deshaun Watson  HOU       QB  24   2  10   20.09522778           8500      18.5458   21.6344   1.654291545
+3   2504775          Drew Brees   NO       QB  40  18   9   19.15696667           8000      17.7317   20.5598   1.942101513
+4   2560757       Lamar Jackson  BAL       QB  22   1   8       19.0057           7400      17.9716  19.98998  0.8240279191
+5   2532975      Russell Wilson  SEA       QB  31   7  11   18.99728571           8200     18.42002   19.5552  0.7361657012
+6   2555260        Dak Prescott  DAL       QB  26   3   8   18.51097857           7500  16.98536857   20.2744    1.39120256
+7   2555259        Carson Wentz  PHI       QB  27   3  10   18.32425833           7600    17.511225   19.1768   1.261535751
+8   2552033      Jameis Winston   TB       QB  25   4   7   18.21193333           7500      17.3418  19.30508   1.295948568
+10  2495455          Cam Newton  CAR       QB  30   8   7   18.07727857           7900  16.55202857   19.3985   1.598917999
+11  2555334          Jared Goff  LAR       QB  25   3   9   17.75290278           7800    16.591825     19.12   1.390028962
+13  2504211           Tom Brady   NE       QB  42  19  10     17.434075           7300    15.971575     18.67   1.204121774
+14  2560800      Baker Mayfield  CLE       QB  24   1   7   17.33459167           7900    15.653425    19.378   2.121982963
+15  2506109  Ben Roethlisberger  PIT       QB  37  15   7     17.117525           7600      15.7836  18.25612  0.9916863097
+17      310           Matt Ryan  ATL       QB  34  11   9      16.76485           8000     15.24857    18.204   1.504369055
+19  2506121       Philip Rivers  LAC       QB  38  15  12     16.681975           7500      15.7787    17.705   1.078485436
+20  2532820        Kirk Cousins  MIN       QB  31   7  12   16.64300833           7400       16.038   17.5702  0.6204877472
+22  2543801     Jimmy Garoppolo   SF       QB  28   5   4   16.01942857           7200  13.34562857  18.08722   2.962191492
+23  2562382        Kyler Murray  ARI       QB  49   0  12   15.73100714           7300  12.89145714   17.8238    2.36606988
+24  2560955          Josh Allen  BUF       QB  23   1   6   15.48228571           6900      14.7106   16.1921  0.8117075225
+26    79860    Matthew Stafford  DET       QB  31  10   5        15.375           6600     14.26682   16.6216   1.532255663
+31  2532842          Nick Foles  JAC       QB  30   7  10   14.08798571           6500     12.31776   15.4404   2.110642037
+37  2555261     Jacoby Brissett  IND       QB  27   3   6       13.5014           6000      12.5408  14.74588   1.040213209
+40  2543499          Derek Carr  OAK       QB  28   5   6   13.34556667           6600      10.3947    15.286   2.148009136
+41      382          Joe Flacco  DEN       QB  34  11  10    13.2302619           6400      11.4401  15.08052   1.605237023
+44  2495143         Andy Dalton  CIN       QB  32   8   9       13.1077           6500      12.0012  14.71704   1.317042314
+47  2552466      Marcus Mariota  TEN       QB  26   4  11   12.90029048           6500      11.8088  14.33412   1.199615689
+56  2561036         Sam Darnold  NYJ       QB  22   1   4   12.46800952           6700  10.41706667  14.29152   1.923492058
+65  2505996         Eli Manning  NYG       QB  38  15  11   11.75677619           6400      10.1912  13.71144   1.746822317
+75  2506581    Ryan Fitzpatrick  MIA       QB  37  14   5    11.2693619           6200       8.9168  14.01664   2.879389769
+77  2532888         Case Keenum  WAS       QB  31   7  10    11.1117619           6200       9.0784  13.16436   1.896544498
+2020-03-08 21:29:47,581 INFO (test_use_Needed_Cols) Only needed columns Remain!!
+2020-03-08 21:30:36,637 INFO (test_use_Needed_Cols) Instantiate Remove() object
+2020-03-08 21:30:36,644 INFO (test_use_Needed_Cols) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, sdPts
+2020-03-08 21:30:36,645 INFO (test_use_Needed_Cols) 0 playerId           player team position age exp bye Actual_Points FanDuel_Salary    lower    upper        sdPts
+1  2558125  Patrick Mahomes   KC       QB  NA   2  12   20.67052778           8700  18.8128  22.3708  2.201742479
+2020-03-08 21:30:36,879 INFO (test_use_Needed_Cols) Only needed columns Remain!!
+2020-03-08 21:32:13,233 INFO (test_use_Needed_Cols) Instantiate Remove() object
+2020-03-08 21:32:13,243 INFO (test_use_Needed_Cols) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, sdPts
+2020-03-08 21:32:13,321 INFO (test_use_Needed_Cols) Before: 0 playerId           player team position age exp bye Actual_Points FanDuel_Salary    lower    upper        sdPts
+1  2558125  Patrick Mahomes   KC       QB  NA   2  12   20.67052778           8700  18.8128  22.3708  2.201742479
+2020-03-08 21:32:13,373 INFO (test_use_Needed_Cols) After: 0           player team position  Actual_Points FanDuel_Salary        sdPts
+1  Patrick Mahomes   KC       QB      20.670528           8700  2.201742479
+2020-03-08 21:32:13,374 INFO (test_use_Needed_Cols) Only needed columns Remain!!
+2020-03-11 19:11:37,073 INFO (test_create_sheet) Instantiate SheetsConnector object
+2020-03-11 19:11:37,077 INFO (test_create_sheet) Get Credentials
+2020-03-11 19:11:37,077 INFO (test_create_sheet) Instantiate Prereqs
+2020-03-11 19:11:37,078 INFO (test_create_sheet) create New sheet
+2020-03-11 19:11:41,927 INFO (test_creds_file) Assert that we have a .credentials object
+2020-03-11 19:22:45,445 INFO (test_create_sheet) Instantiate SheetsConnector object
+2020-03-11 19:22:45,473 INFO (test_create_sheet) Get Credentials
+2020-03-11 19:22:45,476 INFO (test_create_sheet) Instantiate Prereqs
+2020-03-11 19:22:45,476 INFO (test_create_sheet) create New sheet
+2020-03-11 19:22:49,666 INFO (test_creds_file) Assert that we have a .credentials object
+2020-03-11 19:28:20,987 INFO (test_import_data) Instantiate SheetsConnector object
+2020-03-11 19:28:20,990 INFO (test_import_data) Get Credentials
+2020-03-11 19:28:20,991 INFO (test_import_data) Instantiate Prereqs
+2020-03-11 19:28:20,992 INFO (test_import_data) create New sheet
+2020-03-11 19:28:24,598 INFO (test_import_data) Instantiate Prereqs
+2020-03-11 19:28:24,598 INFO (test_import_data) Upload Data
+2020-03-11 19:29:25,537 INFO (test_import_data) Instantiate SheetsConnector object
+2020-03-11 19:29:25,538 INFO (test_import_data) Get Credentials
+2020-03-11 19:29:25,539 INFO (test_import_data) Instantiate Prereqs
+2020-03-11 19:29:25,539 INFO (test_import_data) create New sheet
+2020-03-11 19:29:29,245 INFO (test_import_data) Instantiate Prereqs
+2020-03-11 19:29:29,246 INFO (test_import_data) Upload Data
+2020-03-11 19:30:10,279 INFO (test_import_data) Instantiate SheetsConnector object
+2020-03-11 19:30:10,280 INFO (test_import_data) Get Credentials
+2020-03-11 19:30:10,280 INFO (test_import_data) Instantiate Prereqs
+2020-03-11 19:30:10,280 INFO (test_import_data) create New sheet
+2020-03-11 19:30:14,117 INFO (test_import_data) Instantiate Prereqs
+2020-03-11 19:30:14,117 INFO (test_import_data) Upload Data
+2020-03-11 19:30:55,744 INFO (test_import_data) Instantiate SheetsConnector object
+2020-03-11 19:30:55,745 INFO (test_import_data) Get Credentials
+2020-03-11 19:30:55,746 INFO (test_import_data) Instantiate Prereqs
+2020-03-11 19:30:55,747 INFO (test_import_data) create New sheet
+2020-03-11 19:31:00,119 INFO (test_import_data) Instantiate Prereqs
+2020-03-11 19:31:00,120 INFO (test_import_data) Upload Data
+2020-03-11 19:31:05,904 INFO (test_import_data) Start removing Punctuation
+2020-03-11 19:31:07,010 INFO (test_import_data) 1 cells updated.
+2020-03-11 19:31:07,612 INFO (test_import_data) 1 cells updated.
+2020-03-11 19:31:08,272 INFO (test_import_data) Start removing Punctuation
+2020-03-11 19:31:09,444 INFO (test_import_data) 1 cells updated.
+2020-03-11 19:31:09,967 INFO (test_import_data) 1 cells updated.
+2020-03-11 19:31:10,520 INFO (test_import_data) Start removing Punctuation
+2020-03-11 19:31:11,582 INFO (test_import_data) 1 cells updated.
+2020-03-11 19:31:12,096 INFO (test_import_data) 1 cells updated.
+2020-03-11 19:31:12,670 INFO (test_import_data) Start removing Punctuation
+2020-03-11 19:31:13,765 INFO (test_import_data) 1 cells updated.
+2020-03-11 19:31:14,301 INFO (test_import_data) 1 cells updated.
+2020-03-11 19:31:14,869 INFO (test_import_data) Start removing Punctuation
+2020-03-11 19:31:15,956 INFO (test_import_data) 1 cells updated.
+2020-03-11 19:31:16,499 INFO (test_import_data) 1 cells updated.
+2020-03-11 19:31:17,057 INFO (test_import_data) Start removing Punctuation
+2020-03-11 19:31:18,144 INFO (test_import_data) 1 cells updated.
+2020-03-11 19:31:18,672 INFO (test_import_data) 1 cells updated.
+2020-03-11 19:31:19,273 INFO (test_import_data) Start removing Punctuation
+2020-03-11 19:31:20,393 INFO (test_import_data) 1 cells updated.
+2020-03-11 19:31:20,977 INFO (test_import_data) 1 cells updated.
+2020-03-11 19:31:22,667 INFO (test_import_data) 1 cells updated.
+2020-03-11 19:31:23,196 INFO (test_import_data) 1 cells updated.
+2020-03-11 19:31:24,331 INFO (test_import_data) 1 cells updated.
+2020-03-11 19:32:58,525 INFO (test_create_sheet) Instantiate SheetsConnector object
+2020-03-11 19:32:58,526 INFO (test_create_sheet) Get Credentials
+2020-03-11 19:32:58,526 INFO (test_create_sheet) Instantiate Prereqs
+2020-03-11 19:32:58,526 INFO (test_create_sheet) create New sheet
+2020-03-11 19:33:03,430 INFO (test_creds_file) Assert that we have a .credentials object
+2020-03-11 19:33:03,433 INFO (test_read_sheet) Read from Google sheet
+2020-03-11 19:33:05,825 INFO (test_read_sheet) Print data type of Google sheet class object
+2020-03-11 19:33:05,825 INFO (test_read_sheet) <class 'dict'>
+2020-03-11 19:33:05,828 INFO (test_connectivity) Instantiate SheetConnector object
+2020-03-11 19:33:05,828 INFO (test_connectivity) Get credentials...
+2020-03-11 19:33:05,829 INFO (test_connectivity) Successfully got credentials!!
+2020-03-11 19:33:05,829 INFO (test_connectivity) Read sheet to prove creds work...
+2020-03-11 19:33:08,254 INFO (test_connectivity) Successfully read sheet!!
+2020-03-11 19:33:08,255 INFO (test_connectivity) Convert data into dataframe to return subset of data...
+2020-03-11 19:33:10,601 INFO (test_connectivity)           0                1     2         3    4    5    6              7               8         9        10            11
+0  playerId           player  team  position  age  exp  bye  Actual_Points  FanDuel_Salary     lower     upper         sdPts
+1   2558125  Patrick Mahomes    KC        QB   NA    2   12         21.593            #N/A   19.0218   24.7738   3.829615777
+2   2558063   Deshaun Watson   HOU        QB   24    2   10         20.671            #N/A   18.1646   22.9566   3.032911637
+3   2504775       Drew Brees    NO        QB   40   18    9        20.3874            #N/A  18.62376    22.846   3.037714977
+4   2555259     Carson Wentz   PHI        QB   27    3   10        19.5768            #N/A  18.35832    21.126    1.87213961
+5   2532975   Russell Wilson   SEA        QB   31    7   11    19.23346667            #N/A  18.11032    20.398   1.432604989
+6   2560757    Lamar Jackson   BAL        QB   22    1    8        19.1584            #N/A  18.76216    19.454  0.4841969434
+7   2555260     Dak Prescott   DAL        QB   26    3    8    19.15406667            #N/A  17.94044  20.59644    1.73230298
+8   2552033   Jameis Winston    TB        QB   25    4    7    18.90513333            #N/A    18.088  19.70032   1.008819634
+9   2555334       Jared Goff   LAR        QB   25    3    9    18.62726667            #N/A  17.87344    19.632   1.226017297
+2020-03-11 19:33:10,958 INFO (test_connectivity) Successfully retrieved data set!!
+2020-03-11 19:33:10,959 INFO (test_connectivity) We are checking the length of the data to make sure it is more then 300 rows.
+2020-03-11 19:33:10,959 INFO (test_connectivity) If less then that we most likely have an issue with the data sheet!
+2020-03-11 19:33:10,960 INFO (test_connectivity) Number of rows in data is 537
+2020-03-11 19:33:15,725 INFO (test_header) Success headers match!!
+2020-03-11 19:33:15,777 INFO (test_rm_cols) Success Only necessary Columns Exist!!
+2020-03-11 19:33:15,780 INFO (test_rm_FA) Connect to Googlesheet and prep the data
+2020-03-11 19:33:15,781 INFO (test_rm_FA) Instantiate Remove() object
+2020-03-11 19:33:15,783 INFO (test_rm_FA) Removing All Free Agents using rm_FA()
+2020-03-11 19:33:15,805 INFO (test_rm_FA) All FAs have Been Removed!!
+2020-03-11 19:33:15,807 INFO (test_rm_NA) Connect to Googlesheet and prep the data
+2020-03-11 19:33:15,809 INFO (test_rm_NA) Instantiate Remove() object
+2020-03-11 19:33:15,809 INFO (test_rm_NA) Removing All Not Available values from sdPts column using rm_NA()
+2020-03-11 19:33:15,818 INFO (test_rm_NA) All Non-Available have Been Removed!!
+2020-03-11 19:33:15,822 INFO (test_rm_low_projections) Instantiate Remove() object
+2020-03-11 19:33:15,822 INFO (test_rm_low_projections) Instantiate Remove() object
+2020-03-11 19:33:15,823 INFO (test_rm_low_projections) Removing All players with < 1 in Platform_AVG
+2020-03-11 19:33:15,838 INFO (test_rm_low_projections) All Player With Platform_AVG Under 1 have Been Removed!!
+2020-03-11 19:33:15,841 INFO (test_rm_high_sdpts) Instantiate Remove() object
+2020-03-11 19:33:15,842 INFO (test_rm_high_sdpts) Removing All Not Available values from sdPts column using rm_NA()
+2020-03-11 19:33:15,850 INFO (test_rm_high_sdpts) Removing All players with sdPts >= 10
+2020-03-11 19:33:15,856 INFO (test_rm_high_sdpts) All players with sdPts >= 10.0 have Been Removed!!
+2020-03-11 19:33:15,860 INFO (test_seperate_positions) Instantiate FixUpDF() object
+2020-03-11 19:33:15,861 INFO (test_seperate_positions) Seperating Full Dataframe Into Positional Dataframes
+2020-03-11 19:33:15,867 INFO (test_seperate_positions) Ensure that no other position is in QB Datframe
+2020-03-11 19:33:15,868 INFO (test_seperate_positions) Ensure that no other position is in RB Datframe
+2020-03-11 19:33:15,868 INFO (test_seperate_positions) Ensure that no other position is in WR Datframe
+2020-03-11 19:33:15,869 INFO (test_seperate_positions) Ensure that no other position is in TE Datframe
+2020-03-11 19:33:15,869 INFO (test_seperate_positions) Ensure that no other position is in DST Datframe
+2020-03-11 19:33:15,869 INFO (test_seperate_positions) QB Positional Dataframe Created Succesfully!!
+2020-03-11 19:33:15,901 INFO (test_seperate_positions) 
+ 0 playerId           player team position age exp bye Actual_Points FanDuel_Salary     lower    upper        sdPts
+1  2558125  Patrick Mahomes   KC       QB  NA   2  12        21.593           #N/A   19.0218  24.7738  3.829615777
+2  2558063   Deshaun Watson  HOU       QB  24   2  10        20.671           #N/A   18.1646  22.9566  3.032911637
+3  2504775       Drew Brees   NO       QB  40  18   9       20.3874           #N/A  18.62376   22.846  3.037714977
+2020-03-11 19:33:15,901 INFO (test_seperate_positions) RB Positional Dataframe Created Succesfully!!
+2020-03-11 19:33:15,930 INFO (test_seperate_positions) 
+ 0  playerId               player team position age exp bye Actual_Points FanDuel_Salary    lower    upper        sdPts
+15  2558019         Alvin Kamara   NO       RB  23   2   9   17.59533333           #N/A  14.7672  21.5272  4.853974179
+21  2557997  Christian McCaffrey  CAR       RB  23   2   7   16.71866667           #N/A  15.2992  18.0032  1.715064236
+22  2560968       Saquon Barkley  NYG       RB  22   1  11        16.524           #N/A  15.0104  18.3384  2.091059062
+2020-03-11 19:33:15,930 INFO (test_seperate_positions) WR Positional Dataframe Created Succesfully!!
+2020-03-11 19:33:15,964 INFO (test_seperate_positions) 
+ 0  playerId           player team position age exp bye Actual_Points FanDuel_Salary    lower    upper        sdPts
+34  2540165  DeAndre Hopkins  HOU       WR  27   6  10   13.88366667           #N/A  13.0464  15.2056  1.483577545
+35  2495454      Julio Jones  ATL       WR  30   8   9   13.85366667           #N/A  11.8026   16.065   2.66538859
+39  2552430    Tyler Lockett  SEA       WR  27   4  11       13.5925           #N/A  12.5148  15.3032  1.978896725
+2020-03-11 19:33:15,964 INFO (test_seperate_positions) TE Positional Dataframe Created Succesfully!!
+2020-03-11 19:33:15,999 INFO (test_seperate_positions) 
+ 0   playerId         player team position age exp bye Actual_Points FanDuel_Salary    lower    upper         sdPts
+70   2540258   Travis Kelce   KC       TE  30   6  12   11.37233333           #N/A   9.9494  13.0934   2.068300349
+79   2558266  George Kittle   SF       TE  26   2   4   10.99133333           #N/A  10.3308  11.7148  0.8756656516
+100  2540158      Zach Ertz  PHI       TE  29   6  10         9.751           #N/A   8.3592   11.312   1.881506577
+2020-03-11 19:33:15,999 INFO (test_seperate_positions) DST Positional Dataframe Created Succesfully!!
+2020-03-11 19:33:16,026 INFO (test_seperate_positions) 
+ 0  playerId  player team position age exp bye Actual_Points FanDuel_Salary    lower    upper         sdPts
+61   100016  Chiefs   KC      DST  NA  NA  12        12.054           #N/A   9.9548  10.1532  0.1753624817
+72   100005   Bears  CHI      DST  NA  NA   6        11.339           #N/A  10.7518  11.9262   1.038032755
+73   100010   Lions  DET      DST  NA  NA   5         11.31           #N/A   10.886   11.734  0.7495331881
+2020-03-11 19:33:16,027 INFO (test_seperate_positions) =================================================
+2020-03-11 19:33:16,027 INFO (test_seperate_positions) All Positional Dataframes Created Succesfully!!
+2020-03-11 19:33:16,028 INFO (test_seperate_positions) =================================================
+2020-03-11 19:33:16,034 INFO (test_dupe_positions) Instantiate Remove() object
+2020-03-11 19:33:16,034 INFO (test_dupe_positions) Removing All duplicate players from the same team except one w/ highest AVG
+2020-03-11 19:33:16,641 INFO (test_hit_position_limit) Instantiate Remove() object
+2020-03-11 19:33:16,641 INFO (test_hit_position_limit) Set position limits
+2020-03-11 19:33:16,641 INFO (test_hit_position_limit) All dataframes hit position limits!!
+2020-03-11 19:33:16,644 INFO (test_flx_create) Instantiate FixUpDF() object
+2020-03-11 19:33:16,645 INFO (test_flx_create) Seperating Full Dataframe Into Positional Dataframes
+2020-03-11 19:33:16,652 INFO (test_flx_create) Create FLX Dataframe
+2020-03-11 19:33:16,656 INFO (test_flx_create) All test conditions passed FLX Dataframe is good
+2020-03-11 19:33:16,690 INFO (full_dataframe_prep_for_data) Remove uneeded columns
+2020-03-11 19:33:16,692 INFO (full_dataframe_prep_for_data) Removing All Free Agents using rm_FA()
+2020-03-11 19:33:16,694 INFO (full_dataframe_prep_for_data) Removing All Not Available values from STD column using rm_NA()
+2020-03-11 19:33:16,707 INFO (full_dataframe_prep_for_data) Removing All players with STD >= 10
+2020-03-11 19:33:16,710 INFO (full_dataframe_prep_for_data) Converting STD Column to Integer Values
+2020-03-11 19:33:16,711 INFO (full_dataframe_prep_for_data) Seperating Full Dataframe Into Positional Dataframes
+2020-03-11 19:33:16,716 INFO (full_dataframe_prep_for_data) Set position limits
+2020-03-11 19:33:16,716 INFO (full_dataframe_prep_for_data) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-03-11 19:33:16,722 INFO (full_dataframe_prep_for_data) Create FLX Dataframe
+2020-03-11 19:33:16,725 INFO (test_create_csv_all_data) Instantiate the positional dataframes
+2020-03-11 19:33:16,814 INFO (full_dataframe_prep) Remove uneeded columns
+2020-03-11 19:33:16,815 INFO (full_dataframe_prep) Removing All Free Agents using rm_FA()
+2020-03-11 19:33:16,817 INFO (full_dataframe_prep) Removing All Not Available values from STD column using rm_NA()
+2020-03-11 19:33:16,824 INFO (full_dataframe_prep) Removing All players with < 1 in Platform_AVG
+2020-03-11 19:33:16,828 INFO (full_dataframe_prep) Removing All players with STD >= 10
+2020-03-11 19:33:16,833 INFO (full_dataframe_prep) Converting STD Column to Integer Values
+2020-03-11 19:33:16,834 INFO (full_dataframe_prep) Clean FanDuel_Salary column
+2020-03-11 19:33:16,837 INFO (full_dataframe_prep) Seperating Full Dataframe Into Positional Dataframes
+2020-03-11 19:33:16,846 INFO (full_dataframe_prep) Set position limits
+2020-03-11 19:33:16,847 INFO (full_dataframe_prep) Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD
+2020-03-11 19:33:16,858 INFO (full_dataframe_prep) Create FLX Dataframe
+2020-03-11 19:33:16,862 INFO (test_closest_to_num) Instantiate the positional dataframes
+2020-03-11 19:33:16,863 INFO (test_closest_to_num) 5
+2020-03-11 19:33:16,863 INFO (test_closest_to_num) 5
+2020-03-11 19:33:16,863 INFO (test_closest_to_num) 5
+2020-03-11 19:33:16,864 INFO (test_closest_to_num) 6
+2020-03-11 19:33:16,864 INFO (test_closest_to_num) 2
+2020-03-11 19:33:16,864 INFO (test_closest_to_num) 5
+2020-03-11 19:33:16,865 INFO (test_closest_to_num) 4
+2020-03-11 19:33:16,865 INFO (test_closest_to_num) 5
+2020-03-11 19:33:16,865 INFO (test_closest_to_num) 5
+2020-03-11 19:33:16,866 INFO (createLineup) Instantiate Closest_to_num object
+2020-03-11 19:33:16,981 INFO (test_historic) Instantiate the positional dataframes
+2020-03-11 19:33:16,981 INFO (test_historic) 0
+2020-03-11 19:33:16,982 INFO (test_historic) 0
+2020-03-11 19:33:16,982 INFO (test_historic) 0
+2020-03-11 19:33:16,983 INFO (test_historic) 0
+2020-03-11 19:33:16,983 INFO (test_historic) 0
+2020-03-11 19:33:16,983 INFO (test_historic) 0
+2020-03-11 19:33:16,984 INFO (test_historic) 0
+2020-03-11 19:33:16,984 INFO (test_historic) 0
+2020-03-11 19:33:16,984 INFO (test_historic) 0
+2020-03-11 19:33:16,985 INFO (createLineup) Instantiate Closest_to_num object
+2020-03-11 19:33:17,096 INFO (test_FanDuel_Entry) Instantiate the positional dataframes
+2020-03-11 19:33:17,191 INFO (test_Current_Week) Instantiate the positional dataframes
+2020-03-11 19:33:17,295 INFO (test_track_history) Instantiate the positional dataframes
+2020-03-11 19:33:17,295 INFO (test_track_history) 0.0
+2020-03-11 19:33:17,296 INFO (test_track_history) 0.0
+2020-03-11 19:33:17,296 INFO (test_track_history) 0.0
+2020-03-11 19:33:17,296 INFO (test_track_history) 0.0
+2020-03-11 19:33:17,297 INFO (test_track_history) 0.0
+2020-03-11 19:33:17,297 INFO (test_track_history) 0.0
+2020-03-11 19:33:17,298 INFO (test_track_history) 0.0
+2020-03-11 19:33:17,298 INFO (test_track_history) 0.0
+2020-03-11 19:33:17,298 INFO (test_track_history) 0.0
+2020-03-11 19:33:17,299 INFO (createLineup) Instantiate Closest_to_num object
+2020-03-11 19:33:17,407 INFO (test_closest_to_num) Instantiate Closest_to_num object
+2020-03-11 19:33:17,408 INFO (test_closest_to_num) Instantiate the positional dataframes
+2020-03-11 19:33:17,408 INFO (test_closest_to_num) set the STD value for run at 8
+2020-03-11 19:33:17,495 INFO (test_rm_closest_to_num) Instantiate Closest_to_num object
+2020-03-11 19:33:17,495 INFO (test_rm_closest_to_num) Instantiate the positional dataframes
+2020-03-11 19:33:17,496 INFO (test_rm_closest_to_num) set the STD value for run at 2
+2020-03-11 19:33:17,587 INFO (test_update_points) Instantiate Prereqs
+2020-03-11 19:33:20,559 INFO (test_update_points) 1 cells updated.
+2020-03-16 07:48:10,869 INFO (test_creds_file) Assert that we have a .credentials object
+2020-03-16 07:48:51,468 INFO (test_creds_file) Assert that we have a .credentials object
+2020-03-16 07:49:47,942 INFO (test_creds_file) Assert that we have a .credentials object
+2020-03-16 07:50:46,896 INFO (test_creds_file) Assert that we have a .credentials object
+2020-03-16 08:22:23,475 INFO (test_creds_file) Assert that we have a .credentials object
+2020-03-16 08:23:35,307 INFO (test_create_sheet) Instantiate SheetsConnector object
+2020-03-16 08:23:35,307 INFO (test_create_sheet) Get Credentials
+2020-03-16 08:23:35,308 INFO (test_create_sheet) Instantiate Prereqs
+2020-03-16 08:23:35,308 INFO (test_create_sheet) create New sheet
+2020-03-16 08:23:40,006 INFO (test_creds_file) Assert that we have a .credentials object
+2020-03-16 08:28:38,058 INFO (test_creds_file) Assert that we have a .credentials object
+2020-03-16 08:28:59,376 INFO (test_creds_file) Assert that we have a .credentials object
+2020-03-16 08:29:33,316 INFO (test_create_sheet) Instantiate SheetsConnector object
+2020-03-16 08:29:33,317 INFO (test_create_sheet) Get Credentials
+2020-03-16 08:29:33,317 INFO (test_create_sheet) Instantiate Prereqs
+2020-03-16 08:29:33,318 INFO (test_create_sheet) create New sheet
+2020-03-16 08:29:37,577 INFO (test_creds_file) Assert that we have a .credentials object
+2020-03-16 08:34:38,424 INFO (test_create_sheet) Instantiate SheetsConnector object
+2020-03-16 08:34:38,425 INFO (test_create_sheet) Get Credentials
+2020-03-16 08:34:38,426 INFO (test_create_sheet) Instantiate Prereqs
+2020-03-16 08:34:38,426 INFO (test_create_sheet) create New sheet
+2020-03-16 08:34:43,426 INFO (test_creds_file) Assert that we have a .credentials object
+2020-03-16 08:38:07,182 INFO (test_create_sheet) Instantiate SheetsConnector object
+2020-03-16 08:38:07,183 INFO (test_create_sheet) Get Credentials
+2020-03-16 08:38:07,184 INFO (test_create_sheet) Instantiate Prereqs
+2020-03-16 08:38:07,184 INFO (test_create_sheet) create New sheet
+2020-03-16 08:38:12,302 INFO (test_creds_file) Assert that we have a .credentials object
+2020-03-16 08:38:33,738 INFO (test_create_sheet) Instantiate SheetsConnector object
+2020-03-16 08:38:33,739 INFO (test_create_sheet) Get Credentials
+2020-03-16 08:38:33,739 INFO (test_create_sheet) Instantiate Prereqs
+2020-03-16 08:38:33,740 INFO (test_create_sheet) create New sheet
+2020-03-16 08:38:38,975 INFO (test_creds_file) Assert that we have a .credentials object
+2020-03-17 20:24:49,690 INFO (test_creds_file) Assert that we have a .credentials object
+2020-03-18 04:35:23,229 INFO (test_creds_file) Assert that we have a .credentials object
+2020-03-18 04:43:37,031 INFO (test_creds_file) Assert that we have a .credentials object
+2020-03-18 05:17:56,892 INFO (test_creds_file) Assert that we have a .credentials object
+2020-03-18 05:18:07,313 INFO (test_creds_file) Assert that we have a .credentials object
+2020-03-18 05:18:14,815 INFO (test_creds_file) Assert that we have a .credentials object
+2020-03-18 07:07:15,984 INFO (test_creds_file) Assert that we have a .credentials object
