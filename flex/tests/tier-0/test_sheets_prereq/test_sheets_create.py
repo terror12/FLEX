@@ -13,7 +13,7 @@ import pytest
 
 class TestSheetsCreate:
 
-    g.add_log(g.log, filename='./logs/sheets_create')
+    g.add_log(g.log, filename='./logs/sheets_create.log')
 
     @pytest.mark.create_sheet
     def test_create_sheet(self, print_logging):
