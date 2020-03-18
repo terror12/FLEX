@@ -16,6 +16,7 @@ class TestCleanup:
     g.add_log(g.log, filename='./logs/Dataframecleanuplog')
 
     @pytest.mark.header
+    @pytest.mark.regression
     def test_header(self, rawDataframe, print_logging):
         """
         Method to replace numbered header with proper headers from Google Sheets
@@ -26,7 +27,7 @@ class TestCleanup:
 
         head = FixUpDf()
         new_head = head.fix_header(rawDataframe)
-        schema = ['playerId', 'player', 'team', 'position', 'age', 'exp', 'bye', 'Actual_Points', 'FanDuel_Salary', 'lower', 'upper', 'sdPts']
+        schema = ['playerId', 'player', 'team', 'position', 'age', 'exp', 'bye', 'Actual_Points', 'FanDuel_Salary', 'upper', 'sdPts', 'positionRank']
 
         try:
             assert new_head.columns.tolist() == schema
@@ -40,6 +41,7 @@ class TestCleanup:
                 assert False
 
     @pytest.mark.cols
+    @pytest.mark.regression
     def test_rm_cols(self, rawDataframe, print_logging):
         """
         Method to remove all unneeded columns from Dataframe.
@@ -67,6 +69,7 @@ class TestCleanup:
                 assert False
 
     @pytest.mark.FA
+    @pytest.mark.regression
     def test_rm_FA(self, rawDataframe, print_logging):
         """
         Method to remove all Free Agents from Dataframe.
@@ -96,6 +99,7 @@ class TestCleanup:
         assert True
 
     @pytest.mark.NA
+    @pytest.mark.regression
     def test_rm_NA(self, rawDataframe, print_logging):
         """
         Method to remove all Non-Available from Dataframe.
@@ -137,6 +141,8 @@ class TestCleanup:
         rm = Remove()
         g.log.info('Instantiate Remove() object')
         FixUp_df = FixUpDf()
+        g.log.info('Removing N/A prior to testing rm low')
+        df = rm.rm_NA(df)
         g.log.info('Removing All players with < 1 in Platform_AVG')
         df = rm.rm_Low_Projections(df)
 
@@ -145,6 +151,7 @@ class TestCleanup:
         FixUp_df.convert_to_num(df, "upper")
 
         for i in df.upper:
+            print(i)
             if i <= 1.0:
                 g.log.info('Players With Platform_AVG under 1 Exist When They Shouldnt!!')
                 assert False
@@ -153,6 +160,7 @@ class TestCleanup:
         assert True
 
     @pytest.mark.rm_high
+    @pytest.mark.regression
     def test_rm_high_sdpts(self, rawDataframe, print_logging):
         """
         Method to remove all Players with sdPts greater then 10.
@@ -181,6 +189,7 @@ class TestCleanup:
         assert True
 
     @pytest.mark.seperate
+    @pytest.mark.regression
     def test_seperate_positions(self, rawDataframe, print_logging):
         """
         Test that the full Dataframe is broken up by position
@@ -293,6 +302,7 @@ class TestCleanup:
         assert True
 
     @pytest.mark.limit
+    @pytest.mark.regression
     def test_hit_position_limit(self, rawDataframe, print_logging):
         """
         Test to make sure we can limit the length of the positional dataframes.

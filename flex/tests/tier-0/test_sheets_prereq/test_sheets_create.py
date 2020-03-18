@@ -16,6 +16,7 @@ class TestSheetsCreate:
     g.add_log(g.log, filename='./logs/sheets_create')
 
     @pytest.mark.create_sheet
+    @pytest.mark.regression
     def test_create_sheet(self, print_logging):
         """
         Test that we can read a sheet using the credential object

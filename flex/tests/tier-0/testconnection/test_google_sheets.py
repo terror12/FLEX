@@ -11,6 +11,7 @@ class TestConnection:
     g.add_log(g.log, filename='./logs/connectorlog')
 
     @pytest.mark.json
+    @pytest.mark.regression
     def test_creds_file(self, print_logging):
         """
         Test the existence of the creds json file
@@ -22,6 +23,7 @@ class TestConnection:
         # TODO either extend this test to check for client_secret.json
 
     @pytest.mark.rd_sheet
+    @pytest.mark.regression
     def test_read_sheet(self, deftestdata, print_logging):
         """
         Test that we can read a sheet using the credential object
@@ -40,6 +42,7 @@ class TestConnection:
         assert isinstance(result, dict)
 
     @pytest.mark.conn
+    @pytest.mark.regression
     # TODO: move to tier-1 simple workflows
     def test_connectivity(self, deftestdata, print_logging):
         """
