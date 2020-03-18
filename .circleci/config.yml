@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: circleci/python:3.7
 
-    working_directory: ~/repo
+    working_directory: ~
 
     steps:
       # Step 1: obtain repo from GitHub
@@ -22,6 +22,13 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
+            pwd
+            ls
             flake8 --exclude=venv* --statistics --max-line-length=180
-            # pytest -v --cov=calculator
+            # Workaround to ignore pyautogui in CI testing.
+            sudo rm -r /home/circleci/project/venv/lib/python3.7/site-packages/pyautogui
+            sed -i s/"import pyautogui"/"# import pyautogui"/ /home/circleci/project/venv/lib/python3.7/site-packages/flex/lib/sheets/prerequisite.py
+            sed -i s/"import pyautogui"/"# import pyautogui"/ /home/circleci/project/flex/tests/tier-0/testscrape/test_scrape_ffa.py
+            sed -i s/"import pyautogui"/"# import pyautogui"/ /home/circleci/project/flex/tests/tier-2/test_update/test_create_post_Gsheet.py
+            cd /home/circleci/project/flex && pytest -m json
 

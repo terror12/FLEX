@@ -16,7 +16,7 @@ from glusto.core import Glusto as g
 
 class PreReqs():
 
-    g.add_log(g.log, filename='./logs/sheets_create')
+    # g.add_log(g.log, filename='./logs/sheets_create')
 
     def createNewSheet(self, credentials, title):
 

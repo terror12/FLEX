@@ -32,11 +32,11 @@ class SheetsConnector():
         # except ImportError:
         #     flags = None
         SCOPES = 'https://www.googleapis.com/auth/drive'
-        CLIENT_SECRET_FILE = 'client_secret.json'
+        CLIENT_SECRET_FILE = '.credentials/client_secret.json'
         APPLICATION_NAME = 'Google Sheets API FLEX'
 
-        home_dir = os.path.expanduser('~')
-        credential_dir = os.path.join(home_dir, '.credentials')
+        # home_dir = os.path.expanduser('~')
+        credential_dir = os.path.join('.credentials')
         if not os.path.exists(credential_dir):
             os.makedirs(credential_dir)
         credential_path = os.path.join(credential_dir,
