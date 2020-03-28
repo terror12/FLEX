@@ -14,12 +14,38 @@
 
 Mission Statement
 ==================
-To openly share daily fantasy football generated lineups that result in victory atleast 51% of the time.
+To create a platform where we can analyze fantasy football data and give the community the abillity to generate daily fantasy football lineups in
+real time to actively test the results.
 
-Methodology
+Fantasy Football Data
 =====================
-Using top Fantasy Football projection predicting platforms (nfl.com, cbssports.com, fftoday.com) we will assign each player
-a standard deviation value each week.
+The database we have at our disposal consists of a mix of data collected from FanDuel, NFL.com, CBS.com, and FFtoday.com. (ffanayltics.com was used to aid in data collection).
+The data categories that we have to work with are as follows
+
+| Player  | Team | Position | Age | Experience | Bye | Actual Points | Upper | Standard Deviation | Position Rank | Tier | Point Spread | Risk | Salary |
+
+What category/categories do you think can be used to help find the highest Actual Point total on average?
+
+Call to Action
+=====================
+Finding the right data to key off of is no small feat, it will take many different minds from all different walks of life. Watch the demos below, read the proposed methodolgy to
+help form your own method, and understand the tools you can use to start testing your own solutions. If a function doesn't exist today please feel free to contribute!
+
+How to Install/Use
+====================
+
+Demos
+====================
+
+Data Analyses
+======================
+#### TODO Update with detailed explanation or link to report of data analsis.
+
+
+Proposed Methodology
+=====================
+Using top Fantasy Football projection predicting platforms (nfl.com, cbssports.com, fftoday.com) we have assigned each player
+a standard deviation value for each week, and will do so for every week in the future once the projections come out.
 
 This value is determined by taking the three projections and finding the [standard deviation](https://www.mathsisfun.com/data/standard-deviation.html) of the 3 numbers.
 #### Platform Projection Example
@@ -57,15 +83,12 @@ for every week over the past 5 years.
 This allows us to analyze which standard deviation is the best over time in numerous different ways.
 With this list and the code in place to generate valid lineups based on the players standard deviation value and FanDuel salary,
 overtime the optimal standard deviation value for each position in a lineup will reveal itself.
+(See Analyis section for more info)
 
 Our goal will be to then generate a lineup for the upcoming week based on players that have our desired standard deviation value.
 We can easily do this since the standard deviation value is being calculated based on incoming projections that are released
 days before the game.
 
-
-Historical Analyses
-======================
-#### TODO Update with detailed explanation or link to report of data analsis.
 
 Lineup Generation
 ======================
@@ -104,3 +127,5 @@ High Level Tasks
     b. Store all generated lineups and evaluate based on post week results save only lineup configuration that yeild a high result.
  5. Send link to community and advertise that using this can help them win $$$
  6. Create Facebook, Instagram, and twitter for Flexproject
+
+Disclosure: The Fanduel link above is an affiliate link. I will earn commission if you click through and create and fund a FanDuel account.
