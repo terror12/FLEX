@@ -48,6 +48,7 @@ class TestSTDPerPosition:
         :param rawDataframe:
         :param print_logging:
         :param full_dataframe_prep:
+        :param noround: Set to False to round sdPts, True to not round.
         :return:
         """
         # g.log.info('Instantiate Closest_to_num object')
@@ -63,14 +64,18 @@ class TestSTDPerPosition:
         TEfile = deftestdata['TEfile']
         DSTfile = deftestdata['DSTfile']
         FLXfile = deftestdata['FLXfile']
+        noround = deftestdata['noround']
 
         # TODO: change STD value to hundreths 22.42
-        QB = QB.round(round)
-        RB = RB.round(round)
-        WR = WR.round(round)
-        TE = TE.round(round)
-        DST = DST.round(round)
-        FLX = FLX.round(round)
+        if noround:
+            g.log.info('noround set to True so we do not round sdPts')
+        else:
+            QB = QB.round(round)
+            RB = RB.round(round)
+            WR = WR.round(round)
+            TE = TE.round(round)
+            DST = DST.round(round)
+            FLX = FLX.round(round)
         # g.log.info(type(QB))
         # TODO: list from highest to lowest Actual points
         # g.log.info(QB)

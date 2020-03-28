@@ -231,7 +231,7 @@ def full_dataframe_prep(request, rawDataframe):
 
 
 @pytest.fixture(scope='session')
-def full_dataframe_prep_for_data(request, rawDataframe):
+def full_dataframe_prep_for_data(request, rawDataframe, print_logging):
     """
     Fixture to do everything necessary to prepare dataframes for lineup creation
     :param request:
@@ -242,8 +242,8 @@ def full_dataframe_prep_for_data(request, rawDataframe):
     df = FixUp_df.fix_header(rawDataframe)
 
     rm = Remove()
-    g.log.info('Remove uneeded columns')
-    df = rm.rm_cols(df)
+    # g.log.info('Remove uneeded columns')
+    # df = rm.rm_cols(df)
 
     g.log.info('Removing All Free Agents using rm_FA()')
     df = rm.rm_FA(df)
@@ -270,12 +270,12 @@ def full_dataframe_prep_for_data(request, rawDataframe):
     TE = rm.hit_Position_Limits(TE, 90)
     DST = rm.hit_Position_Limits(DST, 32)
 
-    g.log.info('Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD')
-    QB = rm.use_cols_for_data(QB)
-    RB = rm.use_cols_for_data(RB)
-    WR = rm.use_cols_for_data(WR)
-    TE = rm.use_cols_for_data(TE)
-    DST = rm.use_cols_for_data(DST)
+    # g.log.info('Seperate out only the needed Columns player, team, Actual_Points, FanDuel_Salary, STD')
+    # QB = rm.use_cols_for_data(QB)
+    # RB = rm.use_cols_for_data(RB)
+    # WR = rm.use_cols_for_data(WR)
+    # TE = rm.use_cols_for_data(TE)
+    # DST = rm.use_cols_for_data(DST)
 
     g.log.info('Create FLX Dataframe')
     FLX = FixUp_df.flx_Create(RB, WR, TE)
