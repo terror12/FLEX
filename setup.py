@@ -60,6 +60,7 @@ setup(
         'flake8',
         'pytest',
         'pytest-cov',
+        'setuptools>=40.3.0',
     ],
     classifiers=[
         "Programming Language :: Python :: 3"
