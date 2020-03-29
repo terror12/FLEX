@@ -129,3 +129,4 @@ High Level Tasks
  6. Create Facebook, Instagram, and twitter for Flexproject
 
 Disclosure: The Fanduel link above is an affiliate link. I will earn commission if you click through and create and fund a FanDuel account.
+"Python" and the Python logos are trademarks or registered trademarks of the Python Software Foundation.
