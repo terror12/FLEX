@@ -57,7 +57,6 @@ setup(
         'gspread',
         'plotly',
         'pygsheets',
-        'pyautogui',
         'flake8',
         'pytest',
         'pytest-cov',

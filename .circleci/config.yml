@@ -22,14 +22,13 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
+            # Show us where we are
             pwd
+            # Tell us what we have
             ls
+            # Test python code according to the flake8 standard.
             flake8 --exclude=venv* --statistics --max-line-length=180
-            # Workaround to ignore pyautogui in CI testing.
-            sudo rm -r /home/circleci/project/venv/lib/python3.7/site-packages/pyautogui
-            sed -i s/"import pyautogui"/"# import pyautogui"/ /home/circleci/project/venv/lib/python3.7/site-packages/flex/lib/sheets/prerequisite.py
-            sed -i s/"import pyautogui"/"# import pyautogui"/ /home/circleci/project/flex/tests/tier-0/testscrape/test_scrape_ffa.py
-            sed -i s/"import pyautogui"/"# import pyautogui"/ /home/circleci/project/flex/tests/tier-2/test_update/test_create_post_Gsheet.py
+            # Execute workflow gating tests
             cd /home/circleci/project/flex && pytest -s -v -l --junit-xml /tmp/test_results.xml --testdata="{'spreadsheetId': '1a5WqcJrI6_FPbsWdXeoXWi-kOgrjjhrqDgOdScl2t90', 'rangeName': 'A1:L1447'}" -m regression
 
       - store_test_results:

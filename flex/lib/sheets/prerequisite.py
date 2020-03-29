@@ -7,10 +7,7 @@ from apiclient import discovery
 import gspread
 # import pygsheets
 import csv
-import webbrowser
 import time
-import pyautogui
-import os
 from glusto.core import Glusto as g
 
 
@@ -57,47 +54,6 @@ class PreReqs():
         gc = gspread.authorize(credentials)
 
         gc.import_csv(spreadsheetId, content)
-
-    def pyau_sheets(self, spreadsheet):
-
-        a_website = 'https://docs.google.com/spreadsheets/d/%s' % spreadsheet
-
-        # Open url in a new window of the default browser, if possible
-        webbrowser.open_new(a_website)
-        time.sleep(55)
-        # Click on FanDuel tab
-        pyautogui.moveTo(367, 1180)
-        pyautogui.click()
-
-        time.sleep(15)
-
-        # highlight entire player column
-        pyautogui.moveTo(707, 303)
-        # time.sleep(30)
-        pyautogui.click()
-        time.sleep(5)
-        # Click on 'Add-ons'
-        pyautogui.moveTo(419, 213)
-        pyautogui.click()
-        time.sleep(2)
-
-        time.sleep(2)
-        pyautogui.press('down')
-        time.sleep(2)
-        pyautogui.press('enter')
-        time.sleep(2)
-        pyautogui.press('enter')
-        # Click start in add on
-        time.sleep(15)
-
-        pyautogui.moveTo(926, 846)
-        pyautogui.click()
-        time.sleep(15)
-        # Close addon pop up
-        pyautogui.moveTo(1033, 841)
-        pyautogui.click()
-
-        os.system("killall -9 'chromium-browse'")
 
     def Gsheet_dst_plus_config(self, spreadsheet, service, sheetId0, sheetId1, year):
         """

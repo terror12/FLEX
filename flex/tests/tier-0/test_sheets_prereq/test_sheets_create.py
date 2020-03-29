@@ -5,7 +5,6 @@ from flex.lib.sheets.prerequisite import PreReqs
 # from schema import Schema, And, Use, Optional
 # import os.path
 # from os import path
-# import pyautogui
 import pytest
 # import time
 # import webbrowser
