@@ -61,6 +61,7 @@ setup(
         'pytest',
         'pytest-cov',
         'setuptools>=40.3.0',
+        'psycopg2',
     ],
     classifiers=[
         "Programming Language :: Python :: 3"

@@ -161,6 +161,7 @@ class TestBuildLineup:
         master_csv = deftestdata['master_csv']
         master_csv2 = deftestdata['master_csv2']
         collect_master_csv = deftestdata['collect_master_csv']
+        collect_second_csv = deftestdata['collect_second_csv']
         count = deftestdata['count']
         pairing = deftestdata['pairing']
 
@@ -218,7 +219,7 @@ class TestBuildLineup:
         lineup = assemble.findBestLineup(lineup, QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD, WR3_STD, TE_STD, FLX_STD, DST_STD, min_sal, pairing)
         g.log.info('This is your winning lineup: \n %s' % lineup)
         if lineup:
-            with open(master_csv, 'a') as f:
+            with open(master_csv, 'w') as f:
                 master_lineup = pd.DataFrame(lineup[9:])
                 master_lineup = master_lineup.transpose()
                 if os.stat(master_csv).st_size == 0:
@@ -228,7 +229,7 @@ class TestBuildLineup:
                 else:
                     master_lineup['Count'] = count
                     master_lineup.to_csv(f, header=False)
-            with open(collect_master_csv, 'a') as f:
+            with open(collect_master_csv, 'w') as f:
                 QB = QB[QB['player'] != lineup[0][0]]
                 RB = RB[RB['player'] != lineup[1][0]]
                 RB = RB[RB['player'] != lineup[2][0]]
@@ -254,7 +255,7 @@ class TestBuildLineup:
                 FLX = FLX[FLX['player'] != lineup[6][0]]
                 DST = DST[DST['player'] != lineup[8][0]]
                 collect_lineup = pd.DataFrame(lineup[:9])
-                collect_lineup.to_csv(f, header=False)
+                collect_lineup.to_csv(f, header=['Player', 'Team', 'Position', 'Projection', 'Salary', 'STD'])
 
             g.log.info('Generating second lineup with no duplicates!')
             # time.sleep(5)
@@ -264,7 +265,7 @@ class TestBuildLineup:
             lineup2 = assemble.findBestLineup(lineup2, QB, RB, WR, TE, FLX, DST, QB_STD2, RB_STD2, RB2_STD2, WR_STD2, WR2_STD2, WR3_STD2, TE_STD2, FLX_STD2, DST_STD2, min_sal, pairing)  # noqa E501
             g.log.info('This is your winning lineup: \n %s' % lineup2)
             if lineup2:
-                with open(master_csv2, 'a') as f:
+                with open(master_csv2, 'w') as f:
 
                     master_lineup = pd.DataFrame(lineup2[9:])
                     master_lineup = master_lineup.transpose()
@@ -275,9 +276,9 @@ class TestBuildLineup:
                     else:
                         master_lineup['Count'] = count
                         master_lineup.to_csv(f, header=False)
-                with open(collect_master_csv, 'a') as f:
+                with open(collect_second_csv, 'w') as f:
                     collect_lineup = pd.DataFrame(lineup2[:9])
-                    collect_lineup.to_csv(f, header=False)
+                    collect_lineup.to_csv(f, header=['Player', 'Team', 'Position', 'Projection', 'Salary', 'STD'])
             # assert True
 
     @pytest.mark.current_week
@@ -340,7 +341,7 @@ class TestBuildLineup:
         lineup = assemble.findBestLineup(lineup, QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD, WR3_STD, TE_STD, FLX_STD, DST_STD, min_sal, pairing)
         g.log.info('This is your winning lineup: \n %s' % lineup)
         if lineup:
-            with open(master_csv, 'a') as f:
+            with open(master_csv, 'w') as f:
                 lineup = pd.DataFrame(lineup[9:])
                 lineup = lineup.transpose()
                 if os.stat(master_csv).st_size == 0:
@@ -416,7 +417,7 @@ class TestBuildLineup:
         lineup = assemble.findBestLineup(lineup, QB, RB, WR, TE, FLX, DST, QB_STD, RB_STD, RB2_STD, WR_STD, WR2_STD, WR3_STD, TE_STD, FLX_STD, DST_STD, min_sal, pairing)
         g.log.info('This is your winning lineup: \n %s' % lineup)
         if lineup:
-            with open(master_csv, 'a') as f:
+            with open(master_csv, 'w') as f:
                 lineup = pd.DataFrame(lineup[9:])
                 lineup = lineup.transpose()
                 lineup['2'] = count

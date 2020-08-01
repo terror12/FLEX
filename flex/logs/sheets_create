@@ -1,0 +1,204 @@
+2020-08-01 16:17:23,893 INFO (test_create_sheet) Instantiate SheetsConnector object
+2020-08-01 16:17:23,893 INFO (test_create_sheet) Instantiate SheetsConnector object
+2020-08-01 16:17:23,894 INFO (test_create_sheet) Get Credentials
+2020-08-01 16:17:23,894 INFO (test_create_sheet) Get Credentials
+2020-08-01 16:17:23,895 INFO (test_create_sheet) Instantiate Prereqs
+2020-08-01 16:17:23,895 INFO (test_create_sheet) Instantiate Prereqs
+2020-08-01 16:17:23,895 INFO (test_create_sheet) create New sheet
+2020-08-01 16:17:23,895 INFO (test_create_sheet) create New sheet
+2020-08-01 16:17:26,419 INFO (test_creds_file) Assert that we have a .credentials object
+2020-08-01 16:17:26,419 INFO (test_creds_file) Assert that we have a .credentials object
+2020-08-01 16:17:26,423 INFO (test_read_sheet) Read from Google sheet
+2020-08-01 16:17:26,423 INFO (test_read_sheet) Read from Google sheet
+2020-08-01 16:17:28,389 INFO (test_read_sheet) Print data type of Google sheet class object
+2020-08-01 16:17:28,389 INFO (test_read_sheet) Print data type of Google sheet class object
+2020-08-01 16:17:28,389 INFO (test_read_sheet) <class 'dict'>
+2020-08-01 16:17:28,389 INFO (test_read_sheet) <class 'dict'>
+2020-08-01 16:17:28,392 INFO (test_connectivity) Instantiate SheetConnector object
+2020-08-01 16:17:28,392 INFO (test_connectivity) Instantiate SheetConnector object
+2020-08-01 16:17:28,392 INFO (test_connectivity) Get credentials...
+2020-08-01 16:17:28,392 INFO (test_connectivity) Get credentials...
+2020-08-01 16:17:28,392 INFO (test_connectivity) Successfully got credentials!!
+2020-08-01 16:17:28,392 INFO (test_connectivity) Successfully got credentials!!
+2020-08-01 16:17:28,392 INFO (test_connectivity) Read sheet to prove creds work...
+2020-08-01 16:17:28,392 INFO (test_connectivity) Read sheet to prove creds work...
+2020-08-01 16:17:29,592 INFO (test_connectivity) Successfully read sheet!!
+2020-08-01 16:17:29,592 INFO (test_connectivity) Successfully read sheet!!
+2020-08-01 16:17:29,593 INFO (test_connectivity) Convert data into dataframe to return subset of data...
+2020-08-01 16:17:29,593 INFO (test_connectivity) Convert data into dataframe to return subset of data...
+2020-08-01 16:17:30,853 INFO (test_connectivity)                 0                1     2   ...        9             10            11
+0         playerId           player  team  ...     upper         sdPts  positionRank
+1  Patrick Mahomes  Patrick Mahomes    KC  ...   24.7738   3.829615777             1
+2   Deshaun Watson   Deshaun Watson   HOU  ...   22.9566   3.032911637             2
+3       Drew Brees       Drew Brees    NO  ...    22.846   3.037714977             3
+4     Carson Wentz     Carson Wentz   PHI  ...    21.126    1.87213961             4
+5   Russell Wilson   Russell Wilson   SEA  ...    20.398   1.432604989             5
+6    Lamar Jackson    Lamar Jackson   BAL  ...    19.454  0.4841969434             6
+7     Dak Prescott     Dak Prescott   DAL  ...  20.59644    1.73230298             7
+8   Jameis Winston   Jameis Winston    TB  ...  19.70032   1.008819634             8
+9       Jared Goff       Jared Goff   LAR  ...    19.632   1.226017297             9
+
+[10 rows x 12 columns]
+2020-08-01 16:17:30,853 INFO (test_connectivity)                 0                1     2   ...        9             10            11
+0         playerId           player  team  ...     upper         sdPts  positionRank
+1  Patrick Mahomes  Patrick Mahomes    KC  ...   24.7738   3.829615777             1
+2   Deshaun Watson   Deshaun Watson   HOU  ...   22.9566   3.032911637             2
+3       Drew Brees       Drew Brees    NO  ...    22.846   3.037714977             3
+4     Carson Wentz     Carson Wentz   PHI  ...    21.126    1.87213961             4
+5   Russell Wilson   Russell Wilson   SEA  ...    20.398   1.432604989             5
+6    Lamar Jackson    Lamar Jackson   BAL  ...    19.454  0.4841969434             6
+7     Dak Prescott     Dak Prescott   DAL  ...  20.59644    1.73230298             7
+8   Jameis Winston   Jameis Winston    TB  ...  19.70032   1.008819634             8
+9       Jared Goff       Jared Goff   LAR  ...    19.632   1.226017297             9
+
+[10 rows x 12 columns]
+2020-08-01 16:17:31,108 INFO (test_connectivity) Successfully retrieved data set!!
+2020-08-01 16:17:31,108 INFO (test_connectivity) Successfully retrieved data set!!
+2020-08-01 16:17:31,109 INFO (test_connectivity) We are checking the length of the data to make sure it is more then 300 rows.
+2020-08-01 16:17:31,109 INFO (test_connectivity) We are checking the length of the data to make sure it is more then 300 rows.
+2020-08-01 16:17:31,109 INFO (test_connectivity) If less then that we most likely have an issue with the data sheet!
+2020-08-01 16:17:31,109 INFO (test_connectivity) If less then that we most likely have an issue with the data sheet!
+2020-08-01 16:17:31,109 INFO (test_connectivity) Number of rows in data is 1134
+2020-08-01 16:17:31,109 INFO (test_connectivity) Number of rows in data is 1134
+2020-08-01 16:17:33,621 INFO (test_header) Success headers match!!
+2020-08-01 16:17:33,621 INFO (test_header) Success headers match!!
+2020-08-01 16:17:33,630 INFO (test_rm_cols) Success Only necessary Columns Exist!!
+2020-08-01 16:17:33,630 INFO (test_rm_cols) Success Only necessary Columns Exist!!
+2020-08-01 16:17:33,635 INFO (test_rm_FA) Connect to Googlesheet and prep the data
+2020-08-01 16:17:33,635 INFO (test_rm_FA) Connect to Googlesheet and prep the data
+2020-08-01 16:17:33,636 INFO (test_rm_FA) Instantiate Remove() object
+2020-08-01 16:17:33,636 INFO (test_rm_FA) Instantiate Remove() object
+2020-08-01 16:17:33,637 INFO (test_rm_FA) Removing All Free Agents using rm_FA()
+2020-08-01 16:17:33,637 INFO (test_rm_FA) Removing All Free Agents using rm_FA()
+2020-08-01 16:17:33,640 INFO (test_rm_FA) All FAs have Been Removed!!
+2020-08-01 16:17:33,640 INFO (test_rm_FA) All FAs have Been Removed!!
+2020-08-01 16:17:33,643 INFO (test_rm_NA) Connect to Googlesheet and prep the data
+2020-08-01 16:17:33,643 INFO (test_rm_NA) Connect to Googlesheet and prep the data
+2020-08-01 16:17:33,645 INFO (test_rm_NA) Instantiate Remove() object
+2020-08-01 16:17:33,645 INFO (test_rm_NA) Instantiate Remove() object
+2020-08-01 16:17:33,645 INFO (test_rm_NA) Removing All Not Available values from sdPts column using rm_NA()
+2020-08-01 16:17:33,645 INFO (test_rm_NA) Removing All Not Available values from sdPts column using rm_NA()
+2020-08-01 16:17:33,652 INFO (test_rm_NA) All Non-Available have Been Removed!!
+2020-08-01 16:17:33,652 INFO (test_rm_NA) All Non-Available have Been Removed!!
+2020-08-01 16:17:33,657 INFO (test_rm_high_sdpts) Instantiate Remove() object
+2020-08-01 16:17:33,657 INFO (test_rm_high_sdpts) Instantiate Remove() object
+2020-08-01 16:17:33,657 INFO (test_rm_high_sdpts) Removing All Not Available values from sdPts column using rm_NA()
+2020-08-01 16:17:33,657 INFO (test_rm_high_sdpts) Removing All Not Available values from sdPts column using rm_NA()
+2020-08-01 16:17:33,668 INFO (test_rm_high_sdpts) Removing All players with sdPts >= 10
+2020-08-01 16:17:33,668 INFO (test_rm_high_sdpts) Removing All players with sdPts >= 10
+2020-08-01 16:17:33,672 INFO (test_rm_high_sdpts) All players with sdPts >= 10.0 have Been Removed!!
+2020-08-01 16:17:33,672 INFO (test_rm_high_sdpts) All players with sdPts >= 10.0 have Been Removed!!
+2020-08-01 16:17:33,675 INFO (test_seperate_positions) Instantiate FixUpDF() object
+2020-08-01 16:17:33,675 INFO (test_seperate_positions) Instantiate FixUpDF() object
+2020-08-01 16:17:33,677 INFO (test_seperate_positions) Seperating Full Dataframe Into Positional Dataframes
+2020-08-01 16:17:33,677 INFO (test_seperate_positions) Seperating Full Dataframe Into Positional Dataframes
+2020-08-01 16:17:33,682 INFO (test_seperate_positions) Ensure that no other position is in QB Datframe
+2020-08-01 16:17:33,682 INFO (test_seperate_positions) Ensure that no other position is in QB Datframe
+2020-08-01 16:17:33,684 INFO (test_seperate_positions) Ensure that no other position is in RB Datframe
+2020-08-01 16:17:33,684 INFO (test_seperate_positions) Ensure that no other position is in RB Datframe
+2020-08-01 16:17:33,684 INFO (test_seperate_positions) Ensure that no other position is in WR Datframe
+2020-08-01 16:17:33,684 INFO (test_seperate_positions) Ensure that no other position is in WR Datframe
+2020-08-01 16:17:33,685 INFO (test_seperate_positions) Ensure that no other position is in TE Datframe
+2020-08-01 16:17:33,685 INFO (test_seperate_positions) Ensure that no other position is in TE Datframe
+2020-08-01 16:17:33,685 INFO (test_seperate_positions) Ensure that no other position is in DST Datframe
+2020-08-01 16:17:33,685 INFO (test_seperate_positions) Ensure that no other position is in DST Datframe
+2020-08-01 16:17:33,686 INFO (test_seperate_positions) QB Positional Dataframe Created Succesfully!!
+2020-08-01 16:17:33,686 INFO (test_seperate_positions) QB Positional Dataframe Created Succesfully!!
+2020-08-01 16:17:33,713 INFO (test_seperate_positions) 
+ 0         playerId           player team position  ... FanDuel_Salary    upper        sdPts positionRank
+1  Patrick Mahomes  Patrick Mahomes   KC       QB  ...           8700  24.7738  3.829615777            1
+2   Deshaun Watson   Deshaun Watson  HOU       QB  ...           8500  22.9566  3.032911637            2
+3       Drew Brees       Drew Brees   NO       QB  ...           8000   22.846  3.037714977            3
+
+[3 rows x 12 columns]
+2020-08-01 16:17:33,713 INFO (test_seperate_positions) 
+ 0         playerId           player team position  ... FanDuel_Salary    upper        sdPts positionRank
+1  Patrick Mahomes  Patrick Mahomes   KC       QB  ...           8700  24.7738  3.829615777            1
+2   Deshaun Watson   Deshaun Watson  HOU       QB  ...           8500  22.9566  3.032911637            2
+3       Drew Brees       Drew Brees   NO       QB  ...           8000   22.846  3.037714977            3
+
+[3 rows x 12 columns]
+2020-08-01 16:17:33,714 INFO (test_seperate_positions) RB Positional Dataframe Created Succesfully!!
+2020-08-01 16:17:33,714 INFO (test_seperate_positions) RB Positional Dataframe Created Succesfully!!
+2020-08-01 16:17:33,740 INFO (test_seperate_positions) 
+ 0              playerId               player team  ...    upper        sdPts positionRank
+15         Alvin Kamara         Alvin Kamara   NO  ...  21.5272  4.853974179            1
+21  Christian McCaffrey  Christian McCaffrey  CAR  ...  18.0032  1.715064236            2
+22       Saquon Barkley       Saquon Barkley  NYG  ...  18.3384  2.091059062            3
+
+[3 rows x 12 columns]
+2020-08-01 16:17:33,740 INFO (test_seperate_positions) 
+ 0              playerId               player team  ...    upper        sdPts positionRank
+15         Alvin Kamara         Alvin Kamara   NO  ...  21.5272  4.853974179            1
+21  Christian McCaffrey  Christian McCaffrey  CAR  ...  18.0032  1.715064236            2
+22       Saquon Barkley       Saquon Barkley  NYG  ...  18.3384  2.091059062            3
+
+[3 rows x 12 columns]
+2020-08-01 16:17:33,741 INFO (test_seperate_positions) WR Positional Dataframe Created Succesfully!!
+2020-08-01 16:17:33,741 INFO (test_seperate_positions) WR Positional Dataframe Created Succesfully!!
+2020-08-01 16:17:33,768 INFO (test_seperate_positions) 
+ 0          playerId           player team position  ... FanDuel_Salary    upper        sdPts positionRank
+34  DeAndre Hopkins  DeAndre Hopkins  HOU       WR  ...           9000  15.2056  1.483577545            1
+35      Julio Jones      Julio Jones  ATL       WR  ...           8500   16.065   2.66538859            2
+39    Tyler Lockett    Tyler Lockett  SEA       WR  ...           6800  15.3032  1.978896725            3
+
+[3 rows x 12 columns]
+2020-08-01 16:17:33,768 INFO (test_seperate_positions) 
+ 0          playerId           player team position  ... FanDuel_Salary    upper        sdPts positionRank
+34  DeAndre Hopkins  DeAndre Hopkins  HOU       WR  ...           9000  15.2056  1.483577545            1
+35      Julio Jones      Julio Jones  ATL       WR  ...           8500   16.065   2.66538859            2
+39    Tyler Lockett    Tyler Lockett  SEA       WR  ...           6800  15.3032  1.978896725            3
+
+[3 rows x 12 columns]
+2020-08-01 16:17:33,768 INFO (test_seperate_positions) TE Positional Dataframe Created Succesfully!!
+2020-08-01 16:17:33,768 INFO (test_seperate_positions) TE Positional Dataframe Created Succesfully!!
+2020-08-01 16:17:33,794 INFO (test_seperate_positions) 
+ 0         playerId         player team position  ... FanDuel_Salary    upper         sdPts positionRank
+70    Travis Kelce   Travis Kelce   KC       TE  ...           7800  13.0934   2.068300349            1
+79   George Kittle  George Kittle   SF       TE  ...           7300  11.7148  0.8756656516            2
+100      Zach Ertz      Zach Ertz  PHI       TE  ...           7100   11.312   1.881506577            3
+
+[3 rows x 12 columns]
+2020-08-01 16:17:33,794 INFO (test_seperate_positions) 
+ 0         playerId         player team position  ... FanDuel_Salary    upper         sdPts positionRank
+70    Travis Kelce   Travis Kelce   KC       TE  ...           7800  13.0934   2.068300349            1
+79   George Kittle  George Kittle   SF       TE  ...           7300  11.7148  0.8756656516            2
+100      Zach Ertz      Zach Ertz  PHI       TE  ...           7100   11.312   1.881506577            3
+
+[3 rows x 12 columns]
+2020-08-01 16:17:33,794 INFO (test_seperate_positions) DST Positional Dataframe Created Succesfully!!
+2020-08-01 16:17:33,794 INFO (test_seperate_positions) DST Positional Dataframe Created Succesfully!!
+2020-08-01 16:17:33,819 INFO (test_seperate_positions) 
+ 0  playerId  player team position age  ... Actual_Points FanDuel_Salary    upper         sdPts positionRank
+61   Chiefs  Chiefs   KC      DST  NA  ...             5           3900  10.1532  0.1753624817            1
+72    Bears   Bears  CHI      DST  NA  ...             9           4500  11.9262   1.038032755            2
+73    Lions   Lions  DET      DST  NA  ...             7           4100   11.734  0.7495331881            3
+
+[3 rows x 12 columns]
+2020-08-01 16:17:33,819 INFO (test_seperate_positions) 
+ 0  playerId  player team position age  ... Actual_Points FanDuel_Salary    upper         sdPts positionRank
+61   Chiefs  Chiefs   KC      DST  NA  ...             5           3900  10.1532  0.1753624817            1
+72    Bears   Bears  CHI      DST  NA  ...             9           4500  11.9262   1.038032755            2
+73    Lions   Lions  DET      DST  NA  ...             7           4100   11.734  0.7495331881            3
+
+[3 rows x 12 columns]
+2020-08-01 16:17:33,820 INFO (test_seperate_positions) =================================================
+2020-08-01 16:17:33,820 INFO (test_seperate_positions) =================================================
+2020-08-01 16:17:33,820 INFO (test_seperate_positions) All Positional Dataframes Created Succesfully!!
+2020-08-01 16:17:33,820 INFO (test_seperate_positions) All Positional Dataframes Created Succesfully!!
+2020-08-01 16:17:33,821 INFO (test_seperate_positions) =================================================
+2020-08-01 16:17:33,821 INFO (test_seperate_positions) =================================================
+2020-08-01 16:17:33,830 INFO (test_hit_position_limit) Instantiate Remove() object
+2020-08-01 16:17:33,830 INFO (test_hit_position_limit) Instantiate Remove() object
+2020-08-01 16:17:33,830 INFO (test_hit_position_limit) Set position limits
+2020-08-01 16:17:33,830 INFO (test_hit_position_limit) Set position limits
+2020-08-01 16:17:33,840 INFO (test_hit_position_limit) All dataframes hit position limits!!
+2020-08-01 16:17:33,840 INFO (test_hit_position_limit) All dataframes hit position limits!!
+2020-08-01 16:17:33,843 INFO (test_flx_create) Instantiate FixUpDF() object
+2020-08-01 16:17:33,843 INFO (test_flx_create) Instantiate FixUpDF() object
+2020-08-01 16:17:33,845 INFO (test_flx_create) Seperating Full Dataframe Into Positional Dataframes
+2020-08-01 16:17:33,845 INFO (test_flx_create) Seperating Full Dataframe Into Positional Dataframes
+2020-08-01 16:17:33,851 INFO (test_flx_create) Create FLX Dataframe
+2020-08-01 16:17:33,851 INFO (test_flx_create) Create FLX Dataframe
+2020-08-01 16:17:33,854 INFO (test_flx_create) All test conditions passed FLX Dataframe is good
+2020-08-01 16:17:33,854 INFO (test_flx_create) All test conditions passed FLX Dataframe is good

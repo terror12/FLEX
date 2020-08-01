@@ -173,7 +173,7 @@ def shtCreatePreReq(deftestdata, print_logging):
 
 
 @pytest.fixture(scope='session')
-def full_dataframe_prep(request, rawDataframe):
+def full_dataframe_prep(request, deftestdata, rawDataframe):
     """
     Fixture to do everything necessary to prepare dataframes for lineup creation
     :param request:
@@ -204,6 +204,11 @@ def full_dataframe_prep(request, rawDataframe):
 
     g.log.info('Clean FanDuel_Salary column')
     rm.clean_FanDuel_Salary(df)
+
+    slate = deftestdata['slate']
+    g.log.info('Save Full Dataframe as a csv file.')
+    with open(f'{slate}_slate_dataframe.csv', 'w') as f:
+        df.to_csv(f)
 
     g.log.info('Seperating Full Dataframe Into Positional Dataframes')
     QB, RB, WR, TE, DST = FixUp_df.seperate_positions(df)
