@@ -3,8 +3,8 @@ import psycopg2
 
 class UpdateDB:
 
-    def get_connection(self, dbname, user, password):
-        connection = psycopg2.connect(f"dbname={dbname} user={user} password={password}")
+    def get_connection(self, dbname, user, password, host):
+        connection = psycopg2.connect(f"dbname={dbname} user={user} password={password} host={host}")
         return connection
 
     def fetch_table_data(self, connection, tablename):
@@ -17,8 +17,9 @@ class UpdateDB:
         print(lineup)
         return lineup
 
-    def update_table_data(self, connection, player, team, salary,  position, projection, std, tablename, count):
+    def update_table_data(self, connection, player, team, salary, position, projection, std, tablename, count, row):
         cursor = connection.cursor()
-        pg_update = f"update {tablename} set player = '{player}', team = '{team}', salary = '{salary}', position = '{position}', projection = '{projection}', std = '{std}' where id = {count}"  # noqa E501
+        pg_update = f"update {tablename} set player = '{player}', team = '{team}', salary = '{salary}', position = '{position}', projection = '{projection}', std = '{std}' where id = {row}"  # noqa E501
         cursor.execute(pg_update)
         connection.commit()
+
