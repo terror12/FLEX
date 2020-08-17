@@ -18,7 +18,7 @@ class TestUpdateDatabase:
         user = deftestdata['user']
         password = deftestdata['password']
         host = deftestdata['host']
-        
+
         g.log.info('Instantiate UpdateDB class')
         updatedb = UpdateDB()
         g.log.info('Test for connection')

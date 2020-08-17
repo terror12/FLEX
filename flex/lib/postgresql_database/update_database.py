@@ -22,4 +22,3 @@ class UpdateDB:
         pg_update = f"update {tablename} set player = '{player}', team = '{team}', salary = '{salary}', position = '{position}', projection = '{projection}', std = '{std}' where id = {row}"  # noqa E501
         cursor.execute(pg_update)
         connection.commit()
-
