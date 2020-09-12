@@ -62,6 +62,7 @@ setup(
         'pytest-cov',
         'setuptools>=40.3.0',
         'psycopg2',
+        'sqlalchemy',
     ],
     classifiers=[
         "Programming Language :: Python :: 3"
