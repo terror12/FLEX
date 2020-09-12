@@ -221,6 +221,7 @@ class TestBuildLineup:
         if lineup:
             with open(master_csv, 'w') as f:
                 master_lineup = pd.DataFrame(lineup[9:])
+                print(master_lineup)
                 master_lineup = master_lineup.transpose()
                 if os.stat(master_csv).st_size == 0:
                     master_lineup.columns = ["Points", "Salary"]
@@ -255,7 +256,8 @@ class TestBuildLineup:
                 FLX = FLX[FLX['player'] != lineup[6][0]]
                 DST = DST[DST['player'] != lineup[8][0]]
                 collect_lineup = pd.DataFrame(lineup[:9])
-                collect_lineup.to_csv(f, header=['player', 'team', 'position', 'projection', 'salary', 'stdev'])
+                print(collect_lineup)
+                collect_lineup.to_csv(f, header=['player', 'team', 'position', 'projection', 'salary', 'stdev'], index_label='id')
 
             g.log.info('Generating second lineup with no duplicates!')
             # time.sleep(5)
@@ -278,7 +280,7 @@ class TestBuildLineup:
                         master_lineup.to_csv(f, header=False)
                 with open(collect_second_csv, 'w') as f:
                     collect_lineup = pd.DataFrame(lineup2[:9])
-                    collect_lineup.to_csv(f, header=['player', 'team', 'position', 'projection', 'salary', 'stdev'])
+                    collect_lineup.to_csv(f, header=['player', 'team', 'position', 'projection', 'salary', 'stdev'], index_label='id')
             # assert True
 
     @pytest.mark.current_week

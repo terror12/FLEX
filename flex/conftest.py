@@ -208,7 +208,7 @@ def full_dataframe_prep(request, deftestdata, rawDataframe):
     slate = deftestdata['slate']
     g.log.info('Save Full Dataframe as a csv file.')
     with open(f'{slate}_slate_dataframe.csv', 'w') as f:
-        df.to_csv(f)
+        df.to_csv(f, header=['player', 'team', 'position', 'projection', 'salary', 'stdev'], index_label='id')
 
     g.log.info('Seperating Full Dataframe Into Positional Dataframes')
     QB, RB, WR, TE, DST = FixUp_df.seperate_positions(df)
