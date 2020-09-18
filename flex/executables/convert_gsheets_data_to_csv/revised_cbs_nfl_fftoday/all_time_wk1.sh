@@ -70,3 +70,5 @@ pytest -s -v -l --testdata="{'spreadsheetId': '$wk1_2015',
                               'TEfile': 'wk_1_revised_TE.csv',
                               'DSTfile': 'wk_1_revised_DST.csv',
                               'FLXfile': 'wk_1_revised_FLX.csv'}" -m csv_all_data
+
+  #  TODO: Graphing

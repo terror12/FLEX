@@ -49,5 +49,5 @@ comp <- comp[!grepl("Kickers", comp$Player),]
 comp <- comp[!grepl("Defenses", comp$Player),]
 comp <- comp[!grepl("N/A", comp$FD_Salary),]
 #head(comp)
-setwd("/home/acterror12/FLEX/FLEX/flex/FanDuel_proj")
+setwd("/home/ascerra/FLEX_dev/FLEX/flex/Revised_Data/FanDuel_proj/post")
 write.csv(comp, file = args[3])
