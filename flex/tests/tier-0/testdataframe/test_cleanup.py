@@ -16,7 +16,6 @@ class TestCleanup:
     g.add_log(g.log, filename='./logs/Dataframecleanuplog')
 
     @pytest.mark.header
-    @pytest.mark.regression
     def test_header(self, rawDataframe, print_logging):
         """
         Method to replace numbered header with proper headers from Google Sheets
