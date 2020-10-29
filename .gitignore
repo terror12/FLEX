@@ -11,3 +11,13 @@ executioner
 Googleconnectorlog
 STDOUT
 Dataframecleanuplog
+BuildLineupLog
+ClosesttoNumlog
+DataframeCreationLog
+GraphSTDLog
+STDPerPositionLog
+UpdateActualPoints
+UpdateDatabaseLog
+connectorlog
+scrapelog
+sheets_create
