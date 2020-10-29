@@ -50,7 +50,7 @@ class Remove:
 
         df['Actual_Points'] = pd.to_numeric(df['Actual_Points'])
 
-        df = df[~(df['Actual_Points'] <= 4.0)]
+        df = df[~(df['Actual_Points'] <= 5.0)]
 
         return df
 

@@ -44,6 +44,7 @@ class TestSheetsCreate:
         projections = deftestdata['projections']
         FanDuel_Salaries = deftestdata['FanDuel_Salaries']
         Sheet_Name = deftestdata['Sheet_Name']
+        questionable = deftestdata['questionable']
 
         g.log.info('Instantiate SheetsConnector object')
         FLEX = SheetsConnector()
@@ -144,8 +145,14 @@ class TestSheetsCreate:
         result = prereq.writeToCell(spreadsheet, service, 'player', "FanDuel!L1")
         g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
 
-        result = prereq.writeToCell(spreadsheet, service, '=IF (OR(S2="IR", S2="D", S2="O", AND(S2="Q", B2<>"QB")), "#N/A", K2)', "FanDuel!L2")
-        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+        if (questionable == 'true'):
+            result = prereq.writeToCell(spreadsheet, service, '=IF (OR(S2="IR", S2="D", AND(S2="O", B2<>"QB")), "#N/A", K2)', "FanDuel!L2")
+            g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+            g.log.info('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+        else:
+            result = prereq.writeToCell(spreadsheet, service, '=IF (OR(S2="IR", S2="D", S2="O", AND(S2="Q", B2<>"QB")), "#N/A", K2)', "FanDuel!L2")
+            g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+            g.log.info('_____________________________________________________')
 
         prereq.copyFormula(spreadsheet, service, sheetId1, 11, 12)
 
