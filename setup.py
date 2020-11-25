@@ -52,7 +52,6 @@ setup(
         'schema',
         'google_auth_oauthlib',
         'retrying',
-        'matplotlib',
         'selenium',
         'gspread',
         'plotly',
@@ -61,7 +60,7 @@ setup(
         'pytest',
         'pytest-cov',
         'setuptools>=40.3.0',
-        'psycopg2',
+        'psycopg2-binary',
         'sqlalchemy',
     ],
     classifiers=[
