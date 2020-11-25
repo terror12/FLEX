@@ -6,7 +6,7 @@ from flex.lib.sheets.prerequisite import PreReqs
 # import os.path
 # from os import path
 import pytest
-# import time
+import time
 # import webbrowser
 
 
@@ -174,6 +174,44 @@ class TestSheetsCreate:
         # Rename to Actual_Points bc this is what my code looks for
         result = prereq.writeToCell(spreadsheet, service, 'Actual_Points', "H1")
         g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+
+        prereq.addCol(spreadsheet, service, sheetId0, 7, 8)
+        prereq.rmCol(spreadsheet, service, sheetId0, 6, 7)
+        prereq.addCol(spreadsheet, service, sheetId0, 6, 7)
+        prereq.rmCol(spreadsheet, service, sheetId0, 5, 6)
+
+        # Add FPPG data from Fanduel
+        result = prereq.writeToCell(spreadsheet, service, '=VLOOKUP(B2,{FanDuel!$L$2:$L$1000,FanDuel!$M$2:$M$1000},2,FALSE)', 'E2')  # noqa E501
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+
+        # Rename age to FPPG
+        result = prereq.writeToCell(spreadsheet, service, 'FPPG', "E1")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+
+        # Add data from Fanduel
+        result = prereq.writeToCell(spreadsheet, service, '=VLOOKUP(B2,{FanDuel!$L$2:$L$1000,FanDuel!$R$2:$R$1000},2,FALSE)', 'F2')  # noqa E501
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+
+        # Rename exp to Opp
+        result = prereq.writeToCell(spreadsheet, service, 'Opp', "F1")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+
+        # Add data from Fanduel
+        result = prereq.writeToCell(spreadsheet, service, '=VLOOKUP(B2,{FanDuel!$L$2:$L$1000,FanDuel!$S$2:$S$1000},2,FALSE)', 'G2')  # noqa E501
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+
+        # Rename bye week to Injury Indicator
+        result = prereq.writeToCell(spreadsheet, service, 'Injury_Indicator', "G1")
+        g.log.info('{0} cells updated.'.format(result.get('updatedCells')))
+
+        time.sleep(2)
+
+        prereq.copyFormula(spreadsheet, service, sheetId0, 4, 5)
+        g.log.info('Copy formuala')
+
+        prereq.copyFormula(spreadsheet, service, sheetId0, 5, 6)
+
+        prereq.copyFormula(spreadsheet, service, sheetId0, 6, 7)
 
     @pytest.mark.sht_pretest
     def test_sheet_pre_test(self, shtCreatePreReq, print_logging):

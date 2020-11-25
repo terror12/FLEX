@@ -10,8 +10,9 @@ class Remove:
         :param df: The Dataframe
         :return df: The Dataframe without uneeded columns
         """
-
-        df = df[['player', 'team', 'position', 'Actual_Points', 'FanDuel_Salary', 'sdPts']]
+        print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!df')
+        print(df)
+        df = df[['player', 'team', 'position', 'FPPG', 'Opp', 'Injury_Indicator', 'Actual_Points', 'FanDuel_Salary', 'sdPts', 'positionRank']]
         return df
 
     def rm_FA(self, df):

@@ -26,7 +26,8 @@ class TestCleanup:
 
         head = FixUpDf()
         new_head = head.fix_header(rawDataframe)
-        schema = ['playerId', 'player', 'team', 'position', 'age', 'exp', 'bye', 'Actual_Points', 'FanDuel_Salary', 'upper', 'sdPts', 'positionRank']
+        print(new_head)
+        schema = ['playerId', 'player', 'team', 'position', 'FPPG', 'Opp', 'Injury_Indicate', 'Actual_Points', 'FanDuel_Salary', 'sdPts', 'positionRank']
 
         try:
             assert new_head.columns.tolist() == schema
@@ -54,7 +55,7 @@ class TestCleanup:
         rm = Remove()
         df = rm.rm_cols(df)
 
-        schema = ['player', 'team', 'position', 'Actual_Points', 'FanDuel_Salary', 'sdPts']
+        schema = ['player', 'team', 'position', 'FPPG', 'Opp', 'Injury_Indicator', 'Actual_Points', 'FanDuel_Salary', 'sdPts', 'positionRank']
 
         try:
             assert df.columns.tolist() == schema
