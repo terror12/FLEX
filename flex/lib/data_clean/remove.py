@@ -10,8 +10,6 @@ class Remove:
         :param df: The Dataframe
         :return df: The Dataframe without uneeded columns
         """
-        print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!df')
-        print(df)
         df = df[['player', 'team', 'position', 'FPPG', 'Opp', 'Injury_Indicator', 'Actual_Points', 'FanDuel_Salary', 'sdPts', 'positionRank']]
         return df
 
@@ -104,7 +102,7 @@ class Remove:
         :return: The positional dataframe with only needed columns
         """
 
-        dfp = dfp[['player', 'team', 'position', 'Actual_Points', 'FanDuel_Salary', 'sdPts']]
+        dfp = dfp[['player', 'team', 'position', 'FPPG', 'Opp', 'Injury_Indicator', 'Actual_Points', 'FanDuel_Salary', 'sdPts', 'positionRank']]
         for i in dfp['Actual_Points']:
             if i == 'NA' or i == '#N/A':
                 pass
