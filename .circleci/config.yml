@@ -29,7 +29,7 @@ jobs:
             # Test python code according to the flake8 standard.
             flake8 --exclude=venv* --statistics --max-line-length=180
             # Execute workflow gating tests
-            cd /home/circleci/project/flex && pytest -s -v -l --junit-xml /tmp/test_results.xml --testdata="{'spreadsheetId': '1a5WqcJrI6_FPbsWdXeoXWi-kOgrjjhrqDgOdScl2t90', 'rangeName': 'A1:L1447'}" -m regression
+            cd /home/circleci/project/flex && pytest -s -v -l --junit-xml /tmp/test_results.xml --testdata="{'spreadsheetId': '1vRLtauHuLW4T7fZ7rikjNIaELbNwZrTwAqK4VFl62jo', 'rangeName': 'A1:M1447'}" -m regression
 
       - store_test_results:
           path: /tmp
